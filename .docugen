@@ -1,0 +1,3 @@
+#!/bin/bash
+docsteady --version
+docsteady generate-tpr LVV-P99 DMTR-371.tex --trace true
