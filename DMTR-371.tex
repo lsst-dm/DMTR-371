@@ -31,7 +31,7 @@
 
 \title{LVV-P99: Data Management Acceptance Test Campaign 1 Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-07-14 }
+\date{ 2022-07-27 }
 \author{ Jeffrey Carlin }
 
 \input{history_and_info.tex}
@@ -65,13 +65,22 @@ requirements that have been completed will also be verified.
 \subsection{System Overview}
 \label{sect:systemoverview}
 
- For this campaign, we will use data products and artifacts from Data
-Preview 0.2, which consists of DESC Data Challenge 2 (DC2) data
-reprocessed using the LSST Science
-Pipelines.\\[2\baselineskip]\textbf{Applicable Documents:}\\
+ This test campaign is intended to verify that the DM system satisfies at
+least half of the priority 1a requirements outlined in the Data
+Management System Requirements (DMSR;
+\href{https://lse-61.lsst.io/}{LSE-61} ), ensuring that we are
+progressing toward readiness for the installation and operation of
+ComCam. Additional DMSR requirements will be verified in later
+Acceptance Test Campaigns.\\[2\baselineskip]\textbf{Applicable
+Documents:}\\
 \citeds{LSE-61}: Data Management System (DMS) Requirements\\
 \citeds{LDM-503} Data Management Test Plan\\
-\citeds{LDM-639}: Data Management Acceptance Test Specification\\[2\baselineskip]
+\citeds{LDM-639}: Data Management Acceptance Test
+Specification\\[2\baselineskip]Tests in this campaign will use data
+products and artifacts from Data Preview 0.2, which consists of DESC
+Data Challenge 2 (DC2) simulated data reprocessed using the LSST Science
+Pipelines. Additional on-sky data from auxTel imaging campaigns will be
+used when appropriate.
 
 
 \subsection{Document Overview}
@@ -112,6 +121,10 @@ The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jsp
 
 \subsection{Verification Environment}
 \label{sect:hwconf}
+  Most testing will be performed using the Rubin Science Platform (RSP),
+hosted at the IDF, with auxTel-related tests using the development
+cluster at the USDF. In particular, we will use version X\_XXXX\_XX of
+the Pipelines.
 
 
 
@@ -146,6 +159,14 @@ The personnel involved in the test campaign is shown in the following table.
 Jeffrey Carlin }
 } \\\hline
 \textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1841}{LVV-T1841}
+& {\small Jeffrey Carlin } & {\small  } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1087}{LVV-T1087}
 & {\small Fritz Mueller } & {\small  } &
 \begin{minipage}[]{6cm}
@@ -581,6 +602,15 @@ Jeffrey Carlin }
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C208}{LVV-C208}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ Data Management Acceptance Test Campaign 1 }} & Not Executed \\\hline
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1841}{LVV-T1841}
+&  1
+& Not Executed &
+\begin{minipage}[]{9cm}
+\smallskip
+
+\medskip
+\end{minipage}
+&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1087}{LVV-T1087}
 &  1
 & Not Executed &
@@ -1089,6 +1119,46 @@ Not provided.
 Not provided.
 
 \subsubsection{Test Cases in LVV-C208 Test Cycle}
+
+\paragraph{ LVV-T1841 - Verify calculation of scientifically unusable pixel fraction }\mbox{}\\
+
+Version \textbf{1}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1841}{\textit{ LVV-T1841 } }
+test case in Jira.
+
+Verify that the DM system provides software to assess whether the
+maximum fraction of pixels scientifically unusable per sensor out of the
+total allowable fraction of sensors meeting this performance is less
+than~\textbf{PixFrac = 1 percent}.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Not Executed }
+
+Final comment:\\
+
+
+Detailed steps results:
+
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
 
 \paragraph{ LVV-T1087 - Full Table Joins Functional Test }\mbox{}\\
 
