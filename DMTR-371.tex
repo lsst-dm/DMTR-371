@@ -360,7 +360,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1946}{LVV-T1946}
-& {\small Jeffrey Carlin } & {\small  } &
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -368,7 +368,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1947}{LVV-T1947}
-& {\small Jeffrey Carlin } & {\small  } &
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -376,7 +376,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T28}{LVV-T28}
-& {\small Colin Slater } & {\small  } &
+& {\small Colin Slater } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -552,7 +552,7 @@ Jeffrey Carlin }
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P99}{LVV-P99}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ Data Management Acceptance Test Campaign 1 }} & Draft \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C208}{LVV-C208}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ Data Management Acceptance Test Campaign 1 }} & Not Executed \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ Data Management Acceptance Test Campaign 1 }} & In Progress \\\hline
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T32}{LVV-T32}
 &  1
@@ -781,28 +781,46 @@ Jeffrey Carlin }
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1946}{LVV-T1946}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Executed at the IDF using Science Pipelines version
+w\_2022\_32.\\[2\baselineskip]This test case can be executed by running
+the script test\_LVV-T1946.py, which is available in the test report
+github repository's ``scripts/'' directory.\\[2\baselineskip]Note that
+in this test we only checked source catalogs that are persisted in
+butler repositories. Catalogs in other forms (e.g., parquet tables, or
+tables in the Qserv database) will be confirmed separately.
 \medskip
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1947}{LVV-T1947}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Executed at the IDF using Science Pipelines version
+w\_2022\_32.\\[2\baselineskip]This test case can be executed by running
+the script test\_LVV-T1947.py, which is available in the test report
+github repository's ``scripts/'' directory.\\[2\baselineskip]Note that
+in this test we only checked source catalogs that are persisted in
+butler repositories. Catalogs in other forms (e.g., parquet tables, or
+tables in the Qserv database) will be confirmed separately.
 \medskip
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T28}{LVV-T28}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Executed at the IDF using Science Pipelines version
+w\_2022\_32.\\[2\baselineskip]This test case can be executed by running
+the script test\_LVV-T28.py, which is available in the test report
+github repository's ``scripts/'' directory.\\[2\baselineskip]Note that
+in this test we only checked source catalogs that are persisted in
+butler repositories. Catalogs in other forms (e.g., parquet tables, or
+tables in the Qserv database) will be confirmed separately.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -1001,7 +1019,7 @@ Not yet available.
 Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C208}{Data Management Acceptance Test Campaign 1}} in Jira.
 
 Test Cycle name: Data Management Acceptance Test Campaign 1\\
-Status: Not Executed
+Status: In Progress
 
 This test cycle verifies a subset of
 \href{https://lse-61.lsst.io/}{DMSR} (\citeds{LSE-61}) requirements in order to
@@ -1011,7 +1029,8 @@ Testing will use data products and artifacts from Data Preview 0.2
 reprocessing of DESC DC2 data.
 
 \subsubsection{Software Version/Baseline}
-Not provided.
+Using Science Pipelines version w\_2022\_32 on the interim data facility
+(IDF) at data.lsst.cloud.
 
 \subsubsection{Configuration}
 Not provided.
@@ -2785,16 +2804,18 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Authenticate to the notebook aspect of the LSST Science Platform
-(NB-LSP). ~This is currently at
-https://lsst-lsp-stable.ncsa.illinois.edu/nb.
+Authenticate to the notebook aspect of the Rubin Science Platform
+(NB-RSP). This is currently at either \url{https://data.lsst.cloud/nb}
+(for the interim data facility, or IDF) or
+\url{https://usdf-rsp.slac.stanford.edu/nb} (for the US data facility,
+or USDF).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Redirection to the spawner page of the NB-LSP allowing selection of the
-containerized stack version and machine flavor.
+Redirection to the spawner page of the NB-RSP allowing selection of the
+containerized science pipelines version and machine flavor.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2809,7 +2830,8 @@ Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
  Description \\
 {\footnotesize
 Spawn a container by:\\
-1) choosing an appropriate stack version: e.g. the latest weekly.\\
+1) choosing an appropriate science pipelines version: e.g. the latest
+weekly.\\
 2) choosing an appropriate machine flavor: e.g. medium\\
 3) click ``Spawn''
 
@@ -2818,7 +2840,7 @@ Spawn a container by:\\
   Expected Result \\
 {\footnotesize
 Redirection to the JupyterLab environment served from the chosen
-container containing the correct stack version.
+container containing the correct science pipelines version.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2877,28 +2899,229 @@ Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
  Description \\
 {\footnotesize
 Execute a query in a notebook to select a small number of stars. In the
-example code below, we query the WISE catalog, then extract the results
-to an Astropy table.
+example code below, we query the Data Preview 0.2 (DP0.2) catalog, then
+extract the results to an Astropy table.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Example Code \\
 {\footnotesize
 \begin{verbatim}
-import pandas
-import pyvo
-service = pyvo.dal.TAPService('http://lsst-lsp-stable.ncsa.illinois.edu/api/tap')
-\end{verbatim}
+CELL 1:
 
-results = service.search(``SELECT ra, decl, w1mpro\_ep, w2mpro\_ep,
-w3mpro\_ep FROM wise\_00.allwise\_p3as\_mep WHERE CONTAINS(POINT('ICRS',
-ra, decl), CIRCLE('ICRS', 192.85, 27.13, .2)) = 1'')\\
-tab = results.to\_table()
+from IPython.display import Markdown as md
+from lsst.rsp import get_tap_service, retrieve_query
+    
+service = get_tap_service()
+md(f'The service endpoint for TAP in this environment is:\n\n &#10145;&nbsp;&nbsp;   {service.baseurl}')
+
+CELL 2:
+
+results = service.search("SELECT coord_ra, coord_dec, g_cModelFlux, r_cModelFlux \
+                          FROM dp02_dc2_catalogs.Object \
+                          WHERE CONTAINS(POINT('ICRS', coord_ra, coord_dec), \
+                          CIRCLE('ICRS', 60.0, -30.0, 0.05)) = 1")
+\end{verbatim}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+Screen output from CELL 1:\\[2\baselineskip]The service endpoint for TAP
+in this environment is:\\
+➡ \url{https://data.lsst.cloud/api/tap}\\[2\baselineskip]Example screen
+output from CELL 2 (may not contain the same 10
+entries):\\[2\baselineskip]\emph{Table length=5533}
+
+coord\_ra
+
+coord\_dec
+
+g\_cModelFlux
+
+r\_cModelFlux
+
+deg
+
+deg
+
+nJy
+
+nJy
+
+float64
+
+float64
+
+float64
+
+float64
+
+59.9987401
+
+-29.9728812
+
+62.7060123
+
+49.3496319
+
+59.9995813
+
+-29.9743232
+
+166.0433743
+
+394.8261645
+
+59.9989853
+
+-29.9750457
+
+78.9557388
+
+85.2691232
+
+59.9993731
+
+-29.9732406
+
+111.0082072
+
+165.6229656
+
+60.0477786
+
+-29.9736805
+
+68.4818592
+
+49.4783714
+
+60.0400024
+
+-29.9731507
+
+52.0567337
+
+114.2562171
+
+60.0054666
+
+-29.9728639
+
+146.053072
+
+134.1795803
+
+60.00489
+
+-29.9732239
+
+1436.7150639
+
+3606.8163133
+
+60.0469583
+
+-29.9735655
+
+64.8838762
+
+56.5677789
+
+\ldots{}
+
+\ldots{}
+
+\ldots{}
+
+\ldots{}
+
+60.0053313
+
+-30.0240394
+
+125.6977786
+
+379.8120713
+
+59.9574061
+
+-30.0163726
+
+181.050889
+
+200.8032979
+
+60.0294415
+
+-30.0241709
+
+133.662163
+
+230.8673464
+
+59.9563419
+
+-30.0239843
+
+1551.2308712
+
+4611.0406542
+
+59.9879157
+
+-30.0181116
+
+76.3796313
+
+46.5682713
+
+60.0204061
+
+-30.0228981
+
+174.7738892
+
+304.9991558
+
+60.001638
+
+-30.0183336
+
+43.9593753
+
+46.9695823
+
+59.9861714
+
+-30.0173405
+
+164.6261404
+
+288.8650875
+
+59.9537443
+
+-30.0160515
+
+2228.7204658
+
+5091.2041475
+
+59.9683498
+
+-30.0239539
+
+835.415374
+
+1101.0548649
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+&\tabularnewline
+\bottomrule
+\end{longtable}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2913,7 +3136,7 @@ Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
  Description \\
 {\footnotesize
 Using the example code below, save the files to your storage space on
-the LSP Notebook Aspect.\\[2\baselineskip]Confirm that non-empty output
+the RSP Notebook Aspect.\\[2\baselineskip]Confirm that non-empty output
 files appear on disk.
 
 }
@@ -2999,9 +3222,10 @@ select one of the following:\\[2\baselineskip]
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-You will be returned to the LSP landing page:
-\url{https://lsst-lsp-stable.ncsa.illinois.edu/} It is now safe to close
-the browser window.~
+You will be returned to the RSP landing page: either
+\url{https://data.lsst.cloud/nb} (for the interim data facility, or IDF)
+or \url{https://usdf-rsp.slac.stanford.edu/nb} (for the US data
+facility, or USDF). It is now safe to close the browser window.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -3035,9 +3259,9 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Navigate to the Portal Aspect endpoint. ~The stable version should be
-used for this test and is currently located at:
-https://lsst-lsp-stable.ncsa.illinois.edu/portal/app/ .
+Navigate to the Portal Aspect endpoint. ~The stable version at the
+interim data facility (IDF) should be used for this test and is
+currently located at: \url{https://data.lsst.cloud/portal/app}.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -3057,7 +3281,7 @@ Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Enter a valid set of credentials for an LSST user with LSP access on the
+Enter a valid set of credentials for an LSST user with RSP access on the
 instance under test.
 
 }
@@ -3199,16 +3423,17 @@ Step 8 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Currently, there is no logout mechanism on the portal.\\
-This should be updated as the system matures.\\[2\baselineskip]Simply
-close the browser window.
+Click the ``logout'' button at the upper right corner of the Portal
+screen.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Closed browser window. ~When navigating to the portal endpoint, expect
-to execute the steps in LVV-T849.
+Returned to the RSP home page at
+\href{https://data.lsst.cloud/}{https://data.lsst.cloud/.} When
+navigating to the portal endpoint, expect to execute the steps in
+LVV-T849.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -4035,12 +4260,56 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Delegate to CPP
+Execute Test Case
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T88}{LVV-T88},
+which runs the calibration products pipeline.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Examine the fringe-correction frames created by the pipeline to ensure
+that they are well-formed.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Fringe frame is an lsst.afw.image.Exposure with reasonable pixel values.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Apply the fringe correction to a science image and confirm that it has
+the desired effect.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Images before and after correction have different pixel values.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -4181,16 +4450,22 @@ coadd images are in flux units.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Executed at the IDF using Science Pipelines version
+w\_2022\_32.\\[2\baselineskip]This test case can be executed by running
+the script test\_LVV-T1946.py, which is available in the test report
+github repository's ``scripts/'' directory.\\[2\baselineskip]Note that
+in this test we only checked source catalogs that are persisted in
+butler repositories. Catalogs in other forms (e.g., parquet tables, or
+tables in the Qserv database) will be confirmed separately.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4202,8 +4477,10 @@ Identify the path to the data repository, which we will refer to as
   Example Code \\
 {\footnotesize
 \begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
 \end{verbatim}
 
 }
@@ -4216,11 +4493,16 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Tests were performed by executing test\_LVV-T1946.py, which contains the
+following:\\[2\baselineskip]\# For DP0.2 data on the IDF:\\
+config = `dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4236,11 +4518,18 @@ coadds with the Butler.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+By default, the test script contains the following tract/patch/band
+combination. This can be changed if desired.\\[2\baselineskip]\# Select
+an arbitrary source catalog from a deepCoadd:\\
+band = `i'\\
+tract = 3828\\
+patch = 13\\[2\baselineskip]\# Run the test\\
+LVVT1946(tract, patch, band)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4256,6 +4545,245 @@ Confirmation of measurements in catalogs encoded in flux units.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Execute the script, which checks all flux fields for the input coadd
+image:\\
+`python test\_LVV-T1946.py`\\[2\baselineskip]Screen outputs:\\
+lsst\_distrib ~ ~ ~ ~ ~g0b29ad24fb+cafeaf151e ~ ~current w\_2022\_32
+setup\\
+Input dataId: \{'tract': 3828, `band': `i', `patch': 13\}\\
+base\_SdssShape\_instFlux \ldots{}.. count\\
+base\_SdssShape\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_3\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_3\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_4\_5\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_4\_5\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_6\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_6\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_9\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_9\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_12\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_12\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_17\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_17\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_25\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_25\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_35\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_35\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_50\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_50\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_70\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_70\_0\_instFluxErr \ldots{}.. count\\
+base\_GaussianFlux\_instFlux \ldots{}.. count\\
+base\_GaussianFlux\_instFluxErr \ldots{}.. count\\
+base\_LocalBackground\_instFlux \ldots{}.. count\\
+base\_LocalBackground\_instFluxErr \ldots{}.. count\\
+base\_PsfFlux\_instFlux \ldots{}.. count\\
+base\_PsfFlux\_instFluxErr \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_0\_5\_instFlux \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_0\_5\_instFluxErr \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_0\_7\_instFlux \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_0\_7\_instFluxErr \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_1\_0\_instFlux \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_1\_0\_instFluxErr \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_1\_5\_instFlux \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_1\_5\_instFluxErr \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_2\_5\_instFlux \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_2\_5\_instFluxErr \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_3\_0\_instFlux \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_3\_0\_instFluxErr \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_PsfFlux\_instFlux \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_PsfFlux\_instFluxErr \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_Optimal\_instFlux \ldots{}.. count\\
+ext\_gaap\_GaapFlux\_1\_15x\_Optimal\_instFluxErr \ldots{}.. count\\
+ext\_photometryKron\_KronFlux\_instFlux \ldots{}.. count\\
+ext\_photometryKron\_KronFlux\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_0\_3\_3\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_0\_3\_3\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_0\_4\_5\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_0\_4\_5\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_0\_6\_0\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_0\_6\_0\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_0\_kron\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_0\_kron\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_1\_3\_3\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_1\_3\_3\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_1\_4\_5\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_1\_4\_5\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_1\_6\_0\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_1\_6\_0\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_1\_kron\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_1\_kron\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_2\_3\_3\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_2\_3\_3\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_2\_4\_5\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_2\_4\_5\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_2\_6\_0\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_2\_6\_0\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_2\_kron\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_2\_kron\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_3\_3\_3\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_3\_3\_3\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_3\_4\_5\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_3\_4\_5\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_3\_6\_0\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_3\_6\_0\_instFluxErr \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_3\_kron\_instFlux \ldots{}.. count\\
+ext\_convolved\_ConvolvedFlux\_3\_kron\_instFluxErr \ldots{}.. count\\
+modelfit\_CModel\_initial\_instFlux \ldots{}.. count\\
+modelfit\_CModel\_initial\_instFluxErr \ldots{}.. count\\
+modelfit\_CModel\_initial\_instFlux\_inner \ldots{}.. count\\
+modelfit\_CModel\_exp\_instFlux \ldots{}.. count\\
+modelfit\_CModel\_exp\_instFluxErr \ldots{}.. count\\
+modelfit\_CModel\_exp\_instFlux\_inner \ldots{}.. count\\
+modelfit\_CModel\_dev\_instFlux \ldots{}.. count\\
+modelfit\_CModel\_dev\_instFluxErr \ldots{}.. count\\
+modelfit\_CModel\_dev\_instFlux\_inner \ldots{}.. count\\
+modelfit\_CModel\_instFlux \ldots{}.. count\\
+modelfit\_CModel\_instFluxErr \ldots{}.. count\\
+modelfit\_CModel\_instFlux\_inner \ldots{}.. count\\
+undeblended\_base\_CircularApertureFlux\_3\_0\_instFlux \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_3\_0\_instFluxErr \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_4\_5\_instFlux \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_4\_5\_instFluxErr \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_6\_0\_instFlux \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_6\_0\_instFluxErr \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_9\_0\_instFlux \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_9\_0\_instFluxErr \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_12\_0\_instFlux \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_12\_0\_instFluxErr \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_17\_0\_instFlux \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_17\_0\_instFluxErr \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_25\_0\_instFlux \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_25\_0\_instFluxErr \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_35\_0\_instFlux \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_35\_0\_instFluxErr \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_50\_0\_instFlux \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_50\_0\_instFluxErr \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_70\_0\_instFlux \ldots{}..
+count\\
+undeblended\_base\_CircularApertureFlux\_70\_0\_instFluxErr \ldots{}..
+count\\
+undeblended\_base\_PsfFlux\_instFlux \ldots{}.. count\\
+undeblended\_base\_PsfFlux\_instFluxErr \ldots{}.. count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_0\_5\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_0\_5\_instFluxErr \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_0\_7\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_0\_7\_instFluxErr \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_1\_0\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_1\_0\_instFluxErr \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_1\_5\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_1\_5\_instFluxErr \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_2\_5\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_2\_5\_instFluxErr \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_3\_0\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_3\_0\_instFluxErr \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_PsfFlux\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_PsfFlux\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_Optimal\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_gaap\_GaapFlux\_1\_15x\_Optimal\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_photometryKron\_KronFlux\_instFlux \ldots{}.. count\\
+undeblended\_ext\_photometryKron\_KronFlux\_instFluxErr \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_0\_3\_3\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_0\_3\_3\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_0\_4\_5\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_0\_4\_5\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_0\_6\_0\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_0\_6\_0\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_0\_kron\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_0\_kron\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_1\_3\_3\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_1\_3\_3\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_1\_4\_5\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_1\_4\_5\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_1\_6\_0\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_1\_6\_0\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_1\_kron\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_1\_kron\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_2\_3\_3\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_2\_3\_3\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_2\_4\_5\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_2\_4\_5\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_2\_6\_0\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_2\_6\_0\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_2\_kron\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_2\_kron\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_3\_3\_3\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_3\_3\_3\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_3\_4\_5\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_3\_4\_5\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_3\_6\_0\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_3\_6\_0\_instFluxErr
+\ldots{}.. count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_3\_kron\_instFlux \ldots{}..
+count\\
+undeblended\_ext\_convolved\_ConvolvedFlux\_3\_kron\_instFluxErr
+\ldots{}.. count\\[2\baselineskip]All forced\_src instFlux entries have
+units of counts: True\\[2\baselineskip]All flux fields have units of
+``counts'', so this test has passed.
 
 }
 
@@ -4271,16 +4799,22 @@ difference images are in flux units.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Executed at the IDF using Science Pipelines version
+w\_2022\_32.\\[2\baselineskip]This test case can be executed by running
+the script test\_LVV-T1947.py, which is available in the test report
+github repository's ``scripts/'' directory.\\[2\baselineskip]Note that
+in this test we only checked source catalogs that are persisted in
+butler repositories. Catalogs in other forms (e.g., parquet tables, or
+tables in the Qserv database) will be confirmed separately.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4292,8 +4826,10 @@ Identify the path to the data repository, which we will refer to as
   Example Code \\
 {\footnotesize
 \begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
 \end{verbatim}
 
 }
@@ -4306,11 +4842,16 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Tests were performed by executing test\_LVV-T1947.py, which contains the
+following:\\[2\baselineskip]\# For DP0.2 data on the IDF:\\
+config = `dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4326,11 +4867,18 @@ difference images with the Butler.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+By default, the test script contains the following tract/patch/band
+combination. This can be changed if desired.\\[2\baselineskip]\# Select
+an arbitrary source catalog from a difference image:\\
+instrument = `LSSTCam-imSim'\\
+detector = 5\\
+visit = 924041\\[2\baselineskip]\# Run the test\\
+LVVT1947(instrument, visit, detector)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4347,6 +4895,59 @@ Confirmation of measurements in catalogs encoded in flux units.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Execute the script, which checks all flux fields for the input
+goodSeeingDiff image:\\
+`python test\_LVV-T1947.py`\\[2\baselineskip]Screen
+outputs:\\[2\baselineskip]lsst\_distrib ~ ~ ~ ~ ~g0b29ad24fb+cafeaf151e
+~ ~current w\_2022\_32 setup\\
+Input dataId: \{'instrument': `LSSTCam-imSim', `visit': 924041,
+`detector': 5\}\\
+base\_SdssShape\_instFlux \ldots{}.. count\\
+base\_SdssShape\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_3\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_3\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_4\_5\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_4\_5\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_6\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_6\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_9\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_9\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_12\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_12\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_17\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_17\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_25\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_25\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_35\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_35\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_50\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_50\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_70\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_70\_0\_instFluxErr \ldots{}.. count\\
+base\_GaussianFlux\_instFlux \ldots{}.. count\\
+base\_GaussianFlux\_instFluxErr \ldots{}.. count\\
+base\_PeakLikelihoodFlux\_instFlux \ldots{}.. count\\
+base\_PeakLikelihoodFlux\_instFluxErr \ldots{}.. count\\
+base\_PsfFlux\_instFlux \ldots{}.. count\\
+base\_PsfFlux\_instFluxErr \ldots{}.. count\\
+ip\_diffim\_NaiveDipoleFlux\_pos\_instFlux \ldots{}.. count\\
+ip\_diffim\_NaiveDipoleFlux\_pos\_instFluxErr \ldots{}.. count\\
+ip\_diffim\_NaiveDipoleFlux\_neg\_instFlux \ldots{}.. count\\
+ip\_diffim\_NaiveDipoleFlux\_neg\_instFluxErr \ldots{}.. count\\
+ip\_diffim\_PsfDipoleFlux\_pos\_instFlux \ldots{}.. count\\
+ip\_diffim\_PsfDipoleFlux\_pos\_instFluxErr \ldots{}.. count\\
+ip\_diffim\_PsfDipoleFlux\_neg\_instFlux \ldots{}.. count\\
+ip\_diffim\_PsfDipoleFlux\_neg\_instFluxErr \ldots{}.. count\\
+ip\_diffim\_DipoleFit\_pos\_instFlux \ldots{}.. count\\
+ip\_diffim\_DipoleFit\_pos\_instFluxErr \ldots{}.. count\\
+ip\_diffim\_DipoleFit\_neg\_instFlux \ldots{}.. count\\
+ip\_diffim\_DipoleFit\_neg\_instFluxErr \ldots{}.. count\\
+ip\_diffim\_DipoleFit\_instFlux \ldots{}.. count\\
+ip\_diffim\_forced\_PsfFlux\_instFlux \ldots{}.. count\\
+ip\_diffim\_forced\_PsfFlux\_instFluxErr \ldots{}..
+count\\[2\baselineskip]All diaSrc table instFlux entries have units of
+counts: True\\[2\baselineskip]All flux fields have units of ``counts'',
+so this test has passed.
 
 }
 
@@ -4362,16 +4963,22 @@ processed visit images are in flux units.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Executed at the IDF using Science Pipelines version
+w\_2022\_32.\\[2\baselineskip]This test case can be executed by running
+the script test\_LVV-T28.py, which is available in the test report
+github repository's ``scripts/'' directory.\\[2\baselineskip]Note that
+in this test we only checked source catalogs that are persisted in
+butler repositories. Catalogs in other forms (e.g., parquet tables, or
+tables in the Qserv database) will be confirmed separately.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4383,8 +4990,10 @@ Identify the path to the data repository, which we will refer to as
   Example Code \\
 {\footnotesize
 \begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
 \end{verbatim}
 
 }
@@ -4397,11 +5006,16 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Tests were performed by executing test\_LVV-T28.py, which contains the
+following:\\[2\baselineskip]\# For DP0.2 data on the IDF:\\
+config = `dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4417,11 +5031,18 @@ coadds with the Butler.~
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+By default, the test script contains the following tract/patch/band
+combination. This can be changed if desired.\\[2\baselineskip]\# Select
+an arbitrary source catalog from a deepCoadd:\\
+instrument = `LSSTCam-imSim'\\
+detector = 5\\
+visit = 924041\\[2\baselineskip]\# Run the test\\
+LVVT28(instrument, visit, detector)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4438,6 +5059,49 @@ Confirmation of measurements in catalogs encoded in flux units.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Execute the script, which checks all flux fields for the input PVI:\\
+`python test\_LVV-T28.py`\\[2\baselineskip]lsst\_distrib ~ ~ ~ ~
+~g0b29ad24fb+cafeaf151e ~ ~current w\_2022\_32 setup\\
+Input dataId: \{'instrument': `LSSTCam-imSim', `visit': 924041,
+`detector': 5\}\\
+deblend\_psf\_instFlux \ldots{}.. count\\
+base\_Blendedness\_raw\_child\_instFlux \ldots{}.. count\\
+base\_Blendedness\_raw\_parent\_instFlux \ldots{}.. count\\
+base\_Blendedness\_abs\_child\_instFlux \ldots{}.. count\\
+base\_Blendedness\_abs\_parent\_instFlux \ldots{}.. count\\
+base\_SdssShape\_instFlux \ldots{}.. count\\
+base\_SdssShape\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_3\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_3\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_4\_5\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_4\_5\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_6\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_6\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_9\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_9\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_12\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_12\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_17\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_17\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_25\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_25\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_35\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_35\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_50\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_50\_0\_instFluxErr \ldots{}.. count\\
+base\_CircularApertureFlux\_70\_0\_instFlux \ldots{}.. count\\
+base\_CircularApertureFlux\_70\_0\_instFluxErr \ldots{}.. count\\
+base\_GaussianFlux\_instFlux \ldots{}.. count\\
+base\_GaussianFlux\_instFluxErr \ldots{}.. count\\
+base\_LocalBackground\_instFlux \ldots{}.. count\\
+base\_LocalBackground\_instFluxErr \ldots{}.. count\\
+base\_PsfFlux\_instFlux \ldots{}.. count\\
+base\_PsfFlux\_instFluxErr \ldots{}.. count\\
+ext\_photometryKron\_KronFlux\_instFlux \ldots{}.. count\\
+ext\_photometryKron\_KronFlux\_instFluxErr \ldots{}..
+count\\[2\baselineskip]All src table instFlux entries have units of
+counts: True\\[2\baselineskip]All flux fields have units of ``counts'',
+so this test has passed.
 
 }
 
@@ -4451,7 +5115,8 @@ Verify that per-band deep coadds and best-seeing coadds are present,
 kept, and available.
 
 \textbf{ Preconditions}:\\
-Precursor data from HSC PDR.
+Precursor data from HSC PDR or simulated DC2 data (as reprocessed with
+LSST Science Pipelines to produce Data Preview 0.2).
 
 Execution status: {\bf Not Executed }
 
@@ -4768,9 +5433,10 @@ Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Run the Prompt Processing payload on these data. ~Verify that Processed
-Visit Images are generated at correct size and with significant
-instrumental artifacts removed.
+Run the initial steps (including instrument signature removal and
+calibration) of Data Release (or Prompt) Processing on these data.
+Verify that Processed Visit Images are generated at the correct size and
+with significant instrumental artifacts removed.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -5582,8 +6248,10 @@ Identify the path to the data repository, which we will refer to as
   Example Code \\
 {\footnotesize
 \begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
 \end{verbatim}
 
 }
@@ -5643,11 +6311,50 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+Identify an image containing bright saturated stars. Load this image
+into an image viewer such as Firefly or DS9.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+Image with bright stars is displayed.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Confirm that each of the following is true:\\
+
+\begin{itemize}
+\tightlist
+\item
+  the XY coordinate origin is at the lower left,
+\item
+  the x-coordinate increases left-to-right, and the y-coordinate
+  increases bottom-to-top
+\item
+  bleed trails of saturated stars are vertical (i.e., the parallel
+  transfer direction is oriented vertically)
+\item
+  the sky orientation places east 90 degrees counter-clockwise from
+  north
+\end{itemize}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Via coordinate grid overlays or similar, an image is demonstrated to
+meet the necessary conditions.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
