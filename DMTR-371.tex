@@ -31,7 +31,7 @@
 
 \title{LVV-P99: Data Management Acceptance Test Campaign 1 Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-08-17 }
+\date{ 2022-08-23 }
 \author{ Jeffrey Carlin }
 
 \input{history_and_info.tex}
@@ -432,7 +432,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T127}{LVV-T127}
-& {\small Robert Lupton } & {\small  } &
+& {\small Robert Lupton } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -488,7 +488,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T74}{LVV-T74}
-& {\small Eric Bellm } & {\small  } &
+& {\small Eric Bellm } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -880,7 +880,7 @@ tables in the Qserv database) will be confirmed separately.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T127}{LVV-T127}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -943,10 +943,10 @@ tables in the Qserv database) will be confirmed separately.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T74}{LVV-T74}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+See attached artifact notebook ``test\_LVV-T74.ipynb'' for details.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -5732,7 +5732,7 @@ done by inserting artificial sources into existing datasets.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -5741,7 +5741,7 @@ Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5759,11 +5759,17 @@ input images.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+For this test, we use Data Preview 0.2 data, which is the reprocessed
+version of the simulated DC2 dataset. All work for this test took place
+in the notebook ``test\_LVV-T127.ipynb'', which is archived alongside
+the Test Report for this campaign.\\[2\baselineskip]In the notebook, a
+number of explorations show that the source detection and measurement
+algorithms ran, and produced reasonable measurements, as required.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5783,6 +5789,13 @@ measured fluxes are reasonably close to the simulated inputs.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+We demonstrate in the notebook (from which the figure below is derived)
+that sources are detected to a limit of S/N\textgreater{}5, which
+reaches a depth of at least 24th
+magnitude.\\[2\baselineskip]\includegraphics[width=3.12500in]{jira_imgs/3038.png}\\
+We also demonstrate that the measurements agree with the ``true'' fluxes
+of the simulated sources rather well:\\
+\includegraphics[width=3.12500in]{jira_imgs/3039.png}
 
 }
 
@@ -6397,8 +6410,10 @@ Identify the path to the data repository, which we will refer to as
   Example Code \\
 {\footnotesize
 \begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
 \end{verbatim}
 
 }
@@ -6673,16 +6688,16 @@ Verify that the DMS can produce Template Coadds for DIA processing.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\See attached artifact notebook ``test\_LVV-T74.ipynb'' for details.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -6704,11 +6719,15 @@ DIAObject measurements.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Logged into the RSP at the Interim Data Facility, and accessed the
+shared butler repositories containing Data Preview 0.2 data. All work
+for this Test Case is in Jupyter notebook ``test\_LVV-T74.ipynb'', which
+is archived along with the test report.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -6724,11 +6743,15 @@ catalogs contain reasonable values for measured quantities of interest.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+We confirmed that the expected data products are present, including
+DIASource tables, DIAObject measurements and their associations with
+DIASource, template images, and that all have been photometrically and
+astrometrically calibrated.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -6743,6 +6766,8 @@ Confirm that the template coadds have been created and are well-formed.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Finally, we displayed a template coadd and compared it to the original
+image. See notebook ``test\_LVV-T74.ipynb'' for details.
 
 }
 
@@ -6820,8 +6845,10 @@ Identify the path to the data repository, which we will refer to as
   Example Code \\
 {\footnotesize
 \begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
 \end{verbatim}
 
 }
