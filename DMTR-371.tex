@@ -30,9 +30,8 @@
 \setDocCompact{true}
 
 \title{LVV-P99: Data Management Acceptance Test Campaign 1 Test Plan and Report}
-
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-08-23 }
+\date{ 2022-08-24 }
 \author{ Jeffrey Carlin }
 
 \input{history_and_info.tex}
@@ -425,7 +424,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T129}{LVV-T129}
-& {\small Robert Lupton } & {\small  } &
+& {\small Robert Lupton } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -872,10 +871,21 @@ tables in the Qserv database) will be confirmed separately.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T129}{LVV-T129}
 &  1
-& Not Executed &
+& Pass w/ Deviation &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Executed at the IDF using Science Pipelines version w\_2022\_32. A
+portion of this test case can be executed by running the script
+test\_LVV-T129.py, which is available in the test report github
+repository's ``scripts/'' directory. Qserv tables (i.e., Object tables)
+were checked via the notebook test\_LVV-T129.ipynb, which is available
+in the test report github repository's ``notebooks''
+directory.\\[2\baselineskip]This Test Case is determined to ``Pass with
+Deviation'' because the DIAObject table in Qserv does not clearly
+demonstrate that fluxes are provided in nJy. Though the fluxes are
+probably in nJy (and inspection of code could confirm this), we choose
+not to grant this test a full PASS until the DIAObject table is clearly
+reporting fluxes in nJy.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -884,7 +894,7 @@ tables in the Qserv database) will be confirmed separately.
 & Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+See attached artifact notebook ``test\_LVV-T127.ipynb'' for details.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -5594,16 +5604,27 @@ DRP and AP products.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass w/ Deviation }
 
-Final comment:\\
+Final comment:\\Executed at the IDF using Science Pipelines version w\_2022\_32. A
+portion of this test case can be executed by running the script
+test\_LVV-T129.py, which is available in the test report github
+repository's ``scripts/'' directory. Qserv tables (i.e., Object tables)
+were checked via the notebook test\_LVV-T129.ipynb, which is available
+in the test report github repository's ``notebooks''
+directory.\\[2\baselineskip]This Test Case is determined to ``Pass with
+Deviation'' because the DIAObject table in Qserv does not clearly
+demonstrate that fluxes are provided in nJy. Though the fluxes are
+probably in nJy (and inspection of code could confirm this), we choose
+not to grant this test a full PASS until the DIAObject table is clearly
+reporting fluxes in nJy.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5615,8 +5636,10 @@ Identify the path to the data repository, which we will refer to as
   Example Code \\
 {\footnotesize
 \begin{verbatim}
-import lsst.daf.persistence as dafPersist
-butler = dafPersist.Butler(inputs='DATA/path')
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
 \end{verbatim}
 
 }
@@ -5629,11 +5652,16 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Tests were performed by executing test\_LVV-T28.py, which contains the
+following:\\[2\baselineskip]\# For DP0.2 data on the IDF:\\
+config = `dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5648,11 +5676,18 @@ Ingest the data products from an appropriate DRP-processed dataset.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+By default, the test script contains the following detector/visit
+combination. This can be changed if desired.\\[2\baselineskip]\# Select
+an arbitrary source catalog from a PVI and difference image:\\
+instrument = `LSSTCam-imSim'\\
+detector = 5\\
+visit = 924041\\[2\baselineskip]\# Run the test\\
+python test\_LVV-T129
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5672,11 +5707,24 @@ as tools to convert measured fluxes to magnitudes (and vice-versa).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The test script confirms that AB-calibrated magnitudes and fluxes in nJy
+are available for all Sources. This is checked for both PVIs (i.e.,
+``calexps'') and difference images.The script also compares the results
+from the Science Pipelines to those calculated via transformations from
+nJy to ABmag in `astropy` tools.\\[2\baselineskip]python
+test\_LVV-T129.py\\
+lsst\_distrib g0b29ad24fb+cafeaf151e current w\_2022\_32 setup\\
+Input dataId: \{'instrument': `LSSTCam-imSim', `visit': 924041,
+`detector': 5\}\\[2\baselineskip]TRUE: src table fluxes are available in
+calibrated nJy and ABmag.\\
+Input dataId: \{'instrument': `LSSTCam-imSim', `visit': 924041,
+`detector': 5\}\\[2\baselineskip]TRUE: goodSeeingDiff\_diaSrc table
+fluxes are available in calibrated nJy and ABmag.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5691,11 +5739,14 @@ Ingest the data products from an appropriate AP processing dataset.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+This was confirmed in Step 3 for single-visit AP processing. In the
+following step, we will confirm the fluxes and magnitudes for Object
+tables.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 5 & Step Execution Status: \textbf{ Pass w/ Deviation } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5716,6 +5767,15 @@ magnitudes (and vice-versa).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+For the Object and DIAObject tables, we instead query the Qserv database
+via the Rubin Science Platform. The results are seen in notebook
+test\_LVV-T129.ipynb.\\[2\baselineskip]The notebook demonstrates that
+the Object table (i.e., measurements from DRP processed coadd images)
+meets the requirement -- all fluxes are in calibrated nanoJanskys.
+However, the DIAObject table does not report units with the flux values.
+Even though these fluxes may actually be in nJy, the lack of units in
+the database and schema leads us to characterize this step of the test
+as FAILED.
 
 }
 
@@ -5735,7 +5795,7 @@ done by inserting artificial sources into existing datasets.
 
 Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\See attached artifact notebook ``test\_LVV-T127.ipynb'' for details.
 
 
 Detailed steps results:
