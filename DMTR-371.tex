@@ -288,7 +288,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T84}{LVV-T84}
-& {\small Robert Lupton } & {\small  } &
+& {\small Robert Lupton } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -352,7 +352,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T90}{LVV-T90}
-& {\small Robert Lupton } & {\small  } &
+& {\small Robert Lupton } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -732,10 +732,11 @@ Jeffrey Carlin }
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T84}{LVV-T84}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Results are in the notebook ``test\_LVV-T84.ipynb'' attached to the Test
+Report repository.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -805,10 +806,11 @@ Results of the test execution can be found in the notebook
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T90}{LVV-T90}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Results are in the notebook ``test\_LVV-T90.ipynb'' attached to the Test
+Report repository.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -2724,16 +2726,17 @@ Verify that DMS can do this on demand.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Results are in the notebook ``test\_LVV-T84.ipynb'' attached to the Test
+Report repository.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2748,11 +2751,16 @@ Identify the location of an appropriate precursor dataset.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Working on the Rubin Science Platform (RSP) hosted at the USDF (SLAC),
+using Science Pipelines version w\_2022\_32.\\[2\baselineskip]The
+HSC/RC2 dataset we will use is in a shared repository at:\\
+repo = `/sdf/group/rubin/repo/main'\\
+collection = `HSC/runs/RC2/w\_2022\_28/DM-35609'
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2780,11 +2788,13 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+butler = Butler(repo, collections=collection), where the repo and
+collection were specified in Step 1.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2794,11 +2804,10 @@ Import the standard libraries required for the rest of this test:
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Example Code \\
 {\footnotesize
-import osimport lsst.afw.display as afwDisplay\\
+import os\\
+import lsst.afw.display as afwDisplay\\
 from lsst.daf.persistence import Butler\\
-from lsst.ip.isr import IsrTask\\
-from firefly\_client import FireflyClient\\
-from IPython.display import IFrame
+from lsst.ip.isr import IsrTask
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2809,11 +2818,12 @@ from IPython.display import IFrame
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+LIbraries imported.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2837,11 +2847,17 @@ bias = butler.get(тАЬbiasтАЭ, visit=\$VISIT\_ID, detector=2)
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+In our case, we specified a full dataId for a single i-band visit, then
+retrieved the corresponding raw and bias images:\\[2\baselineskip]dataId
+= \{'instrument': `HSC', `detector': 42, `visit': 30482,
+`exposure':30482, `band':'i'\}\\
+raw = butler.get('raw', dataId=dataId)\\
+bias = butler.get('bias', dataId=dataId)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 5 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2859,11 +2875,12 @@ noise.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+\includegraphics[width=3.12500in]{jira_imgs/3055.png}
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 6 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2880,10 +2897,10 @@ isr\_config.doDark=False\\
 isr\_config.doFlat=False\\
 isr\_config.doFringe=False\\
 isr\_config.doDefect=False\\
-isr\_config.doAddDistortionModel=False\\
 isr\_config.doLinearize=False\\
 isr = IsrTask(config=isr\_config)\\
-result = isr.run(raw, bias=bias)
+result = isr.run(raw, bias=bias, detectorNum=raw.detector.getId(),
+camera=obs\_lsst.LsstCamImSim.getCamera())
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -2895,11 +2912,24 @@ A trimmed, bias-corrected image in `result`.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The ``result'' image was returned. To confirm the bias subtraction had
+the desired effect, we printed some statistics to the
+screen:\\[2\baselineskip]
+
+\begin{verbatim}
+  image       median     stddev    (of image pixel values)
+bias:        0.07311707 0.23739594
+raw:         8130.0 2496.6898982587295
+after bias:  6802.6895 895.51544
+\end{verbatim}
+
+The noise is reduced significantly, suggesting the bias had its intended
+effect.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 7 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2917,6 +2947,11 @@ reduced relative to the raw frame).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+This image displays the raw frame on the left, and the same image after
+bias subtraction on the right.\\
+\includegraphics[width=3.75000in]{jira_imgs/3056.png}\\
+We have thus demonstrated that the bias correction can be applied on
+demand.
 
 }
 
@@ -4186,16 +4221,17 @@ product.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Results are in the notebook ``test\_LVV-T90.ipynb'' attached to the Test
+Report repository.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4211,11 +4247,16 @@ taken with the shutter closed).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Working on the Rubin Science Platform (RSP) hosted at the USDF (SLAC),
+using Science Pipelines version w\_2022\_32.\\[2\baselineskip]The
+HSC/RC2 dataset we will use is in a shared repository at:\\
+repo = `/sdf/group/rubin/repo/main'\\
+collection = `HSC/runs/RC2/w\_2022\_28/DM-35609'
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4231,11 +4272,13 @@ produce dark correction frames.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The ISR correction steps have been executed during the bi-weekly RC2
+reprocessing campaign.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4253,6 +4296,10 @@ Data Butler.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The following image was retrieved from the Butler. It looks like a
+well-formed image, and shows some minor features and the bottom-middle
+region.\\
+\includegraphics[width=3.12500in]{jira_imgs/3057.png}
 
 }
 
