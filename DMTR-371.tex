@@ -31,7 +31,7 @@
 
 \title{LVV-P99: Data Management Acceptance Test Campaign 1 Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-08-26 }
+\date{ 2022-08-29 }
 \author{ Jeffrey Carlin }
 
 \input{history_and_info.tex}
@@ -360,7 +360,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T137}{LVV-T137}
-& {\small Colin Slater } & {\small  } &
+& {\small Colin Slater } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -369,14 +369,6 @@ Jeffrey Carlin }
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T55}{LVV-T55}
 & {\small Eric Bellm } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T146}{LVV-T146}
-& {\small Robert Gruendl [X] } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -560,14 +552,6 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1527}{LVV-T1527}
-& {\small Jeffrey Carlin } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1758}{LVV-T1758}
 & {\small Jeffrey Carlin } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
@@ -830,7 +814,7 @@ Results of the test execution can be found in the notebook
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T137}{LVV-T137}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -838,15 +822,6 @@ Results of the test execution can be found in the notebook
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T55}{LVV-T55}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T146}{LVV-T146}
 &  1
 & Not Executed &
 \begin{minipage}[]{9cm}
@@ -1083,15 +1058,6 @@ See attached artifact notebook ``test\_LVV-T74.ipynb'' for details.
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1527}{LVV-T1527}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1758}{LVV-T1758}
 &  1
 & Not Executed &
 \begin{minipage}[]{9cm}
@@ -4301,7 +4267,7 @@ Verify that data products can be ingested.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -4310,7 +4276,7 @@ Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4326,11 +4292,16 @@ processing.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+This test will be executed using the
+\href{https://github.com/lsst-dm/rc2_subset}{rc2\_subset} data, which is
+a curated dataset selected to allow for full end-to-end processing of
+all DRP steps. The test will be executed on the USDF (SLAC) development
+machines, using Science Pipelines version w\_2022\_30.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4347,11 +4318,61 @@ Data Backbone.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The shell script used to execute the steps of DRP processing is as
+follows:\\[2\baselineskip]\# Set up Stack\\
+\# source /opt/lsst/software/stack/loadLSST.bash\\
+source
+/cvmfs/sw.lsst.eu/linux-x86\_64/lsst\_distrib/w\_2022\_30/loadLSST.bash\\
+setup lsst\_distrib\\
+eups list -s \textbar{} grep lsst\_distrib\\[2\baselineskip]\#cd
+\$HOME/DATA\\
+cd /sdf/group/rubin/sandbox/\$USER\\
+\#git clone https://github.com/lsst-dm/rc2\_subset\\
+cd repos\\
+setup -j -r rc2\_subset\\
+echo \$RC2\_SUBSET\_DIR\\[2\baselineskip]export
+NUMPROC=8\\[2\baselineskip]pipetask --long-log run -j \$NUMPROC -b
+\$\{RC2\_SUBSET\_DIR\}/SMALL\_HSC/butler.yaml -p
+\$\{RC2\_SUBSET\_DIR\}'/pipelines/DRP.yaml\#nightlyStep1' -i
+HSC/RC2/defaults --register-dataset-types -o
+u/\$USER/step1\\[2\baselineskip]echo ``Running step2a on all visits''\\
+pipetask --long-log run -j \$NUMPROC -b
+\$\{RC2\_SUBSET\_DIR\}/SMALL\_HSC/butler.yaml -p
+\$\{RC2\_SUBSET\_DIR\}'/pipelines/DRP.yaml\#nightlyStep2a' -i
+u/\$USER/step1 --register-dataset-types -o
+u/\$USER/step2\\[2\baselineskip]echo ``Running step2b on tract 9813''\\
+pipetask --long-log run -j \$NUMPROC -b
+\$\{RC2\_SUBSET\_DIR\}/SMALL\_HSC/butler.yaml -p
+\$\{RC2\_SUBSET\_DIR\}'/pipelines/DRP.yaml\#nightlyStep2b' -d ``tract =
+9813 and skymap = `hsc\_rings\_v1'\,'' --register-dataset-types -o
+u/\$USER/step2\\[2\baselineskip]echo ``Running step2c without
+multiprocessing''\\
+pipetask --long-log run -b \$\{RC2\_SUBSET\_DIR\}/SMALL\_HSC/butler.yaml
+-p \$\{RC2\_SUBSET\_DIR\}'/pipelines/DRP.yaml\#nightlyStep2c'
+--register-dataset-types -o u/\$USER/step2\\[2\baselineskip]echo
+``Running step2d on all visits''\\
+pipetask --long-log run -j \$NUMPROC -b
+\$\{RC2\_SUBSET\_DIR\}/SMALL\_HSC/butler.yaml -p
+\$\{RC2\_SUBSET\_DIR\}'/pipelines/DRP.yaml\#nightlyStep2d'
+--register-dataset-types -o u/\$USER/step2\\[2\baselineskip]echo
+``Running step3 on all visits''\\
+pipetask --long-log run -j \$NUMPROC -b
+\$\{RC2\_SUBSET\_DIR\}/SMALL\_HSC/butler.yaml -p
+\$\{RC2\_SUBSET\_DIR\}'/pipelines/DRP.yaml\#nightlyStep3' -d ``tract =
+9813 and skymap = `hsc\_rings\_v1' AND patch in (38, 39, 40, 41)'' -i
+u/\$USER/step2 --register-dataset-types -o
+u/\$USER/step3\\[2\baselineskip]echo ``Running step4 on all visits''\\
+pipetask --long-log run -j \$NUMPROC -b
+\$\{RC2\_SUBSET\_DIR\}/SMALL\_HSC/butler.yaml -p
+\$\{RC2\_SUBSET\_DIR\}'/pipelines/DRP.yaml\#nightlyStep4' -d ``tract =
+9813 and skymap = `hsc\_rings\_v1' AND patch in (38, 39, 40, 41)'' -i
+u/\$USER/step3 --register-dataset-types -o
+u/\$USER/step4\\[2\baselineskip]
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4379,11 +4400,17 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+See the attached script, ``test\_LVV-T137.py'', which contains the
+following lines to initialize the Butler:\\[2\baselineskip]from
+lsst.daf.butler import Butler\\[2\baselineskip]repo =
+`/sdf/group/rubin/u/jcarlin/repos/rc2\_subset/SMALL\_HSC'\\
+collection~=~'u/jcarlin/step4'\\
+butler~= Butler(repo, collections=collection)\\[2\baselineskip]
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4401,6 +4428,132 @@ data products are present and accessible via the Butler.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The attached script, ``test\_LVV-T137.py'' was executed from the command
+line via ``python test\_LVV-T137.py \textgreater{} test\_LVV-T137.out''.
+The screen output demonstrates that calibrated exposures have been
+created from ingested raws and calibration frames, and source detection
+and measurement has been performed (among other processing). The output
+of the script is (note: we have truncated the schema results for the
+``src'' catalog for readability):\\[2\baselineskip]lsst\_distrib
+g0b29ad24fb+434521fcbd current w\_2022\_35 setup\\
+WCS for calexp image with dataId \{'instrument': `HSC', `detector': 42,
+`visit': 19680\} :\\
+FITS standard SkyWcs:\\
+Sky Origin: (149.9670716242, +2.1456871368)\\
+Pixel Origin: (989.716, 2019.07)\\
+Pixel Scale: 0.168409 arcsec/pixel\\
+Photocalib for calexp image with dataId \{'instrument': `HSC',
+`detector': 42, `visit': 19680\} :\\
+spatially constant with mean: 0.199449 error: 0.000171253\\
+Image shape and statistics:\\
+Shape: (4176, 2048)\\
+Mean, median, std deviation of pixel values: 21.659693 3.1226554
+277.56586\\
+Variance plane shape and statistics:\\
+Shape: (4176, 2048)\\
+Mean, median, std deviation of pixel values: 918.03143 841.7631
+476.36658\\
+Mask plane has the following mask bits set:\\
+\{'BAD': 0, `CR': 3, `CROSSTALK': 9, `DETECTED': 5,
+`DETECTED\_NEGATIVE': 6, `EDGE': 4, `INTRP': 2, `NOT\_DEBLENDED': 10,
+`NO\_DATA': 8, `SAT': 1, `SUSPECT': 7, `UNMASKEDNAN': 11\}\\
+Mask plane has dimensions: (2048, 4176)\\
+Source catalog has 5135 entries.\\
+The first five entries in the source catalog:\\
+id coord\_ra \ldots{} calib\_photometry\_reserved\\
+rad \ldots{}\\
+---------------- ------------------ \ldots{} -------------------------\\
+8452585832841217 2.615778319777679 \ldots{} False\\
+8452585832841218 2.6157771306147075 \ldots{} False\\
+8452585832841219 2.6157783826078296 \ldots{} False\\
+8452585832841220 2.6157761384385596 \ldots{} False\\
+8452585832841221 2.6157747119184185 \ldots{} False\\
+The schema of the source catalog:\\
+Schema(\\
+(Field{[}'L'{]}(name=``id'', doc=``unique ID''),
+Key\textless{}L\textgreater{}(offset=0, nElements=1)),\\
+(Field{[}'Angle'{]}(name=``coord\_ra'', doc=``position in ra/dec''),
+Key\textless{}Angle\textgreater{}(offset=8, nElements=1)),\\
+(Field{[}'Angle'{]}(name=``coord\_dec'', doc=``position in ra/dec''),
+Key\textless{}Angle\textgreater{}(offset=16, nElements=1)),\\
+(Field{[}'L'{]}(name=``parent'', doc=``unique ID of parent source''),
+Key\textless{}L\textgreater{}(offset=24, nElements=1)),\\
+(Field{[}'Flag'{]}(name=``calib\_detected'', doc=``Source was detected
+as an icSource''), Key{[}'Flag'{]}(offset=32, bit=0)),\\
+(Field{[}'Flag'{]}(name=``calib\_psf\_candidate'', doc=``Flag set if the
+source was a candidate for PSF determination, as determined by the star
+selector.''), Key{[}'Flag'{]}(offset=32, bit=1)),\\
+(Field{[}'Flag'{]}(name=``calib\_psf\_used'', doc=``Flag set if the
+source was actually used for PSF determination, as determined by the''),
+Key{[}'Flag'{]}(offset=32, bit=2)),\\
+(Field{[}'Flag'{]}(name=``calib\_psf\_reserved'', doc=``set if source
+was reserved from PSF determination''), Key{[}'Flag'{]}(offset=32,
+bit=3)),\\
+(Field{[}'I'{]}(name=``deblend\_nChild'', doc=``Number of children this
+object has (defaults to 0)''), Key\textless{}I\textgreater{}(offset=40,
+nElements=1)),\\
+(Field{[}'Flag'{]}(name=``deblend\_deblendedAsPsf'', doc=``Deblender
+thought this source looked like a PSF''), Key{[}'Flag'{]}(offset=32,
+bit=4)),\\
+(Field{[}'D'{]}(name=``deblend\_psfCenter\_x'', doc=``If
+deblended-as-psf, the PSF centroid'', units=``pixel''),
+Key\textless{}D\textgreater{}(offset=48, nElements=1)),\\
+(Field{[}'D'{]}(name=``deblend\_psfCenter\_y'', doc=``If
+deblended-as-psf, the PSF centroid'', units=``pixel''),
+Key\textless{}D\textgreater{}(offset=56, nElements=1)),\\
+(Field{[}'D'{]}(name=``deblend\_psf\_instFlux'', doc=``If
+deblended-as-psf, the instrumental PSF flux'', units=``count''),
+Key\textless{}D\textgreater{}(offset=64,
+nElements=1)),\\[2\baselineskip]\ldots{}\\[2\baselineskip](Field{[}'D'{]}(name=``ext\_photometryKron\_KronFlux\_apCorrErr'',
+doc=``standard deviation of aperture correction applied to
+ext\_photometryKron\_KronFlux''),
+Key\textless{}D\textgreater{}(offset=992, nElements=1)),\\
+(Field{[}'Flag'{]}(name=``ext\_photometryKron\_KronFlux\_flag\_apCorr'',
+doc=``set if unable to aperture correct
+ext\_photometryKron\_KronFlux''), Key{[}'Flag'{]}(offset=976, bit=1)),\\
+(Field{[}'D'{]}(name=``base\_ClassificationExtendedness\_value'',
+doc=``Set to 1 for extended sources, 0 for point sources.''),
+Key\textless{}D\textgreater{}(offset=1000, nElements=1)),\\
+(Field{[}'Flag'{]}(name=``base\_ClassificationExtendedness\_flag'',
+doc=``Set to 1 for any fatal failure.''), Key{[}'Flag'{]}(offset=976,
+bit=2)),\\
+(Field{[}'I'{]}(name=``base\_FootprintArea\_value'', doc=``Number of
+pixels in the source''s detection footprint.'', units=``pixel''),
+Key\textless{}I\textgreater{}(offset=1008, nElements=1)),\\
+(Field{[}'Flag'{]}(name=``calib\_astrometry\_used'', doc=``set if source
+was used in astrometric calibration''), Key{[}'Flag'{]}(offset=976,
+bit=3)),\\
+(Field{[}'Flag'{]}(name=``calib\_photometry\_used'', doc=``set if source
+was used in photometric calibration''), Key{[}'Flag'{]}(offset=976,
+bit=4)),\\
+(Field{[}'Flag'{]}(name=``calib\_photometry\_reserved'', doc=``set if
+source was reserved from photometric calibration''),
+Key{[}'Flag'{]}(offset=976, bit=5)),\\
+`base\_CircularApertureFlux\_flag\_badCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`base\_GaussianFlux\_flag\_badCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`base\_GaussianFlux\_flag\_badShape'-\textgreater{}'ext\_shapeHSM\_HsmSourceMoments\_flag'\\
+`base\_LocalBackground\_flag\_badCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`base\_NaiveCentroid\_flag\_badInitialCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`base\_PsfFlux\_flag\_badCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`base\_SdssShape\_flag\_badCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`base\_Variance\_flag\_badCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`ext\_photometryKron\_KronFlux\_flag\_badInitialCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`ext\_shapeHSM\_HsmPsfMomentsDebiased\_flag\_badCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`ext\_shapeHSM\_HsmPsfMoments\_flag\_badCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`ext\_shapeHSM\_HsmShapeRegauss\_flag\_badCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`ext\_shapeHSM\_HsmSourceMomentsRound\_flag\_badCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`ext\_shapeHSM\_HsmSourceMoments\_flag\_badCentroid'-\textgreater{}'base\_SdssCentroid\_flag'\\
+`slot\_ApFlux'-\textgreater{}'base\_CircularApertureFlux\_12\_0'\\
+`slot\_CalibFlux'-\textgreater{}'base\_CircularApertureFlux\_12\_0'\\
+`slot\_Centroid'-\textgreater{}'base\_SdssCentroid'\\
+`slot\_GaussianFlux'-\textgreater{}'base\_GaussianFlux'\\
+`slot\_ModelFlux'-\textgreater{}'base\_GaussianFlux'\\
+`slot\_PsfFlux'-\textgreater{}'base\_PsfFlux'\\
+`slot\_PsfShape'-\textgreater{}'ext\_shapeHSM\_HsmPsfMoments'\\
+`slot\_Shape'-\textgreater{}'ext\_shapeHSM\_HsmSourceMoments'\\
+)\\[2\baselineskip]Median of PSF magnitudes calculated using the
+associated PhotoCalib object:\\
+24.88843561504042\\[2\baselineskip]
 
 }
 
@@ -4514,67 +4667,6 @@ source.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
-\paragraph{ LVV-T146 - Verify implementation of DMS Initialization Component }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T146}{\textit{ LVV-T146 } }
-test case in Jira.
-
-Demonstrate that the DMS can be initialized in a safe state that will
-not allow data corruption/loss.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Power-cycle all of the DM systems at each Facility.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Restart of all DM systems.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Observe each system and ensure that it has recovered in a properly
-initialized state.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Systems are all active and initialized for their designated purpose.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -7570,157 +7662,6 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
-\paragraph{ LVV-T1758 - Verify that the repeatability outlier limit for isolated bright
-non-saturated point sources in the u, z, and y filters (PA2uzy) can be
-applied. }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1758}{\textit{ LVV-T1758 } }
-test case in Jira.
-
-Verify that the DM system has provided the code to apply the
-repeatability outlier limit for isolated bright non-saturated point
-sources in the u, z, and y filters(PA2uzy) to to computed values of the
-PF1 metric.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Identify a dataset containing at least one field in each of the u, z,
-and y filters with multiple overlapping visits.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-A dataset that has been ingested into a Butler repository.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-The `path` that you will use depends on where you are running the
-science pipelines. Options:\\[2\baselineskip]
-
-\begin{itemize}
-\tightlist
-\item
-  local (newinstall.sh - based
-  install):{[}path\_to\_installation{]}/loadLSST.bash
-\item
-  development cluster (``lsst-dev''):
-  /software/lsstsw/stack/loadLSST.bash
-\item
-  LSP Notebook aspect (from a terminal):
-  /opt/lsst/software/stack/loadLSST.bash
-\end{itemize}
-
-From the command line, execute the commands below in the example
-code:\\[2\baselineskip]
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Example Code \\
-{\footnotesize
-source `path`\\
-setup lsst\_distrib
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Science pipeline software is available for use. If additional packages
-are needed (for example, `obs' packages such as `obs\_subaru`), then
-additional `setup` commands will be necessary.\\[2\baselineskip]To check
-versions in use, type:\\
-eups list -s
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Execute `faro` on a repository containing processed data. Identify the
-path to the data, which we will call `DATA/path', then execute something
-similar to the following (with paths, datasets, and flags replaced or
-additionally specified as needed):
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Example Code \\
-{\footnotesize
-pipetask --long-log run -j 2 -b DATA/path/butler.yaml
---register-dataset-types -p \$FARO\_DIR/pipelines/metrics\_pipeline.yaml
--d ``band in ('g', `r', `i') AND tract=9813 AND skymap='hsc\_rings\_v1'
-AND instrument='HSC''' --output u/username/faro\_metrics -i
-HSC/runs/RC2/w\_2021\_06 2\textgreater{}\&1 \textbar{} tee
-w06\_2021\_tract9813\_faro.txt
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The output collection (in this case, ``u/username/faro\_metrics'')
-containing metric measurements and any associated extras and metadata is
-available via the butler.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm that the PA2uzy threshold has been applied to the assessment of
-the computed values of PF1 for filters u,z,y.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-A JSON file (and/or a report generated from that JSON file)
-demonstrating that PA2uzy has been calculated (and that it used PF1).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
