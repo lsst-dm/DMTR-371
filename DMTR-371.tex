@@ -424,7 +424,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T78}{LVV-T78}
-& {\small Kian-Tat Lim } & {\small  } &
+& {\small Kian-Tat Lim } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -901,10 +901,11 @@ tables in the Qserv database) will be confirmed separately.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T78}{LVV-T78}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+The python test script to execute this code is attached to the Test
+Report github repository in scripts/test\_LVV-T78.py.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -5922,16 +5923,17 @@ kept, and available.
 Precursor data from HSC PDR or simulated DC2 data (as reprocessed with
 LSST Science Pipelines to produce Data Preview 0.2).
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\The python test script to execute this code is attached to the Test
+Report github repository in scripts/test\_LVV-T78.py.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5959,11 +5961,15 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Test executed on the RSP at the IDF. The test script confirms the
+pipelines version by printing the following to the
+screen:\\[2\baselineskip]lsst\_distrib g0b29ad24fb+cafeaf151e current
+w\_2022\_32 setup
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5978,11 +5984,15 @@ Identify some single-band deep coadds and retrieve them from the butler
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+We use the DP0.2 data via the following:\\[2\baselineskip]config =
+`dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5997,11 +6007,13 @@ Examine the deep coadds and confirm that they are well-formed images
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+All subsequent steps were executed as part of the python script
+test\_LVV-T78.py. The results are posted below.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -6021,7 +6033,7 @@ butler
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 5 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -6037,6 +6049,131 @@ images
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The output of the python script is as follows. This script reads both a
+best-seeing coadd and a deep coadd corresponding to the same dataId,
+prints statistics of each image to the screen, examines the variance
+plane and mask to confirm they are well-formed, and confirms that each
+image has an associated PSF and WCS.\\[2\baselineskip]Input dataId:
+\{'tract': 4431, `patch': 17, `band': `u'\}\\[2\baselineskip]Best-seeing
+coadd image shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.03438813 0.0024560345
+5.8153605\\[2\baselineskip]Deep coadd image shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.04503397 0.0047773793
+7.005774\\[2\baselineskip]Best-seeing coadd variance plane shape and
+statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.020518279 0.019447705
+0.10152267\\[2\baselineskip]Deep coadd variance plane shape and
+statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.0056145624 0.0053308182
+0.14121237\\
+Best-seeing coadd mask plane has dimensions: (4200, 4200)\\
+Deep coadd mask plane has dimensions: (4200, 4200)\\
+Both images have a WCS.\\
+Both images have a PSF.\\[2\baselineskip]Input dataId: \{'tract': 4431,
+`patch': 17, `band': `g'\}\\[2\baselineskip]Best-seeing coadd image
+shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.041773453 0.002788621
+2.0373423\\[2\baselineskip]Deep coadd image shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.05321344 0.0066212164
+2.2148554\\[2\baselineskip]Best-seeing coadd variance plane shape and
+statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.002616897 0.002469438
+0.0104264915\\[2\baselineskip]Deep coadd variance plane shape and
+statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.00074665045 0.00070681534
+0.0032021273\\
+Best-seeing coadd mask plane has dimensions: (4200, 4200)\\
+Deep coadd mask plane has dimensions: (4200, 4200)\\
+Both images have a WCS.\\
+Both images have a PSF.\\[2\baselineskip]Input dataId: \{'tract': 4431,
+`patch': 17, `band': `r'\}\\[2\baselineskip]Best-seeing coadd image
+shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.08445272 0.0020215698
+2.8918285\\[2\baselineskip]Deep coadd image shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.10712123 0.009368613
+3.528262\\[2\baselineskip]Best-seeing coadd variance plane shape and
+statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.002568767 0.0024733383
+0.011166171\\[2\baselineskip]Deep coadd variance plane shape and
+statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.00093781634 0.0008518264
+0.012951709\\
+Best-seeing coadd mask plane has dimensions: (4200, 4200)\\
+Deep coadd mask plane has dimensions: (4200, 4200)\\
+Both images have a WCS.\\
+Both images have a PSF.\\[2\baselineskip]Input dataId: ~\{'tract': 4431,
+`patch': 17, `band': `i'\}\\[2\baselineskip]Best-seeing coadd image
+shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.12454637 0.0037209666
+4.126306\\[2\baselineskip]Deep coadd image shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.15418924 0.0157091
+4.6056767\\[2\baselineskip]Best-seeing coadd variance plane shape and
+statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: inf 0.009205212
+nan\\[2\baselineskip]Deep coadd variance plane shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: inf 0.0031147646 nan\\
+Best-seeing coadd mask plane has dimensions: (4200, 4200)\\
+Deep coadd mask plane has dimensions: (4200, 4200)\\
+Both images have a WCS.\\
+Both images have a PSF.\\[2\baselineskip]Input dataId: \{'tract': 4431,
+`patch': 17, `band': `z'\}\\[2\baselineskip]Best-seeing coadd image
+shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.15889181 0.012767363
+5.4510126\\[2\baselineskip]Deep coadd image shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.18890294 0.026478318
+5.2928886\\[2\baselineskip]Best-seeing coadd variance plane shape and
+statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: ~0.082706526 0.080273375
+0.040728822\\[2\baselineskip]Deep coadd variance plane shape and
+statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.026652763 0.026110252
+0.019691393\\
+Best-seeing coadd mask plane has dimensions: (4200, 4200)\\
+Deep coadd mask plane has dimensions: (4200, 4200)\\
+Both images have a WCS.\\
+Both images have a PSF.\\[2\baselineskip]Input dataId: \{'tract': 4431,
+`patch': 17, `band': `y'\}\\[2\baselineskip]Best-seeing coadd image
+shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.2097747 0.022823093
+7.169966\\[2\baselineskip]Deep coadd image shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.26832125 0.039412603
+10.62081\\[2\baselineskip]Best-seeing coadd variance plane shape and
+statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.26777592 0.26288232
+0.16389878\\[2\baselineskip]Deep coadd variance plane shape and
+statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.08693949 0.08555089
+0.26010248\\
+Best-seeing coadd mask plane has dimensions: (4200, 4200)\\
+Deep coadd mask plane has dimensions: (4200, 4200)\\
+Both images have a WCS.\\
+Both images have a PSF.\\[2\baselineskip]We have thus verified that deep
+and best-seeing coadds are present, retained, and available, and are
+well-formed.
 
 }
 
