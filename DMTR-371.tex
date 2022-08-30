@@ -280,7 +280,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T77}{LVV-T77}
-& {\small Jim Bosch } & {\small  } &
+& {\small Jim Bosch } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -439,14 +439,6 @@ Jeffrey Carlin }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T38}{LVV-T38}
-& {\small Eric Bellm } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T141}{LVV-T141}
 & {\small Leanne Guy } & {\small  } &
 \begin{minipage}[]{6cm}
@@ -496,7 +488,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1830}{LVV-T1830}
-& {\small Jeffrey Carlin } & {\small  } &
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -723,10 +715,11 @@ Jeffrey Carlin }
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T77}{LVV-T77}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+The python test script to execute this code is attached to the Test
+Report github repository in scripts/test\_LVV-T77.py.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -925,15 +918,6 @@ Report repository.
 \medskip
 \end{minipage}
 &   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T38}{LVV-T38}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T141}{LVV-T141}
 &  1
 & Not Executed &
@@ -1001,7 +985,7 @@ See attached artifact notebook ``test\_LVV-T127.ipynb'' for details.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1830}{LVV-T1830}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -2590,16 +2574,17 @@ coadd.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\The python test script to execute this code is attached to the Test
+Report github repository in scripts/test\_LVV-T77.py.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2643,11 +2628,15 @@ eups list -s
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Test executed on the RSP at the IDF. The test script confirms the
+pipelines version by printing the following to the
+screen:\\[2\baselineskip]lsst\_distrib g0b29ad24fb+cafeaf151e current
+w\_2022\_32 setup
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2675,11 +2664,15 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+We use the DP0.2 data via the following:\\[2\baselineskip]config =
+`dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2694,11 +2687,13 @@ Explicitly create a coadd for a specified seeing range in each filter.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+For this test, we extract `goodSeeingCoadd` data products that were
+produced during DP0.2 processing.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2713,6 +2708,162 @@ Verify that these coadds exist.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The test script loops over all ugrizy bands for a single tract/patch,
+extracts the `goodSeeingCoadd`, and verifies it is a well-formed image
+by printing various statistics to the screen. Finally, the script also
+extracts the `deepCoadd\_calexp` image and prints a comparison of the
+PSF radius to demonstrate that the best-seeing coadds have a smaller PSF
+radius than the deep coadds.\\[2\baselineskip]The output is as
+follows:\\[2\baselineskip]Input dataId: \{'tract': 4431, `patch': 17,
+`band': `u'\}\\[2\baselineskip]Image shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.03438813 0.0024560345
+5.8153605\\[2\baselineskip]Variance plane shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.020518279 0.019447705
+0.10152267\\[2\baselineskip]Mask plane has the following mask bits
+set:\\
+\{'BAD': 0, `CLIPPED': 9, `CR': 3, `CROSSTALK': 10, `DETECTED': 5,
+`DETECTED\_NEGATIVE': 6, `EDGE': 4, `INEXACT\_PSF': 11, `INTRP': 2,
+`NOT\_DEBLENDED': 12, `NO\_DATA': 8, `REJECTED': 13, `SAT': 1,
+`SENSOR\_EDGE': 14, `SUSPECT': 7, `UNMASKEDNAN': 15\}\\
+Mask plane has dimensions: (4200, 4200)\\[2\baselineskip]WCS for
+goodSeeingCoadd image with dataId \{'tract': 4431, `patch': 17, `band':
+`u'\} :\\
+FITS standard SkyWcs:\\
+Sky Origin: (55.6521739130, -31.9834710744)\\
+Pixel Origin: (13999, 13999)\\
+Pixel Scale: 0.2 arcsec/pixel\\[2\baselineskip]Photocalib for
+goodSeeingCoadd image with dataId \{'tract': 4431, `patch': 17, `band':
+`u'\} :\\
+spatially constant with mean: 57.544 error: 0\\[2\baselineskip]Good
+seeing coadd PSF radius: 1.7244082609166302\\
+Deep coadd PSF radius: 2.074471010117085\\[2\baselineskip]Input dataId:
+\{'tract': 4431, `patch': 17, `band': `g'\}\\[2\baselineskip]Image shape
+and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.041773453 0.002788621
+2.0373423\\[2\baselineskip]Variance plane shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.002616897 0.002469438
+0.0104264915\\[2\baselineskip]Mask plane has the following mask bits
+set:\\
+\{'BAD': 0, `CLIPPED': 9, `CR': 3, `CROSSTALK': 10, `DETECTED': 5,
+`DETECTED\_NEGATIVE': 6, `EDGE': 4, `INEXACT\_PSF': 11, `INTRP': 2,
+`NOT\_DEBLENDED': 12, `NO\_DATA': 8, `REJECTED': 13, `SAT': 1,
+`SENSOR\_EDGE': 14, `SUSPECT': 7, `UNMASKEDNAN': 15\}\\
+Mask plane has dimensions: (4200, 4200)\\[2\baselineskip]WCS for
+goodSeeingCoadd image with dataId \{'tract': 4431, `patch': 17, `band':
+`g'\} :\\
+FITS standard SkyWcs:\\
+Sky Origin: (55.6521739130, -31.9834710744)\\
+Pixel Origin: (13999, 13999)\\
+Pixel Scale: 0.2 arcsec/pixel\\[2\baselineskip]Photocalib for
+goodSeeingCoadd image with dataId \{'tract': 4431, `patch': 17, `band':
+`g'\} :\\
+spatially constant with mean: 57.544 error: 0\\[2\baselineskip]Good
+seeing coadd PSF radius: 1.5164241757236603\\
+Deep coadd PSF radius: 1.8854643031757852\\[2\baselineskip]Input dataId:
+\{'tract': 4431, `patch': 17, `band': `r'\}\\[2\baselineskip]Image shape
+and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.08445272 0.0020215698
+2.8918285\\[2\baselineskip]Variance plane shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.002568767 0.0024733383
+0.011166171\\[2\baselineskip]\hspace*{0.333em}Mask plane has the
+following mask bits set:\\
+\{'BAD': 0, `CLIPPED': 9, `CR': 3, `CROSSTALK': 10, `DETECTED': 5,
+`DETECTED\_NEGATIVE': 6, `EDGE': 4, `INEXACT\_PSF': 11, `INTRP': 2, '\\
+NOT\_DEBLENDED': 12, `NO\_DATA': 8, `REJECTED': 13, `SAT': 1,
+`SENSOR\_EDGE': 14, `SUSPECT': 7, `UNMASKEDNAN': 15\}\\
+Mask plane has dimensions: (4200, 4200)\\[2\baselineskip]WCS for
+goodSeeingCoadd image with dataId \{'tract': 4431, `patch': 17, `band':
+`r'\} :\\
+FITS standard SkyWcs:\\
+Sky Origin: (55.6521739130, -31.9834710744)\\
+Pixel Origin: (13999, 13999)\\
+Pixel Scale: 0.2 arcsec/pixel\\[2\baselineskip]Photocalib for
+goodSeeingCoadd image with dataId \{'tract': 4431, `patch': 17, `band':
+`r'\} :\\
+spatially constant with mean: 57.544 error: 0\\[2\baselineskip]Good
+seeing coadd PSF radius: 1.513700867128578\\
+Deep coadd PSF radius: 1.8005040445327916\\[2\baselineskip]Input dataId:
+\{'tract': 4431, `patch': 17, `band': `i'\}\\[2\baselineskip]Image shape
+and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.12454637 0.0037209666
+4.126306\\[2\baselineskip]Variance plane shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: inf 0.009205212
+nan\\[2\baselineskip]Mask plane has the following mask bits set:\\
+\{'BAD': 0, `CLIPPED': 9, `CR': 3, `CROSSTALK': 10, `DETECTED': 5,
+`DETECTED\_NEGATIVE': 6, `EDGE': 4, `INEXACT\_PSF': 11, `INTRP': 2,
+`NOT\_DEBLENDED': 12, `NO\_DATA': 8, `REJECTED': 13, `SAT': 1,
+`SENSOR\_EDGE': 14, `SUSPECT': 7, `UNMASKEDNAN': 15\}\\
+Mask plane has dimensions: (4200,
+4200)\\[2\baselineskip]\hspace*{0.333em}WCS for goodSeeingCoadd image
+with dataId ~\{'tract': 4431, `patch': 17, `band': `i'\} :\\
+FITS standard SkyWcs:\\
+Sky Origin: (55.6521739130, -31.9834710744)\\
+Pixel Origin: (13999, 13999)\\
+Pixel Scale: 0.2 arcsec/pixel\\[2\baselineskip]Photocalib for
+goodSeeingCoadd image with dataId \{'tract': 4431, `patch': 17, `band':
+`i'\} :\\
+spatially constant with mean: 57.544 error: 0\\[2\baselineskip]Good
+seeing coadd PSF radius: 1.5099309000064964\\
+Deep coadd PSF radius: 1.728315912605641\\[2\baselineskip]Input dataId:
+\{'tract': 4431, `patch': 17, `band': `z'\}\\[2\baselineskip]Image shape
+and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.15889181 0.012767363
+5.4510126\\[2\baselineskip]Variance plane shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.082706526 0.080273375
+0.040728822\\[2\baselineskip]Mask plane has the following mask bits
+set:\\
+\{'BAD': 0, `CLIPPED': 9, `CR': 3, `CROSSTALK': 10, `DETECTED': 5,
+`DETECTED\_NEGATIVE': 6, `EDGE': 4, `INEXACT\_PSF': 11, `INTRP': 2,
+`NOT\_DEBLENDED': 12, `NO\_DATA': 8, `REJECTED': 13, `SAT': 1,
+`SENSOR\_EDGE': 14, `SUSPECT': 7, `UNMASKEDNAN': 15\}\\
+Mask plane has dimensions: (4200, 4200)\\[2\baselineskip]WCS for
+goodSeeingCoadd image with dataId \{'tract': 4431, `patch': 17, `band':
+`z'\} :\\
+FITS standard SkyWcs:\\
+Sky Origin: (55.6521739130, -31.9834710744)\\
+Pixel Origin: (13999, 13999)\\
+Pixel Scale: 0.2
+arcsec/pixel\\[2\baselineskip]\hspace*{0.333em}Photocalib for
+goodSeeingCoadd image with dataId ~\{'tract': 4431, `patch': 17, `band':
+`z'\} :\\
+spatially constant with mean: 57.544 error: 0\\[2\baselineskip]Good
+seeing coadd PSF radius: 1.6839970224085898\\
+Deep coadd PSF radius: 1.9398605388502517\\[2\baselineskip]Input dataId:
+\{'tract': 4431, `patch': 17, `band': `y'\}\\[2\baselineskip]Image shape
+and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.2097747 0.022823093
+7.169966\\[2\baselineskip]Variance plane shape and statistics:\\
+Shape: (4200, 4200)\\
+Mean, median, std deviation of pixel values: 0.26777592 0.26288232
+0.16389878\\[2\baselineskip]Mask plane has the following mask bits
+set:\\
+\{'BAD': 0, `CLIPPED': 9, `CR': 3, `CROSSTALK': 10, `DETECTED': 5,
+`DETECTED\_NEGATIVE': 6, `EDGE': 4, `INEXACT\_PSF': 11, `INTRP': 2,
+`NOT\_DEBLENDED': 12, `NO\_DATA': 8, `REJECTED': 13, `SAT': 1,
+`SENSOR\_EDGE': 14, `SUSPECT': 7, `UNMASKEDNAN': 15\}\\
+Mask plane has dimensions: (4200, 4200)\\[2\baselineskip]WCS for
+goodSeeingCoadd image with dataId \{'tract': 4431, `patch': 17, `band':
+`y'\} :\\
+FITS standard SkyWcs:\\
+Sky Origin: (55.6521739130, -31.9834710744)\\
+Pixel Origin: (13999, 13999)\\
+Pixel Scale: 0.2 arcsec/pixel\\[2\baselineskip]Photocalib for
+goodSeeingCoadd image with dataId \{'tract': 4431, `patch': 17, `band':
+`y'\} :\\
+spatially constant with mean: 57.544 error: 0\\[2\baselineskip]Good
+seeing coadd PSF radius: 2.2861573969027273\\
+Deep coadd PSF radius: 2.508081993634421
 
 }
 
@@ -6129,106 +6280,6 @@ catalog.
 
 }
 
-\paragraph{ LVV-T38 - Verify implementation of Processed Visit Images }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T38}{\textit{ LVV-T38 } }
-test case in Jira.
-
-Verify that the DMS\\
-1. Successfully produces Processed Visit Images, where the instrument
-signature has been removed.\\
-2. Successfully combines images obtained during a standard
-visit.\\[2\baselineskip]The verification should include confirming that
-the images have been trimmed of the overscan, and that correction of the
-instrumental signature (including crosstalk) has been applied properly.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Identify suitable precursor datasets containing unprocessed raw images.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Identify the path to the data repository, which we will refer to as
-`DATA/path', then execute the following:
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Example Code \\
-{\footnotesize
-\begin{verbatim}
-from lsst.daf.butler import Butler
-repo = 'Data/path'
-collection = 'collection'
-butler = Butler(repo, collections=collection)
-\end{verbatim}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Butler repo available for reading.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Run the initial steps (including instrument signature removal and
-calibration) of Data Release (or Prompt) Processing on these data.
-Verify that Processed Visit Images are generated at the correct size and
-with significant instrumental artifacts removed.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Raw precursor dataset images have been processed into Processed Visit
-Images, with instrumental artifacts corrected.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
 \paragraph{ LVV-T141 - Verify implementation of Production Monitoring }\mbox{}\\
 
 Version \textbf{1}.
@@ -6299,7 +6350,7 @@ Version \textbf{1}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T140}{\textit{ LVV-T140 } }
 test case in Jira.
 
-Demonstrate use to orchestration software to perform real-time and batch
+Demonstrate use of orchestration software to perform real-time and batch
 production on LSST compute platform(s).
 
 \textbf{ Preconditions}:\\
@@ -7138,7 +7189,7 @@ coordinate systems defined in \href{https://lse-349.lsst.io/}{LSE-349}.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -7147,7 +7198,7 @@ Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -7164,11 +7215,30 @@ Image with bright stars is displayed.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Via the RSP Portal aspect, we executed a search of the Source table over
+a 5-degree radius, with constraints ``pixelFlags\_saturated = 1,''
+~``pixelFlags\_saturatedCenter = 1,'' and ``detect\_isPrimary = 1'' to
+identify saturated stars. We then took the necessary information to
+create a dataId, and selected the corresponding calexp image within the
+Notebook aspect. The dataId and relevant commands from the notebook
+are:\\[2\baselineskip]from lsst.daf.butler import Butler\\
+import lsst.afw.display as afwDisplay\\
+from firefly\_client import FireflyClient\\[2\baselineskip]config =
+`dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)\\[2\baselineskip]dataId
+= \{'instrument': `LSSTCam-imSim', `detector': 180, `visit': 888370,
+`exposure':888370, `band':'g'\}\\
+calexp = butler.get('calexp',
+dataId=dataId)\\[2\baselineskip]afwDisplay.setDefaultBackend('firefly')\\
+afw\_display = afwDisplay.Display(frame=1)\\
+afw\_display.mtv(calexp)\\[2\baselineskip]This results in a calexp image
+displayed in Firefly.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -7200,6 +7270,25 @@ meet the necessary conditions.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+In the first screenshot, we use the ``extract line from image'' tool to
+demonstrate the first two conditions. The red arrow selecting pixels for
+statistics begins at the lower left corner, and the inset plot says
+``Line Extract Preview - (0, 0) to (19, 0)'', thus confirming that the
+lower-left corner is the coordinate origin. The arrow shows
+directionality, so that the figure demonstrates the arrowhead is at
+coordinate (19, 0). This confirms that the x-coordinate increases
+left-to-right. We confirmed that the y-coordinate increases vertically
+by a similar method.\\
+\includegraphics[width=5.14583in]{jira_imgs/3064.png}\\
+The next screenshot shows two saturated stars. The mask plane has been
+displayed atop the image, with pixels flagged as ``SATURATED'' shown in
+green. From the two saturated stars, it is clear that bleed trails are
+oriented vertically. Finally, the sky orientation is shown by the yellow
+arrows near the upper left, which demonstrate that east is oriented 90
+degrees counter-clockwise from north, as required.\\
+\includegraphics[width=5.22917in]{jira_imgs/3065.png}\\
+We have thus demonstrated that camera image data is visualized using the
+coordinates as defined in LSE-349.
 
 }
 
