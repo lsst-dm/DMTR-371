@@ -504,7 +504,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T145}{LVV-T145}
-& {\small Robert Lupton } & {\small  } &
+& {\small Robert Lupton } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -512,7 +512,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T144}{LVV-T144}
-& {\small Kian-Tat Lim } & {\small  } &
+& {\small Kian-Tat Lim } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -1004,7 +1004,7 @@ See attached artifact notebook ``test\_LVV-T127.ipynb'' for details.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T145}{LVV-T145}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -1013,7 +1013,7 @@ See attached artifact notebook ``test\_LVV-T127.ipynb'' for details.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T144}{LVV-T144}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -7594,7 +7594,7 @@ override, and verify the configuration for a DMS Task.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -7603,7 +7603,7 @@ Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -7619,11 +7619,16 @@ for a Task.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+As an example, take
+\href{https://github.com/lsst/ip_isr/blob/main/python/lsst/ip/isr/isrTask.py}{isrTask}.
+Inspection reveals the following, which is a portion of the
+configuration for
+IsrTask:\\[2\baselineskip]\includegraphics[width=4.22917in]{jira_imgs/3071.png}
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -7639,11 +7644,52 @@ caught before the science algorithm executes.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+With the science pipelines w\_2022\_35 set up on the USDF devl machines,
+execute the following:\\[2\baselineskip]setup -j -r
+/sdf/group/rubin/u/jcarlin/repos/rc2\_subset/\\
+export NUMPROC=8\\[2\baselineskip]Copy the default pipeline for the
+rc2\_subset processing. We will modify this for each test step.\\
+cp \$RC2\_SUBSET\_DIR/pipelines/DRP.yaml ./\\[2\baselineskip]Edit this
+file to contain the (deliberately wrong) configuration:\\
+tasks:\\
+\hspace*{0.333em} characterizeImage:\\
+\hspace*{0.333em} ~ class:
+lsst.pipe.tasks.characterizeImage.CharacterizeImageTask\\
+\hspace*{0.333em} ~ config:\\
+\hspace*{0.333em} ~ ~ detection.thresholdValue:
+`starwars'\\[2\baselineskip]Execute the pipeline task for
+``step1'':\\[2\baselineskip]pipetask --long-log run -j \$NUMPROC -b
+\$\{RC2\_SUBSET\_DIR\}/SMALL\_HSC/butler.yaml -p DRP.yaml\#nightlyStep1
+-i HSC/RC2/defaults --register-dataset-types -o u/\$USER/LVV-T145\_step1
+-d ``detector in (42) AND visit in (11690,
+11698)''\\[2\baselineskip]pipetask --long-log run -j \$NUMPROC -b
+\$\{RC2\_SUBSET\_DIR\}/SMALL\_HSC/butler.yaml -p DRP.yaml\#nightlyStep1
+-i HSC/RC2/defaults --register-dataset-types -o
+u/\$USER/LVV-T145\_step1\\[2\baselineskip]As expected, this fails with
+the following error:\\[2\baselineskip]ERROR
+2022-08-30T15:02:50.570-07:00 lsst.daf.butler.cli.utils
+()(utils.py:1049) - Caught an exception, details are in traceback:\\
+Traceback (most recent call last):\\
+\hspace*{0.333em}\hspace*{0.333em}File
+``/sdf/group/rubin/sw/conda/envs/lsst-scipipe-4.1.0/share/eups/Linux64/pex\_config/g849534e15f+3b870f08dc/python/lsst/pex/config/config.py'',
+line 801, in \_\_set\_\_\\
+\hspace*{0.333em} ~~self.\_validateValue(value)\\
+\hspace*{0.333em}\hspace*{0.333em}File
+``/sdf/group/rubin/sw/conda/envs/lsst-scipipe-4.1.0/share/eups/Linux64/pex\_config/g849534e15f+3b870f08dc/python/lsst/pex/config/rangeField.py'',
+line 144, in \_validateValue\\
+\hspace*{0.333em} ~~Field.\_validateValue(self, value)\\
+\hspace*{0.333em}\hspace*{0.333em}File
+``/sdf/group/rubin/sw/conda/envs/lsst-scipipe-4.1.0/share/eups/Linux64/pex\_config/g849534e15f+3b870f08dc/python/lsst/pex/config/config.py'',
+line 628, in \_validateValue\\
+\hspace*{0.333em} ~~raise TypeError(msg)\\
+TypeError: Value starwars is of incorrect type str. Expected type
+float\\[2\baselineskip]We have thus verified that an invalid
+configuration causes an error before the tasks execute.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -7661,6 +7707,32 @@ runs through difference in recorded provenance and in results.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Now we will change the threshold from the previous step to a valid
+numerical value. We will then run the task with two different values for
+this detection threshold, and confirm that the results
+differ.\\[2\baselineskip]tasks:\\
+characterizeImage:\\
+class: lsst.pipe.tasks.characterizeImage.CharacterizeImageTask\\
+config:\\
+detection.thresholdValue: 100\\[2\baselineskip]pipetask --long-log run
+-j \$NUMPROC -b \$\{RC2\_SUBSET\_DIR\}/SMALL\_HSC/butler.yaml -p
+DRP.yaml\#nightlyStep1 -i HSC/RC2/defaults --register-dataset-types -o
+u/\$USER/LVV-T145\_step1\_thresh100 -d ``detector in (42) AND visit in
+(11690, 11698)''\\[2\baselineskip]Now change the threshold to 30, and
+run the pipetask again, specifying u/\$USER/LVV-T145\_step1\_thresh30 as
+the output collection.\\[2\baselineskip]The attached script
+``test\_LVV-T145.py'' reads the `src` catalog from each of the two
+collections in turn, and compares the number of sources in each
+catalog.\\[2\baselineskip]Executing this prints the following to the
+screen:\\
+python test\_LVV-T145.py\\[2\baselineskip]lsst\_distrib
+g0b29ad24fb+434521fcbd current w\_2022\_35 setup\\
+src1 length:~~3172\\
+src2 length:~~3212\\
+run1 threshold:~~100.0\\
+run2 threshold:~~30.0\\[2\baselineskip]This confirms that the change in
+threshold affected the number of detected sources, and that the
+thresholds were persisted in metadata in the butler collections.
 
 }
 
@@ -7676,7 +7748,7 @@ pipeline task without recompilation.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -7685,7 +7757,7 @@ Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -7703,17 +7775,51 @@ reconfiguring and running Tasks without recompilation.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+As an example, take
+\href{https://github.com/lsst/ip_isr/blob/main/python/lsst/ip/isr/isrTask.py}{isrTask}.
+Inspection reveals the following, which is a portion of the
+configuration for
+IsrTask:\\[2\baselineskip]\includegraphics[width=3.12500in]{jira_imgs/3072.png}\\
+These configuration parameters can be changed in a .yaml pipeline that
+is invoked at pipetask runtime.~
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Verify that tasks can consist of multiple subtasks chained together.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Confirmation that the software architecture has allowed for the use of
+subsets and chains of tasks.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+An example of a YAML pipeline (in this case, one that calculates the
+crosstalk correction) is seen below. One can see that it satisfies the
+requirement from step 1 that the configuration parameters can be
+specified without recompilation of code. At the bottom, this excerpt
+also shows an example of subtasks being chained together to create
+larger
+tasks.\\[2\baselineskip]\includegraphics[width=4.20833in]{jira_imgs/3074.png}
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
 Verify that an example science algorithm can be run through one of these
-Tasks.~ Three examples from different areas: source measurement, image
-subtraction, and photometric-redshift estimation.
+Tasks.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -7727,6 +7833,22 @@ configurations.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+For this, we refer to verification performed in
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/257}{LVV-T145},
+where we demonstrated that configurations can be changed in YAML
+specification files, and that these changes can be demonstrated to take
+effect.\\[2\baselineskip]Executing the script from LVV-T145 prints the
+following to the screen:\\
+python test\_LVV-T145.py\\[2\baselineskip]lsst\_distrib
+g0b29ad24fb+434521fcbd current w\_2022\_35 setup\\
+src1 length: 3172\\
+src2 length: 3212\\
+run1 threshold: 100.0\\
+run2 threshold: 30.0\\[2\baselineskip]\ldots{}where run1 and run2 were
+source detection runs using detection thresholds of 100 and
+30.\\[2\baselineskip]This confirms that the change in threshold affected
+the number of detected sources, and that the thresholds were persisted
+in metadata in the butler collections.
 
 }
 
