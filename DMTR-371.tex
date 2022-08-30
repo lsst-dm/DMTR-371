@@ -392,7 +392,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T126}{LVV-T126}
-& {\small Eric Bellm } & {\small  } &
+& {\small Eric Bellm } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -853,10 +853,11 @@ Report repository.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T126}{LVV-T126}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Results are in the notebook ``test\_LVV-T126.ipynb'' attached to the
+Test Report repository.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -4959,16 +4960,17 @@ and coadds.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Results are in the notebook ``test\_LVV-T126.ipynb'' attached to the
+Test Report repository.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4987,11 +4989,13 @@ diaSrcs).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+We execute this test on the RSP at the IDF, using DP0.2 data and Science
+Pipelines version w\_2022\_32.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5019,11 +5023,15 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+To instantiate the butler containing DP0.2 data:\\[2\baselineskip]config
+= `dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5042,11 +5050,18 @@ difference image.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Select the dataId of a single visit image:\\
+dataId = \{'instrument': `LSSTCam-imSim', `detector': 78, `visit':
+60891, `exposure':60891, `band':'i'\}\\[2\baselineskip]Extract the
+calexp image, difference image, and diaSrc catalog:\\
+calexp = butler.get('calexp', dataId=dataId)\\
+diffim = butler.get('goodSeeingDiff\_differenceExp', dataId=dataId)\\
+diasrc = butler.get('goodSeeingDiff\_diaSrc', dataId=dataId)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5066,6 +5081,13 @@ subtraction) and a catalog of sources detected/measured from that image.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+This following figure shows the calexp image on the left and the
+difference image for the same visit on the right. The difference image
+contains mostly blank sky, with some minor artifacts due to imperfect
+subtraction of bright
+stars.\\[2\baselineskip]\includegraphics[width=5.90625in]{jira_imgs/3062.png}\\
+The attached notebook demonstrates that the diaSrc catalog contains the
+expected measurements.
 
 }
 
