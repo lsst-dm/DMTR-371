@@ -31,7 +31,7 @@
 
 \title{LVV-P99: Data Management Acceptance Test Campaign 1 Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-08-29 }
+\date{ 2022-08-30 }
 \author{ Jeffrey Carlin }
 
 \input{history_and_info.tex}
@@ -272,7 +272,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T190}{LVV-T190}
-& {\small Robert Gruendl [X] } & {\small Jeffrey Carlin } &
+& {\small Leanne Guy } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -384,7 +384,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T91}{LVV-T91}
-& {\small Robert Lupton } & {\small  } &
+& {\small Robert Lupton } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -432,7 +432,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{LVV-T42}
-& {\small Jim Bosch } & {\small  } &
+& {\small Jim Bosch } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -448,7 +448,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T141}{LVV-T141}
-& {\small Robert Gruendl [X] } & {\small  } &
+& {\small Leanne Guy } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -456,7 +456,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T140}{LVV-T140}
-& {\small Robert Gruendl [X] } & {\small  } &
+& {\small Leanne Guy } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -843,10 +843,11 @@ Report repository.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T91}{LVV-T91}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Results are in the notebook ``test\_LVV-T91.ipynb'' attached to the Test
+Report repository.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -915,10 +916,11 @@ tables in the Qserv database) will be confirmed separately.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{LVV-T42}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+Results are in the notebook ``test\_LVV-T42.ipynb'' attached to the Test
+Report repository.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -4849,16 +4851,17 @@ fringe-correction frame and determine how often it should be updated.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Results are in the notebook ``test\_LVV-T91.ipynb'' attached to the Test
+Report repository.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4875,11 +4878,18 @@ which runs the calibration products pipeline.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Working on the Rubin Science Platform (RSP) hosted at the USDF (SLAC),
+using Science Pipelines version w\_2022\_32.\\[2\baselineskip]The
+HSC/RC2 dataset we will use is in a shared repository at:\\
+repo = `/sdf/group/rubin/repo/main'\\
+collection = `HSC/runs/RC2/w\_2022\_28/DM-35609'\\[2\baselineskip]The
+ISR correction steps have been executed during the bi-weekly RC2
+reprocessing campaign.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4896,11 +4906,17 @@ Fringe frame is an lsst.afw.image.Exposure with reasonable pixel values.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+We selected and examined the image with the following
+dataId:\\[2\baselineskip]dataId = \{'instrument': `HSC', `detector': 42,
+`visit': 1880, `exposure': 1880\}\\[2\baselineskip]The image has
+reasonable statistics, and displays the characteristic fringing
+patterns:\\
+\includegraphics[width=3.70833in]{jira_imgs/3058.png}\\
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4917,6 +4933,17 @@ Images before and after correction have different pixel values.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+In the attached notebook, we extracted image statistics before and after
+the fringe correction, and see the following:\\[2\baselineskip]
+
+\begin{verbatim}
+  image                     median     stddev    (of image pixel values)
+raw:                      17078.0 3836.131470952384
+after fringe correction:  17108.0 765.4047
+\end{verbatim}
+
+We have thus demonstrated that the fringe correction has altered the
+image as expected.\\[2\baselineskip]
 
 }
 
@@ -5853,16 +5880,17 @@ and a WCS model.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\Results are in the notebook ``test\_LVV-T42.ipynb'' attached to the Test
+Report repository.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5890,11 +5918,19 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+On the IDF, working with Science Pipelines version w\_2022\_32, executed
+the following to initialize the Butler with the DP0.2
+dataset:\\[2\baselineskip]\# For DP0.2 data on the IDF: ~ ~ ~ ~ ~ ~ ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~\\
+config = `dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5909,11 +5945,12 @@ Ingest the data from an appropriate processed dataset.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Successfully initialized the butler in the previous step.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5929,11 +5966,19 @@ calexp image, psf model, and source list.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Select a single visit with this dataId:\\
+dataId = \{'instrument': `LSSTCam-imSim', `detector': 78, `visit':
+60891, `exposure':60891, `band':'i'\}\\[2\baselineskip]Extract the
+calexp image, source list, psf model, and WCS object,\\
+calexp = butler.get('calexp', dataId=dataId)\\
+src = butler.get('src', dataId=dataId)\\[2\baselineskip]psf =
+calexp.getPsf()\\
+wcs = calexp.getWcs()
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5960,11 +6005,18 @@ visualized using Firefly, which displays mask planes by default.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+We inspected the calexp and its associated image planes in Firefly,
+confirming that the variance plane and image plane differ, and that they
+are well-formed images. An example showing the mask plane overlaid on
+the calexp is below:\\
+\includegraphics[width=4.25000in]{jira_imgs/3059.png}\\
+The above image also shows the definitions of the different-colored mask
+bits that are set.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 5 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -5983,11 +6035,15 @@ taking a difference of PSFs at two positions).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The following image shows the PSF extracted at two different positions
+in the first two panels, and their difference in the third. The PSF is
+clearly varying with position:\\
+\includegraphics[width=5.78125in]{jira_imgs/3060.png}
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 6 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -6007,11 +6063,28 @@ or the WCS.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+We selected a single source from the catalog at
+positions:\\[2\baselineskip]
+
+\begin{verbatim}
+(X, Y): ( 1730.342687466467 ,  386.1185560155262 )
+(ra, dec): ( 71.89388932338906 ,  -37.34102758827357 )
+\end{verbatim}
+
+In the attached notebook, we confirmed that transforming between pixel
+and sky coordinates gives the same result as the catalog. Here is the
+output of the relevant cell:\\
+
+\begin{verbatim}
+RA, Dec from X, Y:  (71.8938893234, -37.3410275883)
+X, Y from RA, Dec:  (1730.3, 386.12)
+Sky to pixel agrees!
+\end{verbatim}
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 7 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -6028,6 +6101,9 @@ processing).
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+See the results in the attached notebook, where we successfully verified
+all of the PVI content for a difference image and its associated diaSrc
+catalog.
 
 }
 
