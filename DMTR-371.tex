@@ -1,6 +1,6 @@
 % generated from JIRA project LVV
 % using template at /usr/share/miniconda/envs/docsteady-env/lib/python3.7/site-packages/docsteady/templates/tpr.latex.jinja2.
-% using docsteady version 2.2.9
+% using docsteady version 2.3.0
 % Please do not edit -- update information in Jira instead
 \documentclass[DM,lsstdraft,STR,toc]{lsstdoc}
 \usepackage{geometry}
@@ -31,7 +31,7 @@
 
 \title{LVV-P99: Data Management Acceptance Test Campaign 1 Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-08-30 }
+\date{ 2022-12-12 }
 \author{ Jeffrey Carlin }
 
 \input{history_and_info.tex}
@@ -132,7 +132,23 @@ the Pipelines.
 \subsection{Related Documentation}
 
 
-No additional documentation provided.
+\begin{longtable}{rp{10cm}l}
+\multicolumn{3}{c}{Jira Attachments} \\ \hline
+                           To LVV-C208 results &
+  DP02ProcessingRuns.png & \attachfile{attachments/DP02ProcessingRuns.png}\\ \hline
+To LVV-C208 results &
+  DOME\_GOGLE\_LSST\_Queues.png & \attachfile{attachments/DOME_GOGLE_LSST_Queues.png}\\ \hline
+ To LVV-C208 results &
+  butlerStat-PREOPS-905.html & \attachfile{attachments/butlerStat-PREOPS-905.html}\\ \hline
+To LVV-C208 results &
+  pandaWfStat-PREOPS-905.html & \attachfile{attachments/pandaWfStat-PREOPS-905.html}\\ \hline
+To LVV-C208 results &
+  pandaStat-PREOPS-905.html & \attachfile{attachments/pandaStat-PREOPS-905.html}\\ \hline
+          \end{longtable}
+
+All documents provided as attachments in Jira are downloaded to Github and linked here for convenience.
+However, since they are not properly versioned, they should be considered informal and therefore
+not be part of the verification baseline.
 
 
 \subsection{PMCS Activity}
@@ -159,8 +175,24 @@ The personnel involved in the test campaign is shown in the following table.
 Jeffrey Carlin }
 } \\\hline
 \textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T33}{LVV-T33}
+& {\small Kian-Tat Lim } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T43}{LVV-T43}
+& {\small Jim Bosch } & {\small Jeffrey Carlin } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2697}{LVV-T2697}
-& {\small Jeffrey Carlin } & {\small  } &
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -168,23 +200,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2698}{LVV-T2698}
-& {\small Jeffrey Carlin } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2694}{LVV-T2694}
-& {\small Jeffrey Carlin } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2695}{LVV-T2695}
-& {\small Jeffrey Carlin } & {\small  } &
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -192,7 +208,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T136}{LVV-T136}
-& {\small Colin Slater } & {\small  } &
+& {\small Colin Slater } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -200,7 +216,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2692}{LVV-T2692}
-& {\small Jeffrey Carlin } & {\small  } &
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -208,31 +224,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T32}{LVV-T32}
-& {\small Kian-Tat Lim } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T374}{LVV-T374}
-& {\small John Swinbank } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T362}{LVV-T362}
-& {\small John Swinbank } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T368}{LVV-T368}
-& {\small John Swinbank } & {\small  } &
+& {\small Kian-Tat Lim } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -240,15 +232,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1756}{LVV-T1756}
-& {\small Jeffrey Carlin } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T124}{LVV-T124}
-& {\small Simon Krughoff } & {\small  } &
+& {\small Jeffrey Carlin } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -257,14 +241,6 @@ Jeffrey Carlin }
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T199}{LVV-T199}
 & {\small Leanne Guy } & {\small Jeffrey Carlin } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T83}{LVV-T83}
-& {\small Robert Lupton } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -288,23 +264,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T84}{LVV-T84}
-& {\small Robert Lupton } & {\small Jeffrey Carlin } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T88}{LVV-T88}
-& {\small Robert Lupton } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T115}{LVV-T115}
-& {\small Kian-Tat Lim } & {\small  } &
+& {\small Eli Rykoff } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -327,24 +287,8 @@ Jeffrey Carlin }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T149}{LVV-T149}
-& {\small Colin Slater } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T72}{LVV-T72}
-& {\small Jim Bosch } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T85}{LVV-T85}
-& {\small Robert Lupton } & {\small  } &
+& {\small Jim Bosch } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -352,7 +296,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T90}{LVV-T90}
-& {\small Robert Lupton } & {\small Jeffrey Carlin } &
+& {\small Eli Rykoff } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -368,7 +312,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T55}{LVV-T55}
-& {\small Eric Bellm } & {\small  } &
+& {\small Eric Bellm } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -376,7 +320,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T66}{LVV-T66}
-& {\small Jim Bosch } & {\small  } &
+& {\small Jim Bosch } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -384,7 +328,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T91}{LVV-T91}
-& {\small Robert Lupton } & {\small Jeffrey Carlin } &
+& {\small Eli Rykoff } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -440,7 +384,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T141}{LVV-T141}
-& {\small Leanne Guy } & {\small  } &
+& {\small Leanne Guy } & {\small Leanne Guy } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -448,7 +392,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T140}{LVV-T140}
-& {\small Leanne Guy } & {\small  } &
+& {\small Leanne Guy } & {\small Leanne Guy } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -456,7 +400,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T129}{LVV-T129}
-& {\small Robert Lupton } & {\small Jeffrey Carlin } &
+& {\small Eli Rykoff } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -464,15 +408,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T127}{LVV-T127}
-& {\small Robert Lupton } & {\small Jeffrey Carlin } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T131}{LVV-T131}
-& {\small Gregory Dubois-Felsmann } & {\small  } &
+& {\small Leanne Guy } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -480,7 +416,7 @@ Jeffrey Carlin }
 \end{minipage}
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T79}{LVV-T79}
-& {\small Jim Bosch } & {\small  } &
+& {\small Jim Bosch } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -495,16 +431,8 @@ Jeffrey Carlin }
 \medskip
 \end{minipage}
 \\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T98}{LVV-T98}
-& {\small Kian-Tat Lim } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T145}{LVV-T145}
-& {\small Robert Lupton } & {\small Jeffrey Carlin } &
+& {\small Leanne Guy } & {\small Jeffrey Carlin } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -521,38 +449,6 @@ Jeffrey Carlin }
 \\ \hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T74}{LVV-T74}
 & {\small Eric Bellm } & {\small Jeffrey Carlin } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T97}{LVV-T97}
-& {\small Kian-Tat Lim } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1529}{LVV-T1529}
-& {\small Jeffrey Carlin } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1527}{LVV-T1527}
-& {\small Jeffrey Carlin } & {\small  } &
-\begin{minipage}[]{6cm}
-\smallskip
-{\small  }
-\medskip
-\end{minipage}
-\\ \hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1528}{LVV-T1528}
-& {\small Jeffrey Carlin } & {\small  } &
 \begin{minipage}[]{6cm}
 \smallskip
 {\small  }
@@ -576,110 +472,82 @@ Jeffrey Carlin }
 \multicolumn{2}{r}{ T. Plan \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testPlan/LVV-P99}{LVV-P99}:} &
 \multicolumn{2}{p{10.9cm}}{\textbf{ Data Management Acceptance Test Campaign 1 }} & Approved \\\hline
 \multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-C208}{LVV-C208}:} &
-\multicolumn{2}{p{10.9cm}}{\textbf{ Data Management Acceptance Test Campaign 1 }} & In Progress \\\hline
+\multicolumn{2}{p{10.9cm}}{\textbf{ Data Management Acceptance Test Campaign 1 }} & Done \\\hline
 \textbf{Test Cases} &  \textbf{Ver.} & \textbf{Status} & \textbf{Comment} & \textbf{Issues} \\\toprule
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2697}{LVV-T2697}
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T33}{LVV-T33}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+The python script to execute this test is attached to the Test Report
+github repository in scripts/test\_LVV-T32.py. (This test was executed
+with LVV-T32.)
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T43}{LVV-T43}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+The executed notebook was saved in the repository associated with this
+campaign's test report as ``notebooks/test\_LVV-T43.ipynb''.
+\medskip
+\end{minipage}
+&   \\\hline
+\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2697}{LVV-T2697}
+&  1
+& Pass &
+\begin{minipage}[]{9cm}
+\smallskip
+The executed notebook was saved in the repository associated with this
+campaign's test report as ``notebooks/test\_LVV-T2697.ipynb''.
 \medskip
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2698}{LVV-T2698}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2694}{LVV-T2694}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2695}{LVV-T2695}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
+The executed notebook was saved in the repository associated with this
+campaign's test report as ``notebooks/test\_LVV-T2698.ipynb''.
 \medskip
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T136}{LVV-T136}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+The executed notebook was saved in the repository associated with this
+campaign's test report as ``notebooks/test\_LVV-T136.ipynb''.
 \medskip
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2692}{LVV-T2692}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+The executed notebook was saved in the repository associated with this
+campaign's test report as ``notebooks/test\_LVV-T2692.ipynb''.
 \medskip
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T32}{LVV-T32}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T374}{LVV-T374}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T362}{LVV-T362}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T368}{LVV-T368}
-&  2
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
+The python script to execute this test is attached to the Test Report
+github repository in scripts/test\_LVV-T32.py.
 \medskip
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1756}{LVV-T1756}
 &  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T124}{LVV-T124}
-&  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -689,15 +557,6 @@ Jeffrey Carlin }
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T199}{LVV-T199}
 &  1
 & Pass &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T83}{LVV-T83}
-&  1
-& Not Executed &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -733,24 +592,6 @@ Report repository.
 \medskip
 \end{minipage}
 &   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T88}{LVV-T88}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T115}{LVV-T115}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T151}{LVV-T151}
 &  1
 & Pass &
@@ -770,30 +611,13 @@ Results of the test execution can be found in the notebook
 \medskip
 \end{minipage}
 &   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T149}{LVV-T149}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T72}{LVV-T72}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T85}{LVV-T85}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
+The executed notebook was saved in the repository associated with this
+campaign's test report as ``notebooks/test\_LVV-T72.ipynb''.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -818,19 +642,21 @@ Report repository.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T55}{LVV-T55}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+The python test script to execute this code is attached to the Test
+Report github repository in scripts/test\_LVV-T55.py.
 \medskip
 \end{minipage}
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T66}{LVV-T66}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
-
+The python test script to execute this code is attached to the Test
+Report github repository in scripts/test\_LVV-T66.py.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -921,7 +747,7 @@ Report repository.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T141}{LVV-T141}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -930,7 +756,7 @@ Report repository.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T140}{LVV-T140}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -966,18 +792,9 @@ See attached artifact notebook ``test\_LVV-T127.ipynb'' for details.
 \medskip
 \end{minipage}
 &   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T131}{LVV-T131}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T79}{LVV-T79}
 &  1
-& Not Executed &
+& Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -987,15 +804,6 @@ See attached artifact notebook ``test\_LVV-T127.ipynb'' for details.
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1830}{LVV-T1830}
 &  1
 & Pass &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T98}{LVV-T98}
-&  1
-& Not Executed &
 \begin{minipage}[]{9cm}
 \smallskip
 
@@ -1029,42 +837,6 @@ See attached artifact notebook ``test\_LVV-T74.ipynb'' for details.
 \medskip
 \end{minipage}
 &   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T97}{LVV-T97}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1529}{LVV-T1529}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1527}{LVV-T1527}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
-\href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1528}{LVV-T1528}
-&  1
-& Not Executed &
-\begin{minipage}[]{9cm}
-\smallskip
-
-\medskip
-\end{minipage}
-&   \\\hline
 \caption{Test Campaign Summary}
 \label{table:summary}
 \end{longtable}
@@ -1089,7 +861,7 @@ Not yet available.
 Open test cycle {\it \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testrun/LVV-C208}{Data Management Acceptance Test Campaign 1}} in Jira.
 
 Test Cycle name: Data Management Acceptance Test Campaign 1\\
-Status: In Progress
+Status: Done
 
 This test cycle verifies a subset of
 \href{https://lse-61.lsst.io/}{DMSR} (\citeds{LSE-61}) requirements in order to
@@ -1107,30 +879,35 @@ Not provided.
 
 \subsubsection{Test Cases in LVV-C208 Test Cycle}
 
-\paragraph{ LVV-T2697 - Verify implementation of Catalog Data Product Access }\mbox{}\\
+\paragraph{ LVV-T33 - Verify implementation of Raw Science Image Metadata }\mbox{}\\
 
 Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2697}{\textit{ LVV-T2697 } }
+Status \textbf{Approved}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T33}{\textit{ LVV-T33 } }
 test case in Jira.
 
-Verify that available catalog data products can be listed and retrieved.
+Verify successful ingestion of raw data and that image metadata is
+present and queryable.
 
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\The python script to execute this test is attached to the Test Report
+github repository in scripts/test\_LVV-T32.py. (This test was executed
+with LVV-T32.)
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+Identify (or gather) a dataset of raw science images.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -1141,12 +918,638 @@ Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+For this test, we use weekly Science Pipelines version `w\_2022\_45` at
+the USDF, examining recently gathered AuxTel imaging data from the
+campaign detailed in
+\href{https://jira.lsstcorp.org/browse/SITCOM-505}{SITCOM-505}. The data
+were obtained in late October 2022, and processed at USDF with pipelines
+version `w\_2022\_44`.\\[2\baselineskip]In particular, these data are at
+`/repo/embargo`, in collection
+`u/huanlin/auxtel\_oga\_panda\_test\_2022102528\_w44`.\\[2\baselineskip]In
+the attached script, we instantiate a butler pointing to that
+repo/collection:\\[2\baselineskip]from lsst.daf.butler import
+Butler\\[2\baselineskip]repo = `/repo/embargo'\\
+collection = `u/huanlin/auxtel\_oga\_panda\_test\_2022102528\_w44'\\
+butler = Butler(repo, collections=collection)\\[2\baselineskip]The
+attached script retrieves the selected raw image via the
+following:\\[2\baselineskip]dataId = \{'exposure':2022092900894,
+`detector':0\}\\
+raw = butler.get('raw', dataId=dataId)\\
+md = raw.getMetadata()
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Verify that time of exposure start/end, site metadata, telescope
+metadata, and camera metadata are stored in DMS
+system.\\[2\baselineskip]
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Raw image data contain the required metadata.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+The attached script also extracts the metadata attached to the image.
+The following code extracts the metadata and prints each entry to the
+screen:\\[2\baselineskip]md\_dict = md.toDict()\\
+for item in md\_dict.items():\\
+print(item)\\[2\baselineskip]The following results were printed to the
+screen:\\
+Metadata:\\
+('SIMPLE', True)\\
+('EXTEND', True)\\
+('CCD\_MANU', `ITL')\\
+('CCD\_TYPE', `3800C')\\
+('BINX', 1)\\
+('BINY', 1)\\
+('CCDGAIN', 1.0)\\
+('CCDNOISE', 10.0)\\
+('CCDSLOT', `S00')\\
+('RAFTBAY', `R00')\\
+('FIRMWARE', `11384004')\\
+('PLATFORM', `auxtel')\\
+('CONTNUM', `189216ee')\\
+('DAQVERS', `R5-V0.6 2021-10-06T19:50:32Z (1800122)')\\
+('DAQPART', `lat')\\
+('DAQFOLD', `raw')\\
+('SEQFILE', `FP\_ITL\_2s\_ir2\_v25.seq')\\
+('SEQNAME', `FP\_ITL\_2s\_ir2\_v25.seq')\\
+('SEQCKSUM', `2552520002')\\
+('LSST\_NUM', `ITL-3800C-068')\\
+('CCD\_SERN', `20862')\\
+('REBNAME', `Unknown')\\
+('RAFTNAME', `AuxTel-Raft')\\
+('FPVERS', `1.1.4')\\
+('IHVERS', `1.0.30')\\
+('STUTTER ROWS', 0)\\
+('STUTTER DELAY', 0.0)\\
+('STUTTER NSHIFTS', 0)\\
+('FILTPOS', None)\\
+('CCDTEMP', -90.7174)\\
+('COMMENT', {[}'`, '---- Date, night and basic image information ----`,
+'`, '---- Telescope info, location, observer ----`, '`, '---- info, etc.
+----`, '`, '---- TAN Projection ----`, '`, '---- Image-identifying used
+to build OBS-ID ----`, '`, '---- Additional Keys Information from Camera
+----`, '`, '---- Image sequence numbers ----`, '`, '---- Test Stand
+information ----`, '`, '---- Information from Camera (Common block)
+----`, '`, '---- Information from Camera ----`, '`, '---- Filter/grating
+information ----`, '`, '---- Exposure-related information ----`, '`,
+'---- Weather information ----`, '`, '---- Header information ----`, '`,
+'---- Hierarch information for CSC Simulatiom Mode ----`, '----
+Checksums ----`, '---- Checksums ----'{]})\\
+('DATE', `2022-09-30T08:19:19.187')\\
+('MJD', 59852.34674984962)\\
+('IMGTYPE', `OBJECT')\\
+('DATE-OBS', `2022-09-30T08:18:28.952')\\
+('MJD-OBS', 59852.346168425865)\\
+('DATE-TRG', `2022-09-30T08:18:42.184')\\
+('MJD-TRG', 59852.34632157395)\\
+('OBSID', `AT\_O\_20220929\_000894')\\
+('DATE-BEG', `2022-09-30T08:18:28.952')\\
+('MJD-BEG', 59852.346168425865)\\
+('DATE-END', `2022-09-30T08:19:19.187')\\
+('MJD-END', 59852.34674984962)\\
+('GROUPID', `2022-09-30T08:10:20.478')\\
+('BUNIT', `adu')\\
+('TIMESYS', `TAI')\\
+('INSTRUME', `LATISS')\\
+('TELESCOP', `LSST AuxTelescope')\\
+('OBS-LONG', -70.749417)\\
+('OBS-LAT', -30.244639)\\
+('OBS-ELEV', 2663.0)\\
+('OBSGEO-X', 1818938.94)\\
+('OBSGEO-Y', -5208470.95)\\
+('OBSGEO-Z', -3195172.08)\\
+('FACILITY', `Vera C. Rubin Observatory')\\
+('RA', 48.41552041666668)\\
+('DEC', -30.22323527777778)\\
+('RASTART', 48.41613010222692)\\
+('DECSTART', -30.209342398754412)\\
+('RAEND', 48.41616329891139)\\
+('DECEND', -30.20934820761029)\\
+('ROTPA', 359.9987453403358)\\
+('ROTCOORD', `sky')\\
+('HASTART', 0.9417104442537305)\\
+('ELSTART', 77.89912050802377)\\
+('AZSTART', -92.99574590867269)\\
+('AMSTART', 1.0227214941767613)\\
+('AHAEND', None)\\
+('AELEND', None)\\
+('AAZEND', None)\\
+('AAMEND', None)\\
+('TRACKSYS', None)\\
+('FOCUSZ', 0.006039788480848074)\\
+('OBJECT', `HD 20187')\\
+('INSTPORT', 2)\\
+('ATM3PORT', 2)\\
+('DOMEAZ', 267.67)\\
+('SHUTLOWR', 0.0)\\
+('SHUTUPPR', 100.0)\\
+('TESTTYPE', `OBJECT')\\
+('CAMCODE', `AT')\\
+('CONTRLLR', `O')\\
+('DAYOBS', `20220929')\\
+('SEQNUM', 894)\\
+('PROGRAM', `SITCOM-479')\\
+('REASON', `PSF+Photometry\_Validation')\\
+('CURINDEX', 1)\\
+('MAXINDEX', 1)\\
+('TSTAND', None)\\
+('IMAGETAG', `493e97dca7a3ec0a')\\
+('OBSANNOT', '')\\
+('TEMP\_SET', -94.15)\\
+('GRATING', `empty\_1')\\
+('GRATBAND', `EMPTY')\\
+('GRATSLOT', 0)\\
+('LINSPOS', 66.99800109863281)\\
+('FILTBAND', `r')\\
+('FILTER', `SDSSr')\\
+('FILTSLOT', 1)\\
+('EXPTIME', 50.0)\\
+('DARKTIME', 50.2347)\\
+('SHUTTIME', None)\\
+('AIRTEMP', None)\\
+('PRESSURE', None)\\
+('HUMIDITY', None)\\
+('WINDSPD', None)\\
+('WINDDIR', None)\\
+('SEEING', 0.9242383241653442)\\
+('FILENAME', `AT\_O\_20220929\_000894\_R00\_S00.fits')\\
+('HEADVER', 2)\\
+('SIMULATE ATMCS', None)\\
+('SIMULATE ATHEXAPOD', 0)\\
+('SIMULATE ATPNEUMATICS', None)\\
+('SIMULATE ATDOME', 0)\\
+('SIMULATE ATSPECTROGRAPH', 0)\\
+('XTENSION', `BINTABLE')\\
+('BITPIX', 8)\\
+('NAXIS', 2)\\
+('NAXIS1', 8)\\
+('NAXIS2', 2048)\\
+('PCOUNT', 929978)\\
+('GCOUNT', 1)\\
+('TFIELDS', 1)\\
+('TTYPE1', `COMPRESSED\_DATA')\\
+('TFORM1', `1PB(523)')\\
+('ZIMAGE', True)\\
+('ZTILE1', 576)\\
+('ZTILE2', 1)\\
+('ZCMPTYPE', `RICE\_1')\\
+('ZNAME1', `BLOCKSIZE')\\
+('ZVAL1', 32)\\
+('ZNAME2', `BYTEPIX')\\
+('ZVAL2', 4)\\
+('ZTENSION', `IMAGE')\\
+('ZBITPIX', 32)\\
+('ZNAXIS', 2)\\
+('ZNAXIS1', 576)\\
+('ZNAXIS2', 2048)\\
+('ZPCOUNT', 0)\\
+('ZGCOUNT', 1)\\
+('ZHECKSUM', `5GGXAF9V7FEVAF9V')\\
+('CHANNEL', 1)\\
+('EXTNAME', `Segment10')\\
+('CCDSUM', `1 1')\\
+('DATASEC', `{[}4:512,1:2000{]}')\\
+('DETSEC', `{[}509:1,1:2000{]}')\\
+('DETSIZE', `{[}1:4072,1:4000{]}')\\
+('DTV1', 513), ('DTV2', 0)\\
+('DTM1\_1', -1.0), ('DTM2\_2', 1.0), ('DTM1\_2', 0.0), ('DTM2\_1',
+0.0)\\
+('CTYPE1A', `Seg\_X'), ('CTYPE2A', `Seg\_Y')\\
+('CRPIX1A', 0.0), ('CRPIX2A', 0.0)\\
+('CRVAL1A', 2001.0), ('CRVAL2A', 513.0)\\
+('BSCALE', 1.0)\\
+('BZERO', 0.0)\\
+('INHERIT', True)\\
+('ZDATASUM', `261725759')\\
+('CHECKSUM', `JiD1JiA0JiA0JiA0')\\
+('DATASUM', `546670105')\\
+('TEMP1', 14.6875), ('TEMP2', 15.75), ('TEMP3', 14.5625)\\
+('TEMP4', 13.8125), ('TEMP5', 13.375), ('TEMP6', 13.0)\\
+('ATEMPU', 4.82143), ('ATEMPL', 4.79911)\\
+('RTDTEMP', 319.806)\\
+('DIGPS\_V', 5.25), ('DIGPS\_I', 694.0)\\
+('ANAPS\_V', 7.2), ('ANAPS\_I', 304.25)\\
+('CLKHPS\_V', 12.025), ('CLKHPS\_I', 31.25), ('CLKLPS\_V', -11.9846)\\
+('ODPS\_V', 32.05), ('ODPS\_I', 30.0)\\
+('HTRPS\_V', 0.0), ('HTRPS\_W', 0.0)\\
+('PCKU\_V', 1.6977), ('PCKL\_V', -8.29127)\\
+('SCKU\_V', 5.15739), ('SCKL\_V', -5.10488)\\
+('RGU\_V', 8.28484), ('RGL\_V', -2.07496)\\
+('ODV', 32.05), ('ODI', 28.2), ('GDP', 20.0), ('RDP', 13.0), ('OGP',
+-2.0), ('ODP', 25.0)\\
+('CSGATEP', 1.0)\\
+('SCK\_LOWP', -5.0), ('SCK\_HIP', 5.0)\\
+('PCK\_LOWP', -8.0), ('PCK\_HIP', 2.0)\\
+('RG\_LOWP', -2.0), ('RG\_HIP', 8.0)\\
+('AP0\_RC', 3), ('AP1\_RC', 3)\\
+('AP0\_GAIN', 0), ('AP1\_GAIN', 0)\\
+('AP0\_CLMP', 0), ('AP1\_CLMP', 0)\\
+('AP0\_AF1', 0), ('AP1\_AF1', 0)\\
+('AP0\_TM', 0), ('AP1\_TM', 0)\\
+('HVBIAS', `ON')\\
+('ANAV', 7.2), ('ANAI', 306.9)\\
+('DIGV', 5.25), ('DIGI', 674.7)\\
+('FANV', 12.0), ('FANI', 104.6)\\
+('CLKHIGHV', 12.0), ('CLKHIGHI', 30.4), ('CLKLOWV', 12.0), ('CLKLOWI',
+30.8)\\
+('HVBIASV', -50.0), ('HVBIASI', -5.24095e-12)\\
+('DPHIV', 10.0), ('DPHII', 6.4)\\
+('OTMV', 5.0), ('OTMI', 460.9)\\
+('AUXV', 0.0), ('AUXI', 0.0)\\
+('FPDAQCS', `4029549637'), ('FPHIDCS', `3666005214'), ('FPINSCS',
+`969329422')\\
+('FPLIMCS', `840592320'), ('FPRTCCS', `2654667822'), ('FPRTCSCS',
+`1965734659')\\
+('FPRCS', `1524324489'), ('FPRLCS', `143804913'), ('FPRPCS',
+`2223968974')\\
+('FPSEQCS', `3259110827'), ('FPTIMCS', `612664540')\\
+('RPLIMCS', `302651546'), ('RPPOWCS', `3969790867'), ('RPTIMCS',
+`81899862')\\
+('HIERARCH ASTRO METADATA FIX MODIFIED', True)\\
+('HIERARCH ASTRO METADATA FIX DATE', `2022-11-08T16:17:22.029574')\\
+('HIERARCH ASTRO METADATA FIX VERSION',
+`g1625dc41fd+0703681425')\\[2\baselineskip]By examination of this
+metadata, we determine that the correct information has been included.
+This includes the start/end times of the exposure (referenced to TAI),
+site information including observatory location, seeing, etc., telescope
+metadata regarding its pointing, sensor readings, and camera and program
+metadata.\\[2\baselineskip]
+
+}
+
+\paragraph{ LVV-T43 - Verify implementation of Background Model Calculation }\mbox{}\\
+
+Version \textbf{1}.
+Status \textbf{Approved}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T43}{\textit{ LVV-T43 } }
+test case in Jira.
+
+Verify that Processed Visit Images produced by the DRP and AP pipelines
+have had a model of the background subtracted, and that this model is
+persisted in a way that permits the background subtracted from any CCD
+to be retrieved along with the image for that CCD.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\The executed notebook was saved in the repository associated with this
+campaign's test report as ``notebooks/test\_LVV-T43.ipynb''.
+
+
+Detailed steps results:
+
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Identify a dataset with processed visit images in multiple filters.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+For this test we use the `rc2\_subset` dataset, which is a small
+collection of HSC data often used for testing. In particular, we use a
+version processed through all DRP pipeline steps on the USDF with
+Pipelines version w\_2022\_32.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Example Code \\
+{\footnotesize
+\begin{verbatim}
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
+\end{verbatim}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Butler repo available for reading.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+from lsst.daf.butler import Butler\\[2\baselineskip]repo =
+`/sdf/group/rubin/u/jcarlin/repos/rc2\_subset/SMALL\_HSC'\\
+coll = `u/jcarlin/step4'\\
+\# Note: the ccdVisitTable resides in a separate collection because it
+was created after all processing was done.\\
+table\_coll = `u/jcarlin/visit\_table'\\
+butler = Butler(repo, collections={[}coll, table\_coll{]})
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Display an image of the background model for a full CCD. Repeat this for
+all available filters, and confirm that the background is smoothly
+varying and defined over the full CCD.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Well-formed background covering the entire CCD for all CCDs in all
+filters.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+CCD visit/detector combinations were selected at random and the
+corresponding dataIds (datarefs) created. To extract the background, the
+following line was executed for each dataId:\\[2\baselineskip]bb =
+butler.get('calexpBackground', dataId =
+data\_ids{[}ii{]})\\[2\baselineskip]These were displayed alongside the
+final calexp image.\\[2\baselineskip]Additionally, a larger subset of
+dataIds was selected, from which we test whether (a) \emph{all} calexps
+have an associated background model, and (b) the background model is
+well-formed and populated with finite values for all pixels. The result
+of this test, seen in the test notebook, is as
+follows:\\[2\baselineskip]
+
+\begin{verbatim}
+All CCDs have an associated background.
+\end{verbatim}
+
+If any of the 100 randomly selected CCDs had a malformed (or
+non-existent) background model, this statement would not return
+True.\\[2\baselineskip]The executed notebook was saved in the repository
+associated with this campaign's test report as
+``notebooks/test\_LVV-T43.ipynb''.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Confirm that the pixel values of the calexp + calexpBackground are
+approximately equal to those of the postISRCCD image.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+All calexp+calexpBackground images should have pixel
+values\emph{~approximately~}equal to those of postISRCCD images. Small
+differences are expected due to cosmic-ray repair and other similar
+corrections, but the median should be equal.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+In the attached notebook, we looped over the dataIds, selecting the
+original postISRCCD image, the calexp, and the background for each one.
+We calculated the median value of postISRCCD - (calexp + background),
+and demonstrated via an assert statement that this value is zero for all
+images.
+
+}
+
+\paragraph{ LVV-T2697 - Verify implementation of Catalog Data Product Access }\mbox{}\\
+
+Version \textbf{1}.
+Status \textbf{Defined}.
+Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2697}{\textit{ LVV-T2697 } }
+test case in Jira.
+
+Verify that available catalog data products can be listed and retrieved.
+
+\textbf{ Preconditions}:\\
+
+
+Execution status: {\bf Pass }
+
+Final comment:\\The executed notebook was saved in the repository associated with this
+campaign's test report as ``notebooks/test\_LVV-T2697.ipynb''.
+
+
+Detailed steps results:
+
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Example Code \\
+{\footnotesize
+\begin{verbatim}
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
+\end{verbatim}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Butler repo available for reading.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+Working in a notebook entitled ``test\_LVV-T2697.ipynb'' on the Interim
+Data Facility at data.lsst.cloud:\\[2\baselineskip]from lsst.daf.butler
+import Butler\\[2\baselineskip]config = `dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Execute a Butler query to identify and list `src` catalogs (measured
+from `calexp` images).
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+A list of DataIds identifying `src` catalogs.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+First, select a tract, patch, and detector to query. (These are known a
+priori to exist in the DP0.2 data.)\\[2\baselineskip]tract = 3828\\
+patch = 42\\
+detector = 42\\[2\baselineskip]Query the Butler registry as
+follows:\\[2\baselineskip]data\_refs = butler.registry.queryDatasets(\\
+datasetType=``src'',\\
+where=f``tract=\{tract\} and patch=\{patch\} and detector=\{detector\}
+and skymap='DC2''')\\[2\baselineskip]data\_ids =
+{[}{]}\\[2\baselineskip]for data\_ref in data\_refs:\\
+print(data\_ref.dataId.full)\\
+data\_ids.append(data\_ref.dataId.full)\\[2\baselineskip]This prints the
+following list of dataIds to the screen:\\[2\baselineskip]
+
+\begin{verbatim}
+{band: 'r', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'r_sim_1.4', visit_system: 1, visit: 414872}
+{band: 'i', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'i_sim_1.4', visit_system: 1, visit: 457676}
+{band: 'i', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'i_sim_1.4', visit_system: 1, visit: 713247}
+{band: 'i', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'i_sim_1.4', visit_system: 1, visit: 1013706}
+{band: 'y', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'y_sim_1.4', visit_system: 1, visit: 1138156}
+{band: 'r', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'r_sim_1.4', visit_system: 1, visit: 1155522}
+{band: 'z', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'z_sim_1.4', visit_system: 1, visit: 1174350}
+{band: 'r', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'r_sim_1.4', visit_system: 1, visit: 1192139}
+\end{verbatim}
+
+We have thus demonstrated that catalog data products can be queried and
+listed via the Butler.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Using `Butler.get()`, retrieve a `src` catalog using one of the DataIds
+returned in the previous step. Print a table version of this catalog,
+then its schema, and confirm that the catalog is well-formed.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Confirmation that a `src` catalog has been retrieved by confirming that
+is has measurements of positions, fluxes, and shapes, and contains flags
+describing measurement quality.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+Retrieve a src catalog via the following line:\\
+src = butler.get('src', dataId=data\_ids{[}0{]})\\[2\baselineskip]Print
+the catalog contents to the screen:\\
+src.asAstropy()\\[2\baselineskip](For brevity, the output from this is
+not shown in this panel. See the attached notebook for the output
+information.)\\[2\baselineskip]Print and examine the catalog schema to
+confirm that it contains expected measurements. A portion of the output
+is as follows:\\[2\baselineskip]
+
+\begin{verbatim}
+The catalog has  265  columns.
+
+ Catalog schema: 
+\end{verbatim}
+
+{[}7{]}:\\
+
+\begin{verbatim}
+Schema(
+    (Field['L'](name="id", doc="unique ID"), Key<L>(offset=0, nElements=1)),
+    (Field['Angle'](name="coord_ra", doc="position in ra/dec"), Key<Angle>(offset=8, nElements=1)),
+    (Field['Angle'](name="coord_dec", doc="position in ra/dec"), Key<Angle>(offset=16, nElements=1)),
+    (Field['L'](name="parent", doc="unique ID of parent source"), Key<L>(offset=24, nElements=1)),
+    (Field['Flag'](name="calib_detected", doc="Source was detected as an icSource"), Key['Flag'](offset=32, bit=0)),
+    (Field['Flag'](name="calib_psf_candidate", doc="Flag set if the source was a candidate for PSF determination, as determined by the star selector."), Key['Flag'](offset=32, bit=1)),
+    (Field['Flag'](name="calib_psf_used", doc="Flag set if the source was actually used for PSF determination, as determined by the"), Key['Flag'](offset=32, bit=2)),
+    (Field['Flag'](name="calib_psf_reserved", doc="set if source was reserved from PSF determination"), Key['Flag'](offset=32, bit=3)),
+    (Field['I'](name="deblend_nChild", doc="Number of children this object has (defaults to 0)"), Key<I>(offset=40, nElements=1)),
+    (Field['Flag'](name="deblend_deblendedAsPsf", doc="Deblender thought this source looked like a PSF"), Key['Flag'](offset=32, bit=4)),
+    (Field['D'](name="deblend_psfCenter_x", doc="If deblended-as-psf, the PSF centroid", units="pixel"), Key<D>(offset=48, nElements=1)),
+    (Field['D'](name="deblend_psfCenter_y", doc="If deblended-as-psf, the PSF centroid", units="pixel"), Key<D>(offset=56, nElements=1)),
+    (Field['D'](name="deblend_psf_instFlux", doc="If deblended-as-psf, the instrumental PSF flux", units="count"), Key<D>(offset=64, nElements=1)),
+...
+\end{verbatim}
+
+\begin{verbatim}
+    (Field['D'](name="base_CircularApertureFlux_3_0_instFlux", doc="instFlux within 3.000000-pixel aperture", units="count"), Key<D>(offset=584, nElements=1)),
+    (Field['D'](name="base_CircularApertureFlux_3_0_instFluxErr", doc="1-sigma instFlux uncertainty", units="count"), Key<D>(offset=592, nElements=1)),
+    (Field['Flag'](name="base_CircularApertureFlux_3_0_flag", doc="General Failure Flag"), Key['Flag'](offset=32, bit=59)),
+    (Field['Flag'](name="base_CircularApertureFlux_3_0_flag_apertureTruncated", doc="aperture did not fit within measurement image"), Key['Flag'](offset=32, bit=60)),
+    (Field['Flag'](name="base_CircularApertureFlux_3_0_flag_sincCoeffsTruncated", doc="full sinc coefficient image did not fit within measurement image"), Key['Flag'](offset=32, bit=61)),
+    (Field['D'](name="base_CircularApertureFlux_4_5_instFlux", doc="instFlux within 4.500000-pixel aperture", units="count"), Key<D>(offset=600, nElements=1)),
+
+...
+\end{verbatim}
+
+We have confirmed that catalog data products can be accessed via the
+Butler using the query results from the previous step.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Repeat steps 2 and 3 for catalogs derived from (a) difference images,
+and (b) coadd images.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+See the attached notebook, wherein we repeated the above steps for
+`goodSeeingDiff\_diaSrc` and `deepCoadd\_forced\_src` catalogs.
 
 }
 
 \paragraph{ LVV-T2698 - Verify implementation of Catalog Metadata Access }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Defined}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2698}{\textit{ LVV-T2698 } }
 test case in Jira.
 
@@ -1156,110 +1559,242 @@ retrieved.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
-\paragraph{ LVV-T2694 - Verify implementation of File Data Product Access }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2694}{\textit{ LVV-T2694 } }
-test case in Jira.
-
-Verify that available file data products can be listed and retrieved.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
+Final comment:\\The executed notebook was saved in the repository associated with this
+campaign's test report as ``notebooks/test\_LVV-T2698.ipynb''.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Example Code \\
+{\footnotesize
+\begin{verbatim}
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
+\end{verbatim}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+Butler repo available for reading.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Working in a notebook entitled ``test\_LVV-T2692.ipynb'' on the Interim
+Data Facility at data.lsst.cloud:\\[2\baselineskip]from lsst.daf.butler
+import Butler\\[2\baselineskip]config = `dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
 
 }
-
-\paragraph{ LVV-T2695 - Verify implementation of file metadata access }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2695}{\textit{ LVV-T2695 } }
-test case in Jira.
-
-Verify that available file data products' metadata can be listed and
-retrieved.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+Execute a Butler query to identify and list `src` catalogs (measured
+from `calexp` images).
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+A list of DataIds identifying `src` catalogs.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+First, select a tract, patch, and detector to query. (These are known a
+priori to exist in the DP0.2 data.)\\[2\baselineskip]tract = 3828\\
+patch = 42\\
+detector = 42\\[2\baselineskip]Query the Butler registry as
+follows:\\[2\baselineskip]data\_refs = butler.registry.queryDatasets(\\
+datasetType=``src'',\\
+where=f``tract=\{tract\} and patch=\{patch\} and detector=\{detector\}
+and skymap='DC2''')\\[2\baselineskip]data\_ids =
+{[}{]}\\[2\baselineskip]for data\_ref in data\_refs:\\
+print(data\_ref.dataId.full)\\
+data\_ids.append(data\_ref.dataId.full)\\[2\baselineskip]This prints the
+following list of dataIds to the screen:\\[2\baselineskip]
+
+\begin{verbatim}
+{band: 'r', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'r_sim_1.4', visit_system: 1, visit: 414872}
+{band: 'i', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'i_sim_1.4', visit_system: 1, visit: 457676}
+{band: 'i', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'i_sim_1.4', visit_system: 1, visit: 713247}
+{band: 'i', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'i_sim_1.4', visit_system: 1, visit: 1013706}
+{band: 'y', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'y_sim_1.4', visit_system: 1, visit: 1138156}
+{band: 'r', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'r_sim_1.4', visit_system: 1, visit: 1155522}
+{band: 'z', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'z_sim_1.4', visit_system: 1, visit: 1174350}
+{band: 'r', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'r_sim_1.4', visit_system: 1, visit: 1192139}
+\end{verbatim}
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use `butler.registry.queryDimensionRecords()` to identify the metadata
+associated with a patch, then a visit, for one of the dataIds returned
+in the query. Print the results to the screen.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Output printed to the screen should include a list of patch metadata
+including the associated tract, id, and bounding region, and a list of
+visit metadata which includes information such as exposure time, date of
+observation, visit id, filter, etc.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+Extract ``patch'' metadata corresponding to a single
+data\_ref:\\[2\baselineskip]calexp\_patch\_metadata =
+butler.registry.queryDimensionRecords('patch',
+dataId=data\_ref.dataId.full)\\[2\baselineskip]Printing the first of
+these results to the screen yields:\\[2\baselineskip]
+
+\begin{verbatim}
+patch:
+  skymap: 'DC2'
+  tract: 4026
+  id: 0
+  cell_x: 0
+  cell_y: 0
+  region: ConvexPolygon([UnitVector3d(0.43026204775397675, 0.6883194991736487, -0.5840298257108897), UnitVector3d(0.426896946056187, 0.6904343352140867, -0.5840029333876526), UnitVector3d(0.42814659142302663, 0.6923830193472248, -0.5807721160424839), UnitVector3d(0.4315119065467899, 0.690268177119236, -0.5807988620553948)])
+\end{verbatim}
+
+Repeat, but now for ``visit'' information:\\
+calexp\_visit\_metadata = butler.registry.queryDimensionRecords('visit',
+dataId=data\_ref.dataId.full)\\[2\baselineskip]
+
+\begin{verbatim}
+visit:
+  instrument: 'LSSTCam-imSim'
+  id: 1192139
+  physical_filter: 'r_sim_1.4'
+  visit_system: 1
+  name: '1192139'
+  day_obs: 20261013
+  exposure_time: 30.0
+  target_name: 'UNKNOWN'
+  observation_reason: 'imsim'
+  science_program: '1192139'
+  zenith_angle: 33.24096737781019
+  region: ConvexPolygon([UnitVector3d(0.4540277748455429, 0.6654318675118485, -0.5925024973521197), UnitVector3d(0.44361089583980434, 0.6666796471459634, -0.598955441726294), UnitVector3d(0.44013053225756876, 0.6670744011796488, -0.6010797433498173), UnitVector3d(0.4260404067595378, 0.6772198775092578, -0.5998856635347384), UnitVector3d(0.42474273135972046, 0.6804005906510217, -0.5972006768238172), UnitVector3d(0.42352041810442, 0.6833765117193251, -0.5946654510554521), UnitVector3d(0.416036425154166, 0.7010293564947697, -0.5791990454735497), UnitVector3d(0.41477118744011865, 0.7039234874245276, -0.5765904837244583), UnitVector3d(0.4214115188412533, 0.7114581756650987, -0.5623518436594634), UnitVector3d(0.425169183247371, 0.7110437231908872, -0.5600428459748454), UnitVector3d(0.42864039934343073, 0.7106424941030932, -0.5579020107739703), UnitVector3d(0.4321022500797612, 0.7102295896872688, -0.5557531605026296), UnitVector3d(0.4527659293386402, 0.7074880385949052, -0.54264508518483), UnitVector3d(0.4668616187641439, 0.6973281169728714, -0.5438508308387443), UnitVector3d(0.46822296389633905, 0.6942454178035495, -0.546617376177251), UnitVector3d(0.47200158939527126, 0.6854751220272934, -0.5543810572972394), UnitVector3d(0.47324331744303, 0.6825308145151987, -0.5569492344305135), UnitVector3d(0.4769213668942926, 0.6736166079988362, -0.5646119687252669), UnitVector3d(0.4781283304168948, 0.6706298531636404, -0.5671409874964662), UnitVector3d(0.47149361115917676, 0.6631017370072779, -0.5813689542915151), UnitVector3d(0.4678006327075857, 0.6636157674371148, -0.5837608082487481), UnitVector3d(0.4643763329318669, 0.6640830601476755, -0.5859593080049592)])
+  timespan: Timespan(begin=astropy.time.Time('2026-10-14 04:22:46.411200', scale='tai', format='iso'), end=astropy.time.Time('2026-10-14 04:23:16.411000', scale='tai', format='iso'))
+\end{verbatim}
+
+Finally, repeat once more for ``detector''
+info:\\[2\baselineskip]calexp\_detector\_metadata =
+butler.registry.queryDimensionRecords('detector',
+dataId=data\_ref.dataId.full)\\[2\baselineskip]
+
+\begin{verbatim}
+detector:
+  instrument: 'LSSTCam-imSim'
+  id: 42
+  full_name: 'R11_S20'
+  name_in_raft: 'S20'
+  raft: 'R11'
+  purpose: 'SCIENCE'
+\end{verbatim}
+
+We have thus demonstrated the ability to list and access metadata via
+the Butler.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use `butler.get()` to directly retrieve a dataset with ``metadata'' in
+its DatasetType name (e.g., `calibrate\_metadata`). Print the returned
+metadata values to the screen.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Detailed information about the processing executed during the
+`calibrate` task is printed to the screen.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+To demonstrate a method of accessing a different type of metadata,
+execute the following:\\
+calibrate\_metadata = butler.get('calibrate\_metadata', dataId =
+data\_ref.dataId.full)\\[2\baselineskip]for v in
+calibrate\_metadata.values():\\
+print(v)\\[2\baselineskip]
+
+\begin{verbatim}
+runStartUtc = "2022-01-03T14:27:01.303472"
+runStartCpuTime = 10576.362046784
+runStartUserTime = 10193.241786000
+runStartSystemTime = 383.12026400000
+runStartMaxResidentSetSize = 3084460
+runStartMinorPageFaults = 99609347
+runStartMajorPageFaults = 8
+runStartBlockInputs = 63528
+runStartBlockOutputs = 78739800
+runStartVoluntaryContextSwitches = 2237238
+runStartInvoluntaryContextSwitches = 8650111
+runEndUtc = "2022-01-03T14:27:30.092458"
+runEndCpuTime = 10605.141212355
+...
+\end{verbatim}
+
+\begin{verbatim}
+fitWcsEndUserTime = [ 10222.800983000, 10223.033200000, 10223.264442000 ]
+fitWcsEndSystemTime = [ 383.30272600000, 383.41161300000, 383.52557000000 ]
+fitWcsEndMaxResidentSetSize = [ 3084460, 3084460, 3084460 ]
+fitWcsEndMinorPageFaults = [ 99633457, 99633457, 99633457 ]
+fitWcsEndMajorPageFaults = [ 8, 8, 8 ]
+fitWcsEndBlockInputs = [ 63528, 63528, 63528 ]
+fitWcsEndBlockOutputs = [ 78752760, 78752760, 78752768 ]
+fitWcsEndVoluntaryContextSwitches = [ 2237936, 2237938, 2237940 ]
+fitWcsEndInvoluntaryContextSwitches = [ 8650272, 8650356, 8650391 ]
+\end{verbatim}
+
+We show a portion of the results that are returned via `butler.get()`.
+The full output is included in the attached
+notebook.\\[2\baselineskip]This test execution has demonstrated two ways
+to list and access catalog metadata via the Butler.
 
 }
 
 \paragraph{ LVV-T136 - Verify implementation of Image Data Product Access }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Defined}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T136}{\textit{ LVV-T136 } }
 test case in Jira.
 
@@ -1268,42 +1803,165 @@ Verify that available image data products can be listed and retrieved.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\The executed notebook was saved in the repository associated with this
+campaign's test report as ``notebooks/test\_LVV-T136.ipynb''.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Details of the Gen3 Butler and ObsTAP tables are still being worked out.
-The general overview of this test will be to use some combination of the
-Gen3 Butler and TAP access to the ObsTAP tables to test that the
-required access is provided.
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Example Code \\
+{\footnotesize
+\begin{verbatim}
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
+\end{verbatim}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
-Verification that the relevant data products and their related tables,
-metadata, and provenance information are available and readily
-accessible.
+Butler repo available for reading.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Working in a notebook entitled ``test\_LVV-T136.ipynb'' on the Interim
+Data Facility at data.lsst.cloud:\\[2\baselineskip]from lsst.daf.butler
+import Butler\\[2\baselineskip]config = `dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Execute a Butler query to identify and list `calexp` images.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+A list of DataIds identifying `calexp` images.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+First, select a tract, patch, and detector to query. (These are known a
+priori to exist in the DP0.2 data.)\\[2\baselineskip]tract = 3828\\
+patch = 42\\
+detector = 42\\[2\baselineskip]Query the Butler registry as
+follows:\\[2\baselineskip]data\_refs = butler.registry.queryDatasets(\\
+datasetType=``calexp'',\\
+where=f``tract=\{tract\} and patch=\{patch\} and detector=\{detector\}
+and skymap='DC2''')\\[2\baselineskip]data\_ids =
+{[}{]}\\[2\baselineskip]for data\_ref in data\_refs:\\
+print(data\_ref.dataId.full)\\
+data\_ids.append(data\_ref.dataId.full)\\[2\baselineskip]This prints the
+following list of dataIds to the screen:\\[2\baselineskip]
+
+\begin{verbatim}
+{band: 'r', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'r_sim_1.4', visit_system: 1, visit: 414872}
+{band: 'i', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'i_sim_1.4', visit_system: 1, visit: 457676}
+{band: 'i', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'i_sim_1.4', visit_system: 1, visit: 713247}
+{band: 'i', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'i_sim_1.4', visit_system: 1, visit: 1013706}
+{band: 'y', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'y_sim_1.4', visit_system: 1, visit: 1138156}
+{band: 'r', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'r_sim_1.4', visit_system: 1, visit: 1155522}
+{band: 'z', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'z_sim_1.4', visit_system: 1, visit: 1174350}
+{band: 'r', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'r_sim_1.4', visit_system: 1, visit: 1192139}
+\end{verbatim}
+
+We have thus demonstrated that image data products can be queried and
+listed via the Butler.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Using `Butler.get()`, retrieve a `calexp` image using one of the DataIds
+returned in the previous step. Display this image and confirm that it is
+well-formed.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Confirmation that a `calexp` image has been retrieved by displaying the
+image and examining some statistics of the pixel values.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+Retrieve an image via the following line:\\
+calexp = butler.get('calexp',
+dataId=data\_ids{[}0{]})\\[2\baselineskip]In the attached notebook, one
+can see the displayed image. We also checked statistics of its pixel
+values to confirm that it is well-formed:\\[2\baselineskip]print('
+~image ~ ~ ~ ~ ~ median ~ ~ stddev ~ ~(of image pixel values)')\\
+print('calexp: ', np.nanmedian(calexp.image.array),
+np.nanstd(calexp.image.array))\\
+print('variance: ', np.nanmedian(calexp.variance.array),
+np.nanstd(calexp.variance.array))\\[2\baselineskip]
+
+\begin{verbatim}
+  image           median     stddev    (of image pixel values)
+calexp:            0.65257454 307.72455
+variance:          1704.5837 449.57498
+\end{verbatim}
+
+We have confirmed that image data products can be accessed via the
+Butler using the query results from the previous step.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Repeat steps 2 and 3 for (a) difference images, and (b) coadd images.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+See the attached notebook, wherein we repeated the above steps for
+`goodSeeingDiff\_differenceExp` and `deepCoadd\_calexp` images.
 
 }
 
 \paragraph{ LVV-T2692 - Verify implementation of Image Metadata Access }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Defined}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T2692}{\textit{ LVV-T2692 } }
 test case in Jira.
 
@@ -1313,35 +1971,260 @@ retrieved.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\The executed notebook was saved in the repository associated with this
+campaign's test report as ``notebooks/test\_LVV-T2692.ipynb''.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Example Code \\
+{\footnotesize
+\begin{verbatim}
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
+\end{verbatim}
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Expected Result \\
 {\footnotesize
+Butler repo available for reading.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Working in a notebook entitled ``test\_LVV-T2692.ipynb'' on the Interim
+Data Facility at data.lsst.cloud:\\[2\baselineskip]from lsst.daf.butler
+import Butler\\[2\baselineskip]config = `dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Execute a Butler query to identify and list `calexp` images.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+A list of DataIds identifying `calexp` images.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+First, select a tract, patch, and detector to query. (These are known a
+priori to exist in the DP0.2 data.)\\[2\baselineskip]tract = 3828\\
+patch = 42\\
+detector = 42\\[2\baselineskip]Query the Butler registry as
+follows:\\[2\baselineskip]data\_refs = butler.registry.queryDatasets(\\
+datasetType=``calexp'',\\
+where=f``tract=\{tract\} and patch=\{patch\} and detector=\{detector\}
+and skymap='DC2''')\\[2\baselineskip]data\_ids =
+{[}{]}\\[2\baselineskip]for data\_ref in data\_refs:\\
+print(data\_ref.dataId.full)\\
+data\_ids.append(data\_ref.dataId.full)\\[2\baselineskip]This prints the
+following list of dataIds to the screen:\\[2\baselineskip]
+
+\begin{verbatim}
+{band: 'r', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'r_sim_1.4', visit_system: 1, visit: 414872}
+{band: 'i', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'i_sim_1.4', visit_system: 1, visit: 457676}
+{band: 'i', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'i_sim_1.4', visit_system: 1, visit: 713247}
+{band: 'i', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'i_sim_1.4', visit_system: 1, visit: 1013706}
+{band: 'y', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'y_sim_1.4', visit_system: 1, visit: 1138156}
+{band: 'r', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'r_sim_1.4', visit_system: 1, visit: 1155522}
+{band: 'z', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'z_sim_1.4', visit_system: 1, visit: 1174350}
+{band: 'r', instrument: 'LSSTCam-imSim', detector: 42, physical_filter: 'r_sim_1.4', visit_system: 1, visit: 1192139}
+\end{verbatim}
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use `butler.registry.queryDimensionRecords()` to identify the metadata
+associated with a patch, then a visit, for one of the dataIds returned
+in the query. Print the results to the screen.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Output printed to the screen should include a list of patch metadata
+including the associated tract, id, and bounding region, and a list of
+visit metadata which includes information such as exposure time, date of
+observation, visit id, filter, etc.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+Extract ``patch'' metadata corresponding to a single
+data\_ref:\\[2\baselineskip]calexp\_patch\_metadata =
+butler.registry.queryDimensionRecords('patch',
+dataId=data\_ref.dataId.full)\\[2\baselineskip]Printing the first of
+these results to the screen yields:\\[2\baselineskip]
+
+\begin{verbatim}
+patch:
+  skymap: 'DC2'
+  tract: 4026
+  id: 0
+  cell_x: 0
+  cell_y: 0
+  region: ConvexPolygon([UnitVector3d(0.43026204775397675, 0.6883194991736487, -0.5840298257108897), UnitVector3d(0.426896946056187, 0.6904343352140867, -0.5840029333876526), UnitVector3d(0.42814659142302663, 0.6923830193472248, -0.5807721160424839), UnitVector3d(0.4315119065467899, 0.690268177119236, -0.5807988620553948)])
+\end{verbatim}
+
+Repeat, but now for ``visit'' information:\\
+calexp\_visit\_metadata = butler.registry.queryDimensionRecords('visit',
+dataId=data\_ref.dataId.full)\\[2\baselineskip]
+
+\begin{verbatim}
+visit:
+  instrument: 'LSSTCam-imSim'
+  id: 1192139
+  physical_filter: 'r_sim_1.4'
+  visit_system: 1
+  name: '1192139'
+  day_obs: 20261013
+  exposure_time: 30.0
+  target_name: 'UNKNOWN'
+  observation_reason: 'imsim'
+  science_program: '1192139'
+  zenith_angle: 33.24096737781019
+  region: ConvexPolygon([UnitVector3d(0.4540277748455429, 0.6654318675118485, -0.5925024973521197), UnitVector3d(0.44361089583980434, 0.6666796471459634, -0.598955441726294), UnitVector3d(0.44013053225756876, 0.6670744011796488, -0.6010797433498173), UnitVector3d(0.4260404067595378, 0.6772198775092578, -0.5998856635347384), UnitVector3d(0.42474273135972046, 0.6804005906510217, -0.5972006768238172), UnitVector3d(0.42352041810442, 0.6833765117193251, -0.5946654510554521), UnitVector3d(0.416036425154166, 0.7010293564947697, -0.5791990454735497), UnitVector3d(0.41477118744011865, 0.7039234874245276, -0.5765904837244583), UnitVector3d(0.4214115188412533, 0.7114581756650987, -0.5623518436594634), UnitVector3d(0.425169183247371, 0.7110437231908872, -0.5600428459748454), UnitVector3d(0.42864039934343073, 0.7106424941030932, -0.5579020107739703), UnitVector3d(0.4321022500797612, 0.7102295896872688, -0.5557531605026296), UnitVector3d(0.4527659293386402, 0.7074880385949052, -0.54264508518483), UnitVector3d(0.4668616187641439, 0.6973281169728714, -0.5438508308387443), UnitVector3d(0.46822296389633905, 0.6942454178035495, -0.546617376177251), UnitVector3d(0.47200158939527126, 0.6854751220272934, -0.5543810572972394), UnitVector3d(0.47324331744303, 0.6825308145151987, -0.5569492344305135), UnitVector3d(0.4769213668942926, 0.6736166079988362, -0.5646119687252669), UnitVector3d(0.4781283304168948, 0.6706298531636404, -0.5671409874964662), UnitVector3d(0.47149361115917676, 0.6631017370072779, -0.5813689542915151), UnitVector3d(0.4678006327075857, 0.6636157674371148, -0.5837608082487481), UnitVector3d(0.4643763329318669, 0.6640830601476755, -0.5859593080049592)])
+  timespan: Timespan(begin=astropy.time.Time('2026-10-14 04:22:46.411200', scale='tai', format='iso'), end=astropy.time.Time('2026-10-14 04:23:16.411000', scale='tai', format='iso'))
+\end{verbatim}
+
+Finally, repeat once more for ``detector''
+info:\\[2\baselineskip]calexp\_detector\_metadata =
+butler.registry.queryDimensionRecords('detector',
+dataId=data\_ref.dataId.full)\\[2\baselineskip]
+
+\begin{verbatim}
+detector:
+  instrument: 'LSSTCam-imSim'
+  id: 42
+  full_name: 'R11_S20'
+  name_in_raft: 'S20'
+  raft: 'R11'
+  purpose: 'SCIENCE'
+\end{verbatim}
+
+We have thus demonstrated the ability to list and access metadata via
+the Butler.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Use `butler.get()` to directly retrieve a dataset with ``metadata'' in
+its DatasetType name (e.g., `characterizeImage\_metadata`). Print the
+returned metadata values to the screen.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Detailed information about the processing executed during the
+`characterizeImage` task is printed to the screen.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+To demonstrate a method of accessing a different type of metadata,
+execute the following:\\[2\baselineskip]char\_image\_metadata =
+butler.get('characterizeImage\_metadata', dataId =
+data\_ref.dataId.full)\\[2\baselineskip]for v in
+char\_image\_metadata.values():\\
+print(v)\\[2\baselineskip]
+
+\begin{verbatim}
+runStartUtc = "2022-01-03T14:26:50.961867"
+runStartCpuTime = 10567.533159602
+runStartUserTime = 10185.162944000
+runStartSystemTime = 382.37023900000
+runStartMaxResidentSetSize = 3084460
+runStartMinorPageFaults = 99345461
+runStartMajorPageFaults = 8
+runStartBlockInputs = 63352
+runStartBlockOutputs = 78524216
+runStartVoluntaryContextSwitches = 2236644
+runStartInvoluntaryContextSwitches = 8650056
+runEndUtc = "2022-01-03T14:26:50.967316"
+runEndCpuTime = 10567.538608606
+runEndUserTime = 10185.168389000
+runEndSystemTime = 382.37023900000
+runEndMaxResidentSetSize = 3084460
+runEndMinorPageFaults = 99345461
+runEndMajorPageFaults = 8
+runEndBlockInputs = 63352
+runEndBlockOutputs = 78524216
+runEndVoluntaryContextSwitches = 2236644
+runEndInvoluntaryContextSwitches = 8650056
+
+...
+\end{verbatim}
+
+\begin{verbatim}
+doSmooth = 1
+sigma = 1.8515346667980
+smoothingKernelWidth = 13
+nGrow = 4
+detectFootprintsEndUtc = [ "2022-01-03T14:25:57.522184", "2022-01-03T14:26:16.980722" ]
+detectFootprintsEndCpuTime = [ 10514.102591908, 10533.556957877 ]
+detectFootprintsEndUserTime = [ 10132.464696000, 10151.463064000 ]
+detectFootprintsEndSystemTime = [ 381.63792100000, 382.09391900000 ]
+detectFootprintsEndMaxResidentSetSize = [ 3084460, 3084460 ]
+detectFootprintsEndMinorPageFaults = [ 98951755, 99200762 ]
+detectFootprintsEndMajorPageFaults = [ 8, 8 ]
+detectFootprintsEndBlockInputs = [ 63352, 63352 ]
+detectFootprintsEndBlockOutputs = [ 78524128, 78524152 ]
+detectFootprintsEndVoluntaryContextSwitches = [ 2236644, 2236644 ]
+detectFootprintsEndInvoluntaryContextSwitches = [ 8649887, 8649963 ]
+runEndUtc = [ "2022-01-03T14:25:57.522993", "2022-01-03T14:26:16.981538" ]
+runEndCpuTime = [ 10514.103401969, 10533.557777330 ]
+runEndUserTime = [ 10132.465465000, 10151.463869000 ]
+\end{verbatim}
+
+\ldots{}\\[2\baselineskip]We show a portion of the results that are
+returned via `butler.get()`. The full output is included in the attached
+notebook.\\[2\baselineskip]This has demonstrated two ways to list and
+access metadata via the Butler.\\[2\baselineskip]
 
 }
 
 \paragraph{ LVV-T32 - Verify implementation of Raw Image Assembly }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T32}{\textit{ LVV-T32 } }
 test case in Jira.
 
@@ -1352,20 +2235,22 @@ metadata are associated with the image data.~
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\The python script to execute this test is attached to the Test Report
+github repository in scripts/test\_LVV-T32.py.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Ingest data from the L1 Camera Test Stand DAQ.
+Identify a dataset with raw images that have been ingested into a butler
+repository.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -1376,15 +2261,59 @@ Ingest data from the L1 Camera Test Stand DAQ.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+For this test, we use weekly Science Pipelines version `w\_2022\_45` at
+the USDF, examining recently gathered AuxTel imaging data from the
+campaign detailed
+in~\href{https://jira.lsstcorp.org/browse/SITCOM-505}{SITCOM-505}. The
+data were obtained in late October 2022, and processed at USDF with
+pipelines version `w\_2022\_44`.\\[2\baselineskip]In particular, these
+data are at `/repo/embargo`, in collection
+`u/huanlin/auxtel\_oga\_panda\_test\_2022102528\_w44`.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Simulate all different modes of data gathering.
+Identify the path to the data repository, which we will refer to as
+`DATA/path', then execute the following:
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Example Code \\
+{\footnotesize
+\begin{verbatim}
+from lsst.daf.butler import Butler
+repo = 'Data/path'
+collection = 'collection'
+butler = Butler(repo, collections=collection)
+\end{verbatim}
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Butler repo available for reading.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+from lsst.daf.butler import Butler\\[2\baselineskip]repo =
+`/repo/embargo'\\
+collection = `u/huanlin/auxtel\_oga\_panda\_test\_2022102528\_w44'\\
+butler = Butler(repo, collections=collection)\\[2\baselineskip]
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Execute a butler query to identify and list raw images.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -1395,15 +2324,23 @@ Simulate all different modes of data gathering.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+From the command line, issued the following query (note that the results
+are piped to an output file):\\
+butler query-datasets /sdf/group/rubin/repo/embargo/ ---collections
+`u/huanlin/auxtel\_oga\_panda\_test\_2022102528\_w44' raw \textgreater{}
+latiss\_raws.txt\\[2\baselineskip]This returns 20550 raw AuxTel frames
+in a variety of filters. We select exposure 2022092900894, an r-band
+science exposure, for this test.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Verify that a raw image is constructed in correct format.
+Retrieve one of the raw images returned by the query, and confirm that
+it is a well-formed image with reasonable pixel values.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -1416,15 +2353,42 @@ sensor.~
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The attached script retrieves the selected raw image via the
+following:\\[2\baselineskip]dataId = \{'exposure':2022092900894,
+`detector':0\}\\
+raw = butler.get('raw', dataId=dataId)\\[2\baselineskip]The script
+continues to verify that the image has expected properties, and prints
+the following to the screen:\\[2\baselineskip]What type of object is
+it?\\
+\textless{}lsst.afw.image.exposure.ExposureF object at
+0x7f784e357130\textgreater{}\\[2\baselineskip]Pixel data type:\\
+\textless{}class `numpy.float32'\textgreater{}\\[2\baselineskip]Visit
+info:~\\
+VisitInfo(exposureId=2022092900894, exposureTime=50, darkTime=50.2347,
+date=2022-09-30T08:18:54.069497388, UT1=nan, ERA=2.32734 rad,
+boresightRaDec=(48.4161301022, -30.2093423988),
+boresightAzAlt=(267.0042540913, +77.8991205080),
+boresightAirmass=1.02272, boresightRotAngle=6.28316 rad, rotType=1,
+observatory=-30.2446N, -70.7494E~~2663, weather=Weather(nan, nan, nan),
+instrumentLabel='LATISS', id=2022092900894, focusZ=0.00603979,
+observationType='science', scienceProgram='SITCOM-479',
+observationReason='psf+photometry\_validation', object='HD 20187',
+hasSimulatedContent=false)\\[2\baselineskip]Image shape and
+statistics:\\
+Shape:~~(4096, 4608)\\
+Mean, median, std deviation of pixel values:~~14305.082 13714.0
+3434.333\\[2\baselineskip]We have thus confirmed that the raw exposure
+data has been combined into a single ``raw'' image of the AuxTel
+detector, and has nonzero, reasonable pixel values.\\[2\baselineskip]
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 5 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
-Verify that a raw image is constructed with correct metadata.
+Verify that a raw image was constructed with correct metadata.
 
 }
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
@@ -1437,599 +2401,91 @@ observing context in which data were gathered.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-
-}
-
-\paragraph{ LVV-T374 - Ingesting Camera test data }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T374}{\textit{ LVV-T374 } }
-test case in Jira.
-
-This test will check:
-
-\begin{itemize}
-\tightlist
-\item
-  That raw Camera test data is available on a filesystem in the LSST
-  Data Facility;
-\item
-  That raw Camera test data can be ingested and made available through
-  the Data Management I/O abstraction (the ``Data Butler'').
-\end{itemize}
-
-\textbf{ Preconditions}:\\
-Appropriate raw data from Camera test systems must be available on a
-filesystem within the LSST Data Facility. This test data is assumed to
-include visit 258334666 (hereafter referred to as \$VISIT\_ID) from RTM
-(Raft Tower Module) 007 for the purposes of this test, but other,
-equivalent, may be substituted.\\[2\baselineskip]At time of writing,
-suitable data may be found on the GPFS filesystem at
-/project/bootcamp/data/LCA-11021\_RTM-007/7086/fe55\_raft\_acq/v0/44981.
-In future, as data transport procedures to the Data Facility become more
-streamlined and formalised, this data may be moved elsewhere or made
-available through some other system. Throughout the test script, we use
-the string ``\$INPUT\_DATA\_DIR'' as an alias for
-``/project/bootcamp/data/LCA-11021\_RTM-007/7086/fe55\_raft\_acq/v0/44981'',
-or wherever this data has been moved to.\\[2\baselineskip]
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Connect to the Notebook Aspect of the Science Platform following the
-instructions at https://nb.lsst.io/. Log in, and ``spawn'' a new machine
-with image ``Weekly 2018\_45`` and size ``large''.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The JupyterLab environment appears.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Create a terminal session. Use it to set up the LSST tools, then
-download and build version 5c12b06e6 of
-obs\_lsst:\\[2\baselineskip]\hspace*{0.333em} ~\$ source
-/opt/lsst/software/stack/loadLSST.bash\\
-\hspace*{0.333em} ~\$ setup lsst\_distrib\\
-\hspace*{0.333em} ~\$ git clone https://github.com/lsst/obs\_lsst.git\\
-\hspace*{0.333em} ~\$ cd obs\_lsst\\
-\hspace*{0.333em} ~\$ git checkout 5c12b06e6\\
-\hspace*{0.333em} ~\$ setup -k -r .\\
-\hspace*{0.333em} ~\$ scons
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-No errors are seen during execution of the provided commands.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Ingest RTM-007 test data by executing the following
-commands:\\[2\baselineskip]\hspace*{0.333em}
-~OUTPUT\_REPO\_DIR=\$OUTPUT\_DATA\_DIR\\
-\hspace*{0.333em} ~INPUT\_DATA\_DIR=\$INPUT\_DATA\_DIR\\
-\hspace*{0.333em} ~mkdir -p \$OUTPUT\_REPO\_DIR\\
-\hspace*{0.333em} ~echo ``lsst.obs.lsst.ts8.Ts8Mapper'' \textgreater{}
-\$OUTPUT\_REPO\_DIR/\_mapper\\
-\hspace*{0.333em} ~ingestImages.py \$OUTPUT\_REPO\_DIR
-\$INPUT\_DATA\_DIR/*/*.fits\\
-\hspace*{0.333em} ~constructBias.py \$OUTPUT\_REPO\_DIR --rerun calibs
---id imageType=BIAS --batch-type smp --cores 4\\
-\hspace*{0.333em} ~ingestCalibs.py \$OUTPUT\_REPO\_DIR --calibType bias
-\$OUTPUT\_REPO\_DIR/rerun/calibs/bias/*/*.fits --validity 9999 --output
-\$OUTPUT\_REPO\_DIR/CALIB
---mode=link\\[2\baselineskip]Where:\\[2\baselineskip]\hspace*{0.333em}
-~\$OUTPUT\_DATA\_DIR is some location on shared storage to which the
-user has write permission;\\
-\hspace*{0.333em} ~\$INPUT\_DATA\_DIR is defined in the test case
-description.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Many status messages are logged to screen, and the command exits with
-status 0.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Demonstrate that raw and bias data for visit \$VISIT\_ID have been made
-available in the repository. Load a Python interpreter (run ``python'')
-and execute the following:\\[2\baselineskip]\hspace*{0.333em} ~from
-lsst.daf.persistence import Butler\\
-\hspace*{0.333em} ~visit\_id = \$VISIT\_ID\\
-\hspace*{0.333em} ~b = Butler(\$OUTPUT\_DATA\_DIR)\\
-\hspace*{0.333em} ~b.get(``raw'', visit=visit\_id, detector=2)\\
-\hspace*{0.333em} ~b.get(``bias'', visit=visit\_id, detector=2)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Each call to b.get() returns an instance of an ExposureF object.
-Warnings about lack of dark-time or WCS information may be ignored.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
-\paragraph{ LVV-T362 - Installation of the LSST Science Pipelines Payloads }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T362}{\textit{ LVV-T362 } }
-test case in Jira.
-
-This test will check that:
-
-\begin{itemize}
-\tightlist
-\item
-  The Alert Production Pipeline payload is available for installation
-  from documented channels;
-\item
-  The Data Release Production Pipeline payload is available for
-  installation from documented channels;
-\item
-  The Calibration Products Production Pipeline payload is available for
-  installation from documented channels;
-\item
-  These payloads can be installed on systems at the LSST Data Facility
-  following available documentation;
-\item
-  The installed pipeline payloads are capable of successfully executing
-  basic integration tests.
-\end{itemize}
-
-Note that this test assumes packaging of the Science Pipelines software,
-in which all the above payloads are represented by a single
-``meta-package'', lsst\_distrib.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-The LSST Science Pipelines, described by the lsst\_distrib meta-package,
-should be installed following the documentation available at
-https://pipelines.lsst.io/. The suggested Conda environment will be used
-to ensure that a supported execution environment is available.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Detailed output will depend on the installation method chosen, but will
-confirm the successful installation of the Science Pipelines.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-The lsst\_distrib top-level metapackage will be enabled. Assuming that
-the software has been installed at
-\$\{LSST\_DIR\}:\\[2\baselineskip]\hspace*{0.333em} ~ ~ ~source
-\$\{LSST\_DIR\}/loadLSST.bash\\
-\hspace*{0.333em} ~ ~ ~setup lsst\_distrib
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Nothing is printed. The command\\[2\baselineskip]\hspace*{0.333em} ~eups
-list -s lsst\_distrib\\[2\baselineskip]may be used to confirm that the
-correct version of the codebase has been installed.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-The ``LSST Stack Demo'' package will be downloaded onto the test system
-from https://github.com/lsst/pipelines\_check/releases. The version
-corresponding to to the version of the Science Pipelines under test
-should be chosen.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Depends on the tool selected by the user for downloading.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-The stack demo package is uncompressed into a directory \$\{DEMO\_DIR\}.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Depends on options given to the tar command. Should confirm the
-availability of the stack demo source.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-The demo package will be executed by following the instructions in its
-README file.~
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Successful execution will result in the string ``Ok'' being returned.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
-\paragraph{ LVV-T368 - Loading and processing Camera test data }\mbox{}\\
-
-Version \textbf{2}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T368}{\textit{ LVV-T368 } }
-test case in Jira.
-
-This test will check:
-
-\begin{itemize}
-\tightlist
-\item
-  That Camera test data is available for processing in the LSST Data
-  Facility, and accessible through the LSST Science Platform;
-\item
-  That the Data Management I/O abstraction (the ``Data Butler'') can
-  load that data into the Science Platform environment;
-\item
-  That Data Management algorithmic ``tasks'' can be executed to process
-  that data;
-\item
-  That results can be displayed in the Firefly display tool.
-\end{itemize}
-
-\textbf{ Preconditions}:\\
-Appropriate data --- to include a ``raw'' and a ``bias'' exposure ---
-from the Camera test systems must be available in a Butler data
-repository on a filesystem accessible to the Notebook Aspect of the
-Science Platform.\\[2\baselineskip]For the purposes of the following
-discussion, we assume that:\\[2\baselineskip]
-
-\begin{itemize}
-\tightlist
-\item
-  Visit 258334666 from RTM (Raft Tower Module) 007 will be used;
-\item
-  The data is available in a repository at
-  /project/bootcamp/repo\_RTM-007/ on the Data Facility GPFS filesystem
-\end{itemize}
-
-In the test script, we refer to ``258334666'' as ``\$VISIT\_ID'' and
-``/project/bootcamp/repo\_RTM-007/'' as ``\$REPOSITORY\_PATH''; other
-data may be substituted as appropriate.
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Connect to the Notebook Aspect of the Science Platform following the
-instructions at https://nb.lsst.io/. Log in, and ``spawn'' a new machine
-with image ``Weekly 2018\_45`` and size ``small''.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-The JupyterLab environment appears.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Create a terminal session. Use it to set up the LSST tools, then
-download and build version 5c12b06e6 of
-obs\_lsst:\\[2\baselineskip]\hspace*{0.333em} ~\$ source
-/opt/lsst/software/stack/loadLSST.bash\\
-\hspace*{0.333em} ~\$ setup lsst\_distrib\\
-\hspace*{0.333em} ~\$ git clone https://github.com/lsst/obs\_lsst.git\\
-\hspace*{0.333em} ~\$ cd obs\_lsst\\
-\hspace*{0.333em} ~\$ git checkout 5c12b06e6\\
-\hspace*{0.333em} ~\$ setup -k -r .\\
-\hspace*{0.333em} ~\$ scons\\[2\baselineskip]Arrange for obs\_lsst to
-automatically be added to the environment when starting a new
-notebook:\\[2\baselineskip]\hspace*{0.333em} ~\$ echo ``setup -j -r
-\textasciitilde{}/obs\_lsst'' \textgreater{}\textgreater{}
-\textasciitilde{}/notebooks/.user\_setups\\[2\baselineskip]Exit the
-terminal.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-No errors are seen during execution of the provided commands.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Create a new ``LSST'' notebook.\\[2\baselineskip]Import the standard
-libraries required for the rest of this
-test:\\[2\baselineskip]\hspace*{0.333em} ~import os\\
-\hspace*{0.333em} ~import lsst.afw.display as afwDisplay\\
-\hspace*{0.333em} ~from lsst.daf.persistence import Butler\\
-\hspace*{0.333em} ~from lsst.ip.isr import IsrTask\\
-\hspace*{0.333em} ~from firefly\_client import FireflyClient\\
-\hspace*{0.333em} ~from IPython.display import
-IFrame\\[2\baselineskip]and execute the cell.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Nothing is printed.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Create a Data Butler client, and use it to retrieve the data which will
-be used for this test.\\[2\baselineskip]\hspace*{0.333em} ~butler =
-Butler(\$REPOSITORY\_PATH)\\
-\hspace*{0.333em} ~raw = butler.get(``raw'', visit=\$VISIT\_ID,
-detector=2)\\
-\hspace*{0.333em} ~bias = butler.get(``bias'', visit=\$VISIT\_ID,
-detector=2)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Nothing is printed.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Initialize the Firefly display
-system:\\[2\baselineskip]\hspace*{0.333em} ~my\_channel =
-`\{\}\_test\_channel'.format(os.environ{[}'USER'{]})\\
-\hspace*{0.333em} ~server = `https://lsst-lspdev.ncsa.illinois.edu'\\
-\hspace*{0.333em}
-~ff='\{\}/firefly/slate.html?\_\_wsch=\{\}'.format(server,
-my\_channel)\\
-\hspace*{0.333em} ~IFrame(ff,800,600)\\
-\hspace*{0.333em} ~afwDisplay.setDefaultBackend('firefly')\\
-\hspace*{0.333em} ~afw\_display = afwDisplay.getDisplay(frame=1,\\
-\hspace*{0.333em} ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-~name=my\_channel)\\[2\baselineskip]Click on the link provided after
-executing the above.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-A Firefly window is shown.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Display the raw image data in the Firefly
-window:\\[2\baselineskip]\hspace*{0.333em} afw\_display.mtv(raw)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Raw image data is displayed.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Configure and run an Instrument Signature Removal (ISR) task on the raw
-data. Most corrections are disabled for simplicity. but the bias frame
-is applied.\\
-\hspace*{0.333em}
-
-\begin{verbatim}
-   isr_config = IsrTask.ConfigClass()
-   isr_config.doDark=False
-   isr_config.doFlat=False
-   isr_config.doFringe=False
-   isr_config.doDefect=False
-   isr_config.doAddDistortionModel=False
-   isr_config.doLinearize=False
-   isr = IsrTask(config=isr_config)
-   result = isr.run(raw, bias=bias)
-\end{verbatim}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Nothing is printed.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 8 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Display the corrected image data in the Firefly
-window:\\[2\baselineskip]\hspace*{0.333em}
-~afw\_display.mtv(result.exposure)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Processed (trimmed, bias-subtracted) image data is displayed.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
+In addition to the visitInfo shown in the previous step, the attached
+script also extracts the metadata attached to the image. The following
+code extracts the metadata and prints each entry to the
+screen:\\[2\baselineskip]md = raw.getMetadata()\\
+md\_dict = md.toDict()\\[2\baselineskip]for item in md\_dict.items():\\
+print(item)\\[2\baselineskip]The results are long; we thus truncate the
+results to demonstrate that basic
+information\\[2\baselineskip]Metadata:\\
+('CCD\_MANU', `ITL')\\
+('CCD\_TYPE', `3800C')\\
+('CCDGAIN', 1.0)\\
+('CCDNOISE', 10.0)\\
+('CCDSLOT', `S00')\\
+('RAFTBAY', `R00')\\
+('FIRMWARE', `11384004')\\
+('PLATFORM', `auxtel')\\
+('CONTNUM', `189216ee')\\
+('DAQVERS', `R5-V0.6 2021-10-06T19:50:32Z (1800122)')\\
+('DAQPART', `lat')\\
+('DAQFOLD', `raw')\\
+('SEQFILE', `FP\_ITL\_2s\_ir2\_v25.seq')\\
+('SEQNAME', `FP\_ITL\_2s\_ir2\_v25.seq')\\
+('SEQCKSUM', `2552520002')\\
+('LSST\_NUM', `ITL-3800C-068')\\
+('CCD\_SERN', `20862')\\
+('RAFTNAME', `AuxTel-Raft')\\
+('FPVERS', `1.1.4')\\
+('IHVERS', `1.0.30')\\
+('CCDTEMP', -90.7174)\\
+('DATE', `2022-09-30T08:19:19.187')\\
+('MJD', 59852.34674984962)\\
+('IMGTYPE', `OBJECT')\\
+('DATE-OBS', `2022-09-30T08:18:28.952')\\
+('MJD-OBS', 59852.346168425865)\\
+('DATE-TRG', `2022-09-30T08:18:42.184')\\
+('MJD-TRG', 59852.34632157395)\\
+('OBSID', `AT\_O\_20220929\_000894')\\
+('DATE-BEG', `2022-09-30T08:18:28.952')\\
+('MJD-BEG', 59852.346168425865)\\
+('DATE-END', `2022-09-30T08:19:19.187')\\
+('MJD-END', 59852.34674984962)\\
+('GROUPID', `2022-09-30T08:10:20.478')\\
+('BUNIT', `adu')\\
+('TIMESYS', `TAI')\\
+('INSTRUME', `LATISS')\\
+('TELESCOP', `LSST AuxTelescope')\\
+('OBS-LONG', -70.749417)\\
+('OBS-LAT', -30.244639)\\
+('OBS-ELEV', 2663.0)\\
+('OBSGEO-X', 1818938.94)\\
+('OBSGEO-Y', -5208470.95)\\
+('OBSGEO-Z', -3195172.08)\\
+('FACILITY', `Vera C. Rubin Observatory')\\
+('RA', 48.41552041666668)\\
+('DEC', -30.22323527777778)\\
+('RASTART', 48.41613010222692)\\
+('DECSTART', -30.209342398754412)\\
+('RAEND', 48.41616329891139)\\
+('DECEND', -30.20934820761029)\\
+('ROTPA', 359.9987453403358)\\
+('ROTCOORD', `sky')\\
+('HASTART', 0.9417104442537305)\\
+('ELSTART', 77.89912050802377)\\
+('AZSTART', -92.99574590867269)\\
+('AMSTART', 1.0227214941767613)\\
+('OBJECT', `HD 20187')\\
+('PROGRAM', `SITCOM-479')\\
+('REASON', `PSF+Photometry\_Validation')\\
+('FILTBAND', `r')\\
+('FILTER', `SDSSr')\\
+('EXPTIME', 50.0)\\
+('DARKTIME', 50.2347)\\
+('SEEING', 0.9242383241653442)\\
+('FILENAME',
+`AT\_O\_20220929\_000894\_R00\_S00.fits')\\[2\baselineskip]We have thus
+demonstrated that sufficient metadata about the observing context,
+telescope and instrument configuration, and observation details have
+been attached to the image.
 
 }
 
 \paragraph{ LVV-T1756 - Verify calculation of photometric repeatability in uzy filters }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1756}{\textit{ LVV-T1756 } }
 test case in Jira.
 
@@ -2042,7 +2498,7 @@ millimagnitudes}.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -2051,7 +2507,7 @@ Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2068,11 +2524,14 @@ A dataset that has been ingested into a Butler repository.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The HSC RC2 dataset described
+\href{https://dmtn-091.lsst.io/\#medium}{in DMTN-091}~will be used for
+this test.~
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2104,11 +2563,17 @@ available via the butler.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Rather than executing a specific processing pipeline, we demonstrate the
+calculation of metrics via the monthly reprocessing of RC2 data. In
+particular, the Characterization Metric Report for version 23 of the
+Science Pipelines (\href{https://dmtr-351.lsst.io/}{DMTR-351})
+summarizes the metrics that are typically monitored for pipeline
+characterization.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -2126,240 +2591,14 @@ demonstrating that PA1uzy has been calculated.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-
-}
-
-\paragraph{ LVV-T124 - Verify implementation of Software Architecture to Enable Community
-Re-Use }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T124}{\textit{ LVV-T124 } }
-test case in Jira.
-
-Show that the LSST software is capable of being executed in multiple
-contexts: single user instance, batch processing, continuous
-integration.\\
-Also show that the algorithms can be reconfigured and, if desired,
-completely replaced at run time.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-The `path` that you will use depends on where you are running the
-science pipelines. Options:\\[2\baselineskip]
-
-\begin{itemize}
-\tightlist
-\item
-  local (newinstall.sh - based
-  install):{[}path\_to\_installation{]}/loadLSST.bash
-\item
-  development cluster (``lsst-dev''):
-  /software/lsstsw/stack/loadLSST.bash
-\item
-  LSP Notebook aspect (from a terminal):
-  /opt/lsst/software/stack/loadLSST.bash
-\end{itemize}
-
-From the command line, execute the commands below in the example
-code:\\[2\baselineskip]
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Example Code \\
-{\footnotesize
-source `path`\\
-setup lsst\_distrib
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Science pipeline software is available for use. If additional packages
-are needed (for example, `obs' packages such as `obs\_subaru`), then
-additional `setup` commands will be necessary.\\[2\baselineskip]To check
-versions in use, type:\\
-eups list -s
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Using curated test datasets for multiple precursor instruments, verify
-and log that the prototype DRP pipelines execute successfully in three
-contexts:\\
-1. The CI system\\
-2. On a single user system: laptop, desktop, or notebook running in the
-Notebook aspect of the LSP.\\
-3. Project workflow system.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Using a template testing notebook in the Notebook aspect of the LSP,
-verify and log the following:\\
-1. Individual pipeline steps (tasks) are importable and executable on
-their own. ~this is not comprehensive, but demonstrative.\\
-2. Individual pipeline steps may be overridden by configuration.\\
-3. Users can implement a custom pipeline step and insert i into the
-processing flow via configuration.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Identify the path to the data repository, which we will refer to as
-`DATA/path', then execute the following:
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Example Code \\
-{\footnotesize
-\begin{verbatim}
-from lsst.daf.butler import Butler
-repo = 'Data/path'
-collection = 'collection'
-butler = Butler(repo, collections=collection)
-\end{verbatim}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Butler repo available for reading.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Read the resulting dataset using the Bulter, and confirm that it
-produced the desired data products.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Run subset of full DRP from previous step on an individual node. ~Was
-this organizationally easy? ~Did the performance scale appropriately?
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Re-run aperture correction on subset. ~Verify that same results as DRP
-run are achieved.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 8 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Re-run photometric redshift estimation algorithm on subset coadd
-catalogs. ~Verify that same results are achieved as from full DRP.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
+Section 4 of \href{https://dmtr-351.lsst.io/}{DMTR-351} summarizes
+photometric performance metrics, including photometric repeatability,
+PA1. The table (attached below) illustrates that the DM pipelines have
+provided software to calculate the photometric repeatability metric PA1.
+(Note that there are currently no u-band data, so repeatability cannot
+be calculated in u-band. However, the same software used for grizy bands
+will also work for
+u-band.)\\[2\baselineskip]\includegraphics[width=5.15625in]{jira_imgs/3270.png}
 
 }
 
@@ -2367,6 +2606,7 @@ catalogs. ~Verify that same results are achieved as from full DRP.
 Facility }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T199}{\textit{ LVV-T199 } }
 test case in Jira.
 
@@ -2427,75 +2667,11 @@ translate to Rubin Observatory operations.''
 
 }
 
-\paragraph{ LVV-T83 - Verify implementation of Bad Pixel Map }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T83}{\textit{ LVV-T83 } }
-test case in Jira.
-
-Verify that the DMS can produce a map of detector pixels that suffer
-from pathologies, and that these pathologies are encoded in at least
-32-bit values.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Interrogate the calibRegistry for the metadata associated with a bad
-pixel map, where the validity range contains the date of interest.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-A bad pixel map for the requested date has been returned.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Check that the bad pixel pathologies are encoded as at least 32-bit
-values, and that the various pathologies are represented by different
-encoding.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Bad pixel values can be decoded to determine their pathologies using
-their 32-bit values.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
 \paragraph{ LVV-T190 - Verify implementation of Base Facility Co-Location with Existing
 Facility }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T190}{\textit{ LVV-T190 } }
 test case in Jira.
 
@@ -2565,6 +2741,7 @@ operations.''\\[2\baselineskip]
 \paragraph{ LVV-T77 - Verify implementation of Best Seeing Coadds }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T77}{\textit{ LVV-T77 } }
 test case in Jira.
 
@@ -2871,6 +3048,7 @@ Deep coadd PSF radius: 2.508081993634421
 \paragraph{ LVV-T84 - Verify implementation of Bias Residual Image }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T84}{\textit{ LVV-T84 } }
 test case in Jira.
 
@@ -3110,241 +3288,10 @@ demand.
 
 }
 
-\paragraph{ LVV-T88 - Verify implementation of Calibration Data Products }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T88}{\textit{ LVV-T88 } }
-test case in Jira.
-
-Verify that the DMS can produce and archive the required Calibration
-Data Products: cross talk correction, bias, dark, monochromatic dome
-flats, broad-band flats, fringe correction, and illumination
-corrections.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Identify a suitable set of calibration frames, including biases, dark
-frames, and flat-field frames.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Execute the Calibration Products Production payload. The payload uses
-raw calibration images and information from the Transformed EFD to
-generate a subset of Master Calibration Images and Calibration Database
-entries in the Data Backbone.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm that the expected Master Calibration images and Calibration
-Database entries are present and well-formed.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm that the expected data products are created, and that they have
-the expected properties.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-A full set of calibration data products has been created, and they are
-well-formed.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Test that the calibration products are archived, and can readily be
-applied to science data to produce the desired corrections.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Confirmation that application of the calibration products to processed
-data has the desired effects.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
-\paragraph{ LVV-T115 - Verify implementation of Calibration Production Processing }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T115}{\textit{ LVV-T115 } }
-test case in Jira.
-
-Execute CPP on a variety of representative cadences, and verify that the
-calibration pipeline correctly produces necessary calibration products.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Identify a suitable set of calibration frames, including biases, dark
-frames, and flat-field frames.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Execute the Calibration Products Production payload. The payload uses
-raw calibration images and information from the Transformed EFD to
-generate a subset of Master Calibration Images and Calibration Database
-entries in the Data Backbone.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm that the expected Master Calibration images and Calibration
-Database entries are present and well-formed.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm that the expected data products are created, and that they have
-the expected properties.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Repos containing valid calibration products that are well-formed and
-ready to be applied to processed datasets.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
 \paragraph{ LVV-T151 - Verify Implementation of Catalog Export Formats From the Notebook Aspect }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T151}{\textit{ LVV-T151 } }
 test case in Jira.
 
@@ -3824,6 +3771,7 @@ Successfully logged out and returned to the landing page.
 \paragraph{ LVV-T1232 - Verify Implementation of Catalog Export Formats From the Portal Aspect }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1232}{\textit{ LVV-T1232 } }
 test case in Jira.
 
@@ -4053,84 +4001,10 @@ Returned to the RSP home page.
 
 }
 
-\paragraph{ LVV-T149 - Verify implementation of Catalog Queries }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T149}{\textit{ LVV-T149 } }
-test case in Jira.
-
-Verify that SQL, or a similar structured language, can be used to query
-catalogs.
-
-\textbf{ Preconditions}:\\
-An operational QSERV database that has been verified via
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1085}{LVV-T1085}
-and
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1086}{LVV-T1086}
-and
-\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T1087}{LVV-T1087}.
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Execute a simple query (for example, the one below) and confirm that it
-returns the expected result.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Example Code \\
-{\footnotesize
-SELECT * FROM Object WHERE qserv\_areaspec\_box(316.582327, −6.839078,
-316.653938, −6.781822)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-A catalog of objects satisfying the specified constraints.~
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Repeat the query from all available access routes (e.g., an external VO
-client, internal DM tools on the development cluster, the Science
-Platform query tool, and from within the Notebook Aspect), confirming in
-each case that the results are as expected.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
 \paragraph{ LVV-T72 - Verify implementation of Coadd Image Method Constraints }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T72}{\textit{ LVV-T72 } }
 test case in Jira.
 
@@ -4139,16 +4013,17 @@ Verify the implementation of how Coadd images are created.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\The executed notebook was saved in the repository associated with this
+campaign's test report as ``notebooks/test\_LVV-T72.ipynb''.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4163,11 +4038,13 @@ Identify a dataset that has been processed to create coadd images.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+We will use the Data Preview 0.2 dataset as processed at the Interim
+Data Facility (IDF).
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4195,11 +4072,16 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Working in a notebook entitled ``test\_LVV-T72.ipynb'' on the Interim
+Data Facility at data.lsst.cloud:\\[2\baselineskip]from lsst.daf.butler
+import Butler\\[2\baselineskip]config = `dp02'\\
+collection = `2.2i/runs/DP0.2'\\
+butler = Butler(config, collections=collection)
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4214,11 +4096,49 @@ Retrieve the coadds in the dataset and verify that they are non-empty.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+First, we query the Butler to find all coadds overlapping the requested
+tract:\\[2\baselineskip]tract = 3828\\[2\baselineskip]data\_refs\_coadd
+= butler.registry.queryDatasets(\\
+datasetType=``deepCoadd'',\\
+where=f``tract=\{tract\} and
+skymap='DC2''')\\[2\baselineskip]data\_ids\_coadd =
+{[}{]}\\[2\baselineskip]for data\_ref in data\_refs\_coadd:\\
+data\_ids\_coadd.append(data\_ref.dataId.full)\\[2\baselineskip]We
+examined a few images at random, and confirmed they are non-empty and
+contained all necessary associated data by printing the following output
+to the screen (see the notebook for more detail):\\
+
+\begin{verbatim}
+dataId:  {band: 'i', skymap: 'DC2', tract: 3828, patch: 1}
+
+ Image shape and statistics:
+Shape:  (4100, 4200)
+Mean, median, std deviation of pixel values:  0.08778822 -0.00036619927 4.830672
+
+ Variance plane shape and statistics:
+Shape:  (4100, 4200)
+Median of pixel values:  0.0033457286
+
+ Mask plane has the following mask bits set:
+{'BAD': 0, 'CLIPPED': 9, 'CR': 3, 'CROSSTALK': 10, 'DETECTED': 5, 'DETECTED_NEGATIVE': 6, 'EDGE': 4, 'INEXACT_PSF': 11, 'INTRP': 2, 'NOT_DEBLENDED': 12, 'NO_DATA': 8, 'REJECTED': 13, 'SAT': 1, 'SENSOR_EDGE': 14, 'SUSPECT': 7, 'UNMASKEDNAN': 15}
+Mask plane has dimensions:  (4200, 4100)
+
+Has PSF?  True
+
+ WCS:
+FITS standard SkyWcs:
+Sky Origin: (56.6497461929, -36.4462809917)
+Pixel Origin: (13999, 13999)
+Pixel Scale: 0.2 arcsec/pixel
+
+ Photocalib:
+spatially constant with mean: 57.544 error: 0
+\end{verbatim}
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4233,140 +4153,20 @@ Verify that coadds were created following specification
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
-
-}
-
-\paragraph{ LVV-T85 - Verify implementation of Crosstalk Correction Matrix }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T85}{\textit{ LVV-T85 } }
-test case in Jira.
-
-Verify that the DMS can generate a cross-talk correction matrix from
-appropriate calibration data.\\
-Verify that the DMS can measure the effectiveness of the cross-talk
-correction matrix.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Identify an appropriate calibration dataset that can be used to derive
-the crosstalk correction matrix.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Execute the Calibration Products Production payload. The payload uses
-raw calibration images and information from the Transformed EFD to
-generate a subset of Master Calibration Images and Calibration Database
-entries in the Data Backbone.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm that the expected Master Calibration images and Calibration
-Database entries are present and well-formed.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Confirm that the crosstalk correction matrix is produced and persisted.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-A correction matrix quantifying what fraction of the signal detected in
-any given amplifier on each sensor in the focal plane appears in any
-other amplifier.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Apply the crosstalk correction to simulated images, and confirm that the
-correction is performing as expected.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-A noticeable difference between images before and after applying the
-correction.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
+To verify that the coadds have been created using all of the overlapping
+visit images, we extract the catalog of overlapping images and plot
+their bounding boxes along with that of the coadd. Details can be seen
+in the attached notebook, which produced this
+image:\\[2\baselineskip]\includegraphics[width=3.86458in]{jira_imgs/3315.png}We
+have thus verified that the randomly-selected coadd was created
+following specification.
 
 }
 
 \paragraph{ LVV-T90 - Verify implementation of Dark Current Correction Frame }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T90}{\textit{ LVV-T90 } }
 test case in Jira.
 
@@ -4461,6 +4261,7 @@ region.\\
 \paragraph{ LVV-T137 - Verify implementation of Data Product Ingest }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T137}{\textit{ LVV-T137 } }
 test case in Jira.
 
@@ -4762,6 +4563,7 @@ associated PhotoCalib object:\\
 \paragraph{ LVV-T55 - Verify implementation of DIAForcedSource Catalog }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T55}{\textit{ LVV-T55 } }
 test case in Jira.
 
@@ -4771,16 +4573,17 @@ catalog contains measured fluxes for DIAObjects.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\The python test script to execute this code is attached to the Test
+Report github repository in scripts/test\_LVV-T55.py.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4802,11 +4605,14 @@ DIAObject measurements.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+For this test, we use the monthly reprocessing of the HSC RC2 dataset.
+All steps of end-to-end data processing are executed in the RC2 runs,
+including difference imaging.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4822,11 +4628,38 @@ catalogs contain reasonable values for measured quantities of interest.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Load and inspect the `forcedSourceOnDiaObjectTable` to confirm that it
+was produced and all columns have been populated with
+measurements:\\[2\baselineskip]In {[}\textbf{11}{]}:~forced\_src =
+butler.get('forcedSourceOnDiaObjectTable\_tract', tract=9615,
+skymap='hsc\_rings\_v1')\\[2\baselineskip]In {[}12{]}:~forced\_src\\
+Out{[}12{]}:~\\
+\hspace*{0.333em} ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~diaObjectId~~parentObjectId~
+~~coord\_ra~~coord\_dec~~ccdVisitId~~\ldots{}
+pixelFlags\_saturatedCenter~~pixelFlags\_crCenter~~pixelFlags\_suspectCenter~~tract~~patch\\
+forcedSourceOnDiaObjectId~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~\ldots{} ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~\\
+173516678758401~ ~ ~ ~ ~ ~~3425330564243128393 ~ ~ ~ ~ ~ ~
+~~0~~215.886840 ~~0.254806 ~ ~ ~~80800~~\ldots{}~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~~False~ ~ ~ ~ ~ ~ ~ ~~False ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~False ~~9615 ~ ~~15\\
+173516678758402~ ~ ~ ~ ~ ~~3425330564243128394 ~ ~ ~ ~ ~ ~
+~~0~~215.889248 ~~0.247669 ~ ~ ~~80800~~\ldots{}~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~~False~ ~ ~ ~ ~ ~ ~ ~~False ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~False ~~9615 ~ ~~15\\
+173516678758403~ ~ ~ ~ ~ ~~3425330564243128395 ~ ~ ~ ~ ~ ~
+~~0~~215.889644 ~~0.241762 ~ ~ ~~80800~~\ldots{}~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~~False~ ~ ~ ~ ~ ~ ~ ~~False ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~False ~~9615 ~ ~~15\\
+173516678758404~ ~ ~ ~ ~ ~~3425330564243128399 ~ ~ ~ ~ ~ ~
+~~0~~215.897606 ~~0.244158 ~ ~ ~~80800~~\ldots{}~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~~False~ ~ ~ ~ ~ ~ ~ ~~False ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~False ~~9615 ~
+~~15\\[2\baselineskip]{[}39147253 rows x 34
+columns{]}\\[2\baselineskip]The table looks well-formed.
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4854,11 +4687,16 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Working on the USDF (SLAC), a butler was instantiated by the
+following:\\[2\baselineskip]repo = `/sdf/group/rubin/repo/main'\\
+collection = `HSC/runs/RC2/w\_2022\_24/DM-35231'\\
+butler = Butler(repo, collections=collection)\\[2\baselineskip](i.e.,
+pointing to processing of HSC RC2 data from weekly w\_2022\_24).
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4874,12 +4712,47 @@ source.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+This test was executed via a script (``test\_LVV-T55.py'') that does the
+following:
+
+\begin{itemize}
+\tightlist
+\item
+  Execute a butler query to identify all visit/detector images
+  overlapping a given tract/patch
+\item
+  extract all `forced\_src` catalogs from the query results, and confirm
+  that each has (a) forced photometry measurements for each DIAObject
+  within its boundaries, and (b) the measurements consist of real
+  numbers (i.e., not NaN or Inf).
+\end{itemize}
+
+These steps are then repeated for forced photometry on DiaObjects
+measured on `calexps`, then difference images. The code prints the
+following output:\\[2\baselineskip]\$ python test\_LVV-T55.py\\
+lsst\_distrib~ ~ ~ ~ ~~g0b29ad24fb+a10408d0bf~ ~~w\_2022\_39 setup\\
+100~~of~~358\\
+200~~of~~358\\
+300~~of~~358\\[2\baselineskip]Results for~~334 visit/detectors that
+overlap the input tract.\\[2\baselineskip]DIA psfflux check:~~True\\
+DIA psfflux\_err check:~~True\\
+DIA: All objects have forced sources?~~True\\
+100~~of~~358\\
+200~~of~~358\\
+300~~of~~358\\[2\baselineskip]Results for~~334 visit/detectors that
+overlap the input tract.\\[2\baselineskip]DIA diffim psfflux
+check:~~True\\
+DIA diffim psfflux\_err check:~~True\\
+DIA diffim: All objects have forced sources? True\\[2\baselineskip]This
+confirms that the forced source measurements have been performed for all
+DIAObjects, including on `calexps` and `diffims`.\\[2\baselineskip]
 
 }
 
 \paragraph{ LVV-T66 - Verify implementation of Forced-Source Catalog }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T66}{\textit{ LVV-T66 } }
 test case in Jira.
 
@@ -4890,16 +4763,17 @@ uncertainties, an Object ID, and a Visit ID.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
-Final comment:\\
+Final comment:\\The python test script to execute this code is attached to the Test
+Report github repository in scripts/test\_LVV-T66.py.
 
 
 Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4927,11 +4801,16 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Working on the USDF (SLAC), a butler was instantiated by the
+following:\\[2\baselineskip]repo = `/sdf/group/rubin/repo/main'\\
+collection = `HSC/runs/RC2/w\_2022\_24/DM-35231'\\
+butler = Butler(repo, collections=collection)\\[2\baselineskip](i.e.,
+pointing to processing of HSC RC2 data from weekly w\_2022\_24).
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4947,11 +4826,59 @@ non-empty.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Result of printing the `forced\_src` catalog's first few rows to the
+screen:\\[2\baselineskip]\hspace*{0.333em} ~ ~ ~id ~ ~ ~ ~ ~ ~~coord\_ra
+~ ~ ~ ~ ~~coord\_dec ~ ~ ~~parent \ldots{} base\_PsfFlux\_flag\_apCorr
+ext\_photometryKron\_KronFlux\_apCorr
+ext\_photometryKron\_KronFlux\_apCorrErr
+ext\_photometryKron\_KronFlux\_flag\_apCorr\\
+\hspace*{0.333em} ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~rad ~ ~ ~ ~ ~ ~ ~ ~~rad ~ ~ ~ ~
+~ ~ ~ ~~\ldots{} ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~ ~ ~ ~ ~\\
+---------------- ------------------ -------------------- ------ \ldots{}
+------------------------ ----------------------------------
+-------------------------------------
+---------------------------------------\\
+5029488307994625 ~~2.63104145229885 0.038054902578442455~ ~ ~~0
+\ldots{}~ ~ ~ ~ ~ ~ ~ ~ ~ ~~False ~ ~ ~ ~ ~ ~ ~ ~~1.0270320546384992 ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~0.0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~~False\\
+5029488307994626~~2.630928461400815 0.037891765102001845~ ~ ~~0
+\ldots{}~ ~ ~ ~ ~ ~ ~ ~ ~ ~~False~ ~ ~ ~ ~ ~ ~ ~ ~~1.026189759742002 ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~0.0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~~False\\
+5029488307994627~~2.632233427600064~~0.03791343935244524~ ~ ~~0
+\ldots{}~ ~ ~ ~ ~ ~ ~ ~ ~ ~~False ~ ~ ~ ~ ~ ~ ~ ~ ~~1.02175858713207 ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~0.0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~~False\\
+5029488307994628 2.6304566006364767~~0.03788995502872067~ ~ ~~0
+\ldots{}~ ~ ~ ~ ~ ~ ~ ~ ~ ~~False ~ ~ ~ ~ ~ ~ ~ ~~1.0266876839647747 ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~0.0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~~False\\
+5029488307994629~~2.630538198528984~~0.03788277899472417~ ~ ~~0
+\ldots{}~ ~ ~ ~ ~ ~ ~ ~ ~ ~~False ~ ~ ~ ~ ~ ~ ~ ~~1.0265930273455812 ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~0.0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~~False\\
+5029488307994630 2.6318566450014282~~0.03790571746997802~ ~ ~~0
+\ldots{}~ ~ ~ ~ ~ ~ ~ ~ ~ ~~False ~ ~ ~ ~ ~ ~ ~ ~~1.0235191928776037 ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~0.0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~~False\\
+5029488307994631 2.6314240224499974~~0.03795431495760043~ ~ ~~0
+\ldots{}~ ~ ~ ~ ~ ~ ~ ~ ~ ~~False ~ ~ ~ ~ ~ ~ ~ ~~1.0254220348170437 ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~0.0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~~False\\
+5029488307994632~~2.631721634971245 0.037888599928408165~ ~ ~~0
+\ldots{}~ ~ ~ ~ ~ ~ ~ ~ ~ ~~False ~ ~ ~ ~ ~ ~ ~ ~~1.0239559189552083 ~ ~
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~~0.0 ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+~~False\\
+5\\[2\baselineskip]The catalog exists, and all columns are populated
+with measurements (we will further verify this in subsequent steps).
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4967,11 +4894,48 @@ coadd objects for the PVIs on which the object should appear.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+This test was executed via a script (``test\_LVV-T66.py'') that does the
+following:
+
+\begin{itemize}
+\tightlist
+\item
+  Execute a butler query to identify all visit/detector images
+  overlapping a given tract/patch
+\item
+  Load objectIds from the `objectTable\_tract` for the input tract
+\item
+  extract all `forced\_src` catalogs from the query results, and confirm
+  that each has (a) forced photometry measurements for each object
+  within its boundaries, and (b) the measurements consist of real
+  numbers (i.e., not NaN or Inf).
+\end{itemize}
+
+These steps are then repeated for forced photometry on DiaObjects
+measured on `calexps`, then difference images. The code prints the
+following output:\\[2\baselineskip]\$ python test\_LVV-T66.py\\
+lsst\_distrib~ ~ ~ ~ ~~g0b29ad24fb+a10408d0bf~ ~~current w\_2022\_39
+setup\\[2\baselineskip]Results for~~334 visit/detectors that overlap the
+input tract.\\[2\baselineskip]psfflux check:~~True\\
+psfflux\_err check:~~True\\
+apflux check:~~True\\
+apflux\_err check:~~True\\
+All objects have forced sources?~~True\\[2\baselineskip]Results for~~334
+visit/detectors that overlap the input tract.\\[2\baselineskip]DIA
+psfflux check:~~True\\
+DIA psfflux\_err check:~~True\\
+DIA: All objects have forced sources?~~True\\[2\baselineskip]Results
+for~~334 visit/detectors that overlap the input
+tract.\\[2\baselineskip]DIA diffim psfflux check:~~True\\
+DIA diffim psfflux\_err check:~~True\\
+DIA diffim: All objects have forced sources? True\\[2\baselineskip]This
+confirms that the forced source measurements have been performed for all
+objects, including on `calexps` and `diffims`.\\[2\baselineskip]
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 4 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -4987,12 +4951,14 @@ image for all DIAObjects.\\[2\baselineskip]
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+This was included in the attached script (see the previous test step).
 
 }
 
 \paragraph{ LVV-T91 - Verify implementation of Fringe Correction Frame }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T91}{\textit{ LVV-T91 } }
 test case in Jira.
 
@@ -5103,6 +5069,7 @@ image as expected.\\[2\baselineskip]
 \paragraph{ LVV-T126 - Verify implementation of Image Differencing }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T126}{\textit{ LVV-T126 } }
 test case in Jira.
 
@@ -5246,6 +5213,7 @@ expected measurements.
 \paragraph{ LVV-T1946 - Verify implementation of measurements in catalogs from coadds }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1946}{\textit{ LVV-T1946 } }
 test case in Jira.
 
@@ -5595,6 +5563,7 @@ units of counts: True\\[2\baselineskip]All flux fields have units of
 \paragraph{ LVV-T1947 - Verify implementation of measurements in catalogs from difference images }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1947}{\textit{ LVV-T1947 } }
 test case in Jira.
 
@@ -5759,6 +5728,7 @@ so this test has passed.
 \paragraph{ LVV-T28 - Verify implementation of measurements in catalogs from PVIs }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T28}{\textit{ LVV-T28 } }
 test case in Jira.
 
@@ -5913,6 +5883,7 @@ so this test has passed.
 \paragraph{ LVV-T78 - Verify implementation of Persisting Data Products }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T78}{\textit{ LVV-T78 } }
 test case in Jira.
 
@@ -6180,6 +6151,7 @@ well-formed.
 \paragraph{ LVV-T42 - Verify implementation of Processed Visit Image Content }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T42}{\textit{ LVV-T42 } }
 test case in Jira.
 
@@ -6420,6 +6392,7 @@ catalog.
 \paragraph{ LVV-T141 - Verify implementation of Production Monitoring }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T141}{\textit{ LVV-T141 } }
 test case in Jira.
 
@@ -6430,7 +6403,7 @@ execution and production systems usage/load.
 Data set and mechanism for Production Orchestration as outlined in
 \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCase/LVV-T140}{LVV-T140}.
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -6439,7 +6412,7 @@ Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -6456,11 +6429,14 @@ Data Backbone.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+300 sq. degrees of simulated LSST data (DESC DC2) ~was processed as part
+of the DP0.2 processing campaign at the Interim Data Facility. The
+production orchestration software used was PanDA.~
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -6478,22 +6454,28 @@ including resource usage.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+During the execution of jobs in the PanDA system, production, resources
+usage was monitored via the PanDA monitoring interface.
+~DOMA\_GOOGLE\_LSST\_Queues.png shows LSST processing jobs in in the
+DOMA\_GOOGLE\_LSST\_* queues. DP02 Processing Runs.png shows a snapshot
+of jobs jobs in the PanDA workflow monitor during processing.~
 
 }
 
 \paragraph{ LVV-T140 - Verify implementation of Production Orchestration }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T140}{\textit{ LVV-T140 } }
 test case in Jira.
 
-Demonstrate use of orchestration software to perform real-time and batch
-production on LSST compute platform(s).
+Demonstrate use of orchestration software to perform batch production on
+LSST compute platform(s).
 
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -6502,7 +6484,7 @@ Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -6517,11 +6499,14 @@ Identify an appropriate precursor dataset.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+The dataset to be used is the DP0.2 / DESC DC2 dataset at the IDF. DP0.2
+Production Processing used stack v23 on IDF's PanDA
+system.\\[2\baselineskip]
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -6542,12 +6527,36 @@ be inspected for identification of problems in the processing.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+Batch processing was carried in the Google Cloud environment at the IDF.
+The production orchestration system deployed and used at the IDF
+(Interim Data Facility) was PanDA. The BPS (Batch Processing Service)
+software (part of the LSST distribution) was used to interface between
+the Butler and PanDA using a set of yaml job submission files. A set of
+six PanDA job queues were established with different retry
+characteristics and memory limits. In excess of 4,000 cores were
+available in a number of queues and memory/core configurations within
+the IDF. 20K raw exposures/visits were pre-loaded into S3 storage to be
+processed via thePanDA system. After processing was complete, a copy of
+the Butler registry was made for end user access. All batch processing
+for DP0.2 is described in Jira ticket:
+\href{https://jira.lsstcorp.org/browse/PREOPS-905}{PREOPS-905}. Report
+https://rtn-039.lsst.io/ describes the full details of the DP0.2
+production processing.\\[2\baselineskip]\# Logs of the processing\\
+Google Cloud logging system was used to collect logging information
+output by the production pipelines and organize it into a searchable
+form sorted by date of production. Snapshots of logs showing the status
+of jobs is attached.\\[2\baselineskip]\# Show that single visit, coadds
+and catalogs are present in the DP0.2 Butler repository.\\
+These data products can be accessed via the DP0.2 Butler
+programmatically at the IDF with the attached script. This clearly shows
+the availability of processed data products
 
 }
 
 \paragraph{ LVV-T129 - Verify implementation of Provide Calibrated Photometry }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T129}{\textit{ LVV-T129 } }
 test case in Jira.
 
@@ -6736,6 +6745,7 @@ as FAILED.
 \paragraph{ LVV-T127 - Verify implementation of Provide Source Detection Software }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T127}{\textit{ LVV-T127 } }
 test case in Jira.
 
@@ -6814,439 +6824,10 @@ of the simulated sources rather well:\\
 
 }
 
-\paragraph{ LVV-T131 - Verify implementation of Provide User Interface Services }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T131}{\textit{ LVV-T131 } }
-test case in Jira.
-
-Verify the availability and functionality of the broad range of user
-interface services called for in the requirement, as applied to both
-Nightly and DRP data. ~This will primarily be done by verifications
-performed at the LSST Science Platform level, based on the requirements
-in \citeds{LDM-554}; however, a high-level set of tests corresponding to the
-DMS-REQ-0160 requirement are defined below.
-
-\textbf{ Preconditions}:\\
-\begin{enumerate}
-\tightlist
-\item
-  Testing this requirement relies on a set of data products meeting the
-  data model implied by the DPDD existing in a deployment of the Science
-  Platform and its underlying database and file services.
-
-  \begin{enumerate}
-  \tightlist
-  \item
-    In particular, both image and catalog data products are required.
-  \item
-    From the specific language of the underlying requirement, it appears
-    clear that coadded data products are required, but in practice
-    single-epoch data products should be included in the test as well.
-  \end{enumerate}
-\item
-  Depending on when this requirement is tested, the tests may involve
-  either or both of precursor data and LSST commissioning data. ~The use
-  of the latter is ultimately essential to ensure that the tests are
-  performed with as LSST-like a dataset as possible.
-\end{enumerate}
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Establishment of test coordinates:}\\
-Establish sky positions and surrounding regions (e.g., cones or
-polygons), field sizes, filter bands, and temporal epochs for the tests
-that are consistent with the known content of the test dataset, whether
-precursor or LSST commissioning data.\\
-Establishing sky positions should include pre-determining the
-corresponding LSST ``tract and patch'' identifiers.\\
-If the plan to not keep all calibrated single-epoch images on disk is
-still in place at the time of the test, identify for use in the test
-both images that are, and are not, on disk.\\
-Establish target image boundaries, projections, and pixel scales to be
-used for resampling tests. ~Ensure that at least some of these test
-conditions include coadded image boundaries that cross tract and patch
-boundaries, and single-epoch image boundaries that cross focal plane
-raft boundaries.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Butler image access:}\\
-From within the Notebook Aspect, verify that coadded images for the
-identified regions of sky and filter bands are accessible via the
-Butler. ~Verify that the same images are available whether obtained by
-direct reference to the previous established tract/patch identifiers or
-by the use of LSST stack code for retrieving images based on sky
-coordinates.\\
-From within the Notebook Aspect, verify that single-epoch raw images for
-the selected locations and times are available. ~Verify that calibrated
-images (PVIs) for the selected locations and times are available;
-depending on the details of the test dataset, verify that PVIs still on
-disk can be retrieved immediately.\\
-Verify that lists or tables of image metadata, not just individual
-images, can be retrieved. ~E.g., a list of all the single-epoch images
-covering a selected sky location.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Programmatic PVI re-creation:}\\
-From within the Notebook Aspect, verify that the recreation on demand of
-a PVI can be performed. ~Ideally, this should be done as follows:
-
-\begin{itemize}
-\tightlist
-\item
-  Verify that recreation of a PVI that \emph{is} still available works
-  and that it reproduces the original PVI exactly (except for provenance
-  metadata that must be different) or within the reasonable ability of
-  processing systems to do so (e.g., taking into account that the
-  original calibration and the recreation may have run on different CPU
-  architectures).
-\item
-  The test conditions should ensure the verification that a recreation
-  was actually performed, i.e., that the still-available PVI was not
-  returned instead.
-\item
-  Note that it does not appear to be a requirement that \emph{at Butler
-  level} recreation on demand of PVIs is a completely transparent
-  process. ~If this \emph{is} decided to be a requirement, the test must
-  also verify that it has been satisfied. ~If it is \emph{not} a
-  requirement, verify that adequate documentation on the PVI-recreation
-  process (e.g., the SuperTasks and configuration to be used) is
-  available.
-\end{itemize}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Butler catalog access:}\\
-From within the Notebook Aspect, verify that all the catalog data
-products described in the DPDD can be retrieved for the coordinates
-selected above via the Butler. (This test should include access to
-SSObject data, but the details of how such a test would depend on the
-coordinate selections require additional thought.)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{LSST-stack-based resampling/reprojection:}\\
-Verify the availability of software in the LSST stack, and associated
-documentation, that permits the resampling of LSST images to different
-pixel grids and projections.\\
-Exercise this capability for the test conditions selected in Step 1
-above.\\
-Perform photometric and astrometric tests on the resulting resampled
-images to provide evidence that the transformations performed were
-correct to the accuracy supported by the data.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Comment:}\\
-The following API Aspect test steps should be carried out on the
-required ``offsite-like'' test platform, to ensure that their success
-does not reflect any privileged access given to processes inside the
-Data Access Center or other Science Platform instance. ~However, at
-least a small sampling of them should \emph{also} be carried out
-\emph{within} the Science Platform environment, i.e., in the Notebook
-Aspect, and the results compared.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 7 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{API Aspect image access:}\\
-Using IVOA services such as the Registry and ObsTAP, from the
-``offsite-like'' test platform, verify that the existence of the classes
-of image data products foreseen in the DPDD can be determined.\\
-Verify that ObsTAP and/or SIAv2 can be used to find the same images and
-lists of images for the established test coordinates that were retrieved
-via the Butler in Step 2 above.\\
-Verify that the selected images are retrievable from the Web services.\\
-Verify that the retrieved images are identical in their pixel content
-and metadata.\\
-The tests must include both coadded and single-epoch images.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 8 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{API Aspect image transformations:}\\
-Verify that image cutouts and resamplings can be performed via the IVOA
-SODA service, and that the results are identical to those obtained for
-the same parameters from the LSST-stack-based tests in Step 5.\\
-(The requirements for supported reprojections, if any, in the SODA
-service have not been established at the time of writing.)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 9 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{API Aspect catalog data access:}\\
-Verify that the IVOA Registry, RegTAP, TAP\_SCHEMA, and other relevant
-mechanisms can be used to discover the existence of all the catalog data
-products foreseen in the DPDD.\\
-Using the IVOA TAP service, verify that all the catalog data products
-foreseen in the DPDD can be retrieved for the coordinates determined in
-Step 1. ~Verify that their scientific content is the same as when they
-are retrieved via the Butler.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 10 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Comment:}\\
-The Portal Aspect tests below should be carried out from a web browser
-on an ``offsite-like'' test platform, to ensure that no privileged
-access provided to intra-data-center clients is relied upon.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 11 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Portal Aspect data browsing:}\\
-Verify that the Portal Aspect can be used to discover the existence of
-all the data products foreseen in the DPDD. ~Verify that the UI permits
-locating the data for the coordinates selected in Step 1 by visual
-means, e.g., by zooming and panning in from an all-sky view.\\
-Verify that the UI permits locating the data by typing in coordinates as
-well.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 12 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Portal Aspect image access:}\\
-Verify that the Portal Aspect allows both the retrieval of ``original''
-image data, i.e., in its native LSST pixel projection and with full
-metadata, as well as retrieval of on-demand UI cutouts of coadded image
-data for selected locations.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 13 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Portal Aspect catalog query and visualization:}\\
-Verify that the Portal Aspect allows graphical querying of DPDD catalog
-data, both coadded and single-epoch, for selected regions of sky and/or
-with selected properties, and supports the visualization of the results
-(including histogramming, scatterplots, time series, table
-manipulations, and overplotting on image data).\\
-(Note that the Science Platform requirements, LDM-554, lay out a
-detailed set of requirements on the selection and visualization of
-catalog data.)
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 14 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-\textbf{Portal Aspect data download:}\\
-Verify that data identified and/or visualized in the Portal Aspect can
-be downloaded to the remote system running the web browser in which the
-Portal is displayed, as well as to the User Workspace.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
 \paragraph{ LVV-T79 - Verify implementation of PSF-Matched Coadds }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T79}{\textit{ LVV-T79 } }
 test case in Jira.
 
@@ -7255,7 +6836,7 @@ Verify that the DRP pipelines produce PSF matched coadds.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Not Executed }
+Execution status: {\bf Pass }
 
 Final comment:\\
 
@@ -7264,7 +6845,50 @@ Detailed steps results:
 
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 1 & Step Execution Status: \textbf{ Pass } \\ \hline
+\end{tabular}
+ Description \\
+{\footnotesize
+Execute the AssembleCoaddTask, specifying via configuration that
+PSF-matched coadds should be created.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Expected Result \\
+{\footnotesize
+Pipetask executes and produces coadd images.
+
+}
+\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
+  Actual Result \\
+{\footnotesize
+Working on the USDF (SLAC) with the LSST Science Pipelines set up, we
+defined a brief pipeline that explicitly specifies that `psfMatched`
+warps should be created. For this test, we use the `rc2\_subset` data,
+which has already been processed from end to end. The PSF-matched warps
+are created in the `step3` subset of `rc2\_subset` processing, so we can
+use those to create a PSF-matched coadd.\\[2\baselineskip]Contents of
+psfmatched\_coadd.yaml:\\[2\baselineskip]description: The DRP pipeline
+specialized for rc2\_subset processing in jenkins and tutorials\\
+imports:\\
+- \$DRP\_PIPE\_DIR/pipelines/HSC/DRP-RC2.yaml\\
+tasks:\\
+assemblePsfMatchedCoadd:\\
+class: lsst.pipe.tasks.assembleCoadd.AssembleCoaddTask\\
+config:\\
+warpType: psfMatched\\[2\baselineskip]Execute the pipeline as follows:\\
+pipetask run -b \$RC2\_SUBSET\_DIR/SMALL\_HSC/butler.yaml -d ``tract =
+9813 AND skymap = `hsc\_rings\_v1' AND patch in (38, 39, 40, 41) AND
+band='i''' -p
+\$RC2\_\_DIR/psfmatched\_coadd.yaml\#assemblePsfMatchedCoadd -i
+u/\$USER/step3 -o u/\$USER/psf\_matched\_coadds --register-dataset-types
+-j 4\\[2\baselineskip]This pipeline executed its 4 quanta in about 5
+minutes.
+
+}
+\begin{tabular}{p{2cm}p{14cm}}
+\toprule
+Step 2 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -7292,11 +6916,21 @@ Butler repo available for reading.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+from lsst.daf.butler import Butler\\
+repo =
+`/sdf/data/rubin/u/jcarlin/repos/rc2\_subset/SMALL\_HSC'\\[2\baselineskip]\#
+Output collection from pipetask run in Step 1:\\
+collection = `u/jcarlin/psf\_matched\_coadds'\\
+butler = Butler(repo, collections=collection)\\[2\baselineskip]\#
+Initialize a second Butler pointing to the original rc2\_subset
+processing:\\
+collection2 = `u/jcarlin/step3'\\
+butler2 = Butler(repo, collections=collection2)\\[2\baselineskip]
 
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
+Step 3 & Step Execution Status: \textbf{ Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -7311,12 +6945,41 @@ Verify that PSF-matched coadds were created.
 \hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
   Actual Result \\
 {\footnotesize
+In an ipython session, we executed the following commands. The object is
+to demonstrate (a) that the coadd was created, and (b) that the
+PSF-matched coadd differs from the direct coadd in the ``step3''
+collection.\\[2\baselineskip]\# Is ``coadd'' an Exposure object?\\
+coadd\\
+Out{[}29{]}: \textless{}lsst.afw.image.exposure.ExposureF at
+0x7f9be81e4db0\textgreater{}\\[2\baselineskip]Yes, it is a non-empty
+exposure. Next, extract the newly-created, PSF-matched coadd and the
+direct-warp coadd, and compare their pixel
+values.\\[2\baselineskip]import numpy as np\\[2\baselineskip]\# Get the
+PSF-matched coadd:\\
+coadd = butler.get('deepCoadd', tract=9813, patch=38,
+band='i')\\[2\baselineskip]\# Get the direct coadd:\\
+coadd2 = butler2.get('deepCoadd', tract=9813, patch=38,
+band='i')\\[2\baselineskip]\# Copy the PSF-matched coadd:\\
+coadd\_copy = coadd.clone()\\
+\# Subtract the direct coadd's image array from the PSF-matched image
+array:\\
+coadd\_copy.image.array -= coadd2.image.array\\[2\baselineskip]\#
+Extract some statistics of the resulting array:\\
+In {[}26{]}: np.mean(coadd\_copy.image.array)\\
+Out{[}26{]}:~1.31110555e-05\\[2\baselineskip]In
+{[}27{]}:~np.median(coadd\_copy.image.array)\\
+Out{[}27{]}:~1.4901161e-08\\[2\baselineskip]In
+{[}28{]}:~np.std(coadd\_copy.image.array)\\
+Out{[}28{]}: 0.0049309013\\[2\baselineskip]The two coadd images differ,
+but only by a small amount, which is verification that the PSF-matched
+coadd has been created successfully.
 
 }
 
 \paragraph{ LVV-T1830 - Verify Implementation of Scientific Visualization of Camera Image Data }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1830}{\textit{ LVV-T1830 } }
 test case in Jira.
 
@@ -7429,162 +7092,10 @@ coordinates as defined in LSE-349.
 
 }
 
-\paragraph{ LVV-T98 - Verify implementation of Selection of Datasets }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T98}{\textit{ LVV-T98 } }
-test case in Jira.
-
-Verify that the DMS can identify and retrieve datasets consisting of
-logical groupings of Exposures, metadata, provenance, etc., or other
-groupings that are processed or produced as a logical unit.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Identify the path to the data repository, which we will refer to as
-`DATA/path', then execute the following:
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Example Code \\
-{\footnotesize
-\begin{verbatim}
-from lsst.daf.butler import Butler
-repo = 'Data/path'
-collection = 'collection'
-butler = Butler(repo, collections=collection)
-\end{verbatim}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Butler repo available for reading.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Ingest data from an appropriate processed dataset.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Observe retrieval of single Processed Visit Image (PVI) with metadata.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-A PVI and its associated metadata.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Observe retrieval of multiple PVIs with metadata.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-A set of PVIs and their associated metadata.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Observe retrieval of coadd patch with metadata and provenance
-information.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-An image of coadded data in a patch, along with its metadata and
-information describing the provenance of the patch constituents.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 6 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Observe retrieval of subset of rows in each of the above catalogs.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
 \paragraph{ LVV-T145 - Verify implementation of Task Configuration }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T145}{\textit{ LVV-T145 } }
 test case in Jira.
 
@@ -7739,6 +7250,7 @@ thresholds were persisted in metadata in the butler collections.
 \paragraph{ LVV-T144 - Verify implementation of Task Specification }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T144}{\textit{ LVV-T144 } }
 test case in Jira.
 
@@ -7855,6 +7367,7 @@ in metadata in the butler collections.
 \paragraph{ LVV-T74 - Verify implementation of Template Coadds }\mbox{}\\
 
 Version \textbf{1}.
+Status \textbf{Approved}.
 Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T74}{\textit{ LVV-T74 } }
 test case in Jira.
 
@@ -7943,262 +7456,6 @@ Confirm that the template coadds have been created and are well-formed.
 {\footnotesize
 Finally, we displayed a template coadd and compared it to the original
 image. See notebook ``test\_LVV-T74.ipynb'' for details.
-
-}
-
-\paragraph{ LVV-T97 - Verify implementation of Uniqueness of IDs Across Data Releases }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T97}{\textit{ LVV-T97 } }
-test case in Jira.
-
-Verify that the IDs of Objects, Sources, DIAObjects, and DIASources from
-different Data Releases are unique.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Identify an appropriate precursor dataset to be processed through Data
-Release Production.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 2 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Process data with the Data Release Production payload, starting from raw
-science images and generating science data products, placing them in the
-Data Backbone.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 3 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Identify the path to the data repository, which we will refer to as
-`DATA/path', then execute the following:
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Example Code \\
-{\footnotesize
-\begin{verbatim}
-from lsst.daf.butler import Butler
-repo = 'Data/path'
-collection = 'collection'
-butler = Butler(repo, collections=collection)
-\end{verbatim}
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Butler repo available for reading.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 4 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-After running the DRP payload multiple times, load the resulting data
-products (both data release and prompt products) using the Butler.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-Multiple datasets resulting from processing of the same input data.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 5 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-Inspect the IDs in the multiple data products and confirm that all IDs
-are unique.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-No IDs are repeated between multiple processings of the identical input
-dataset.
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
-\paragraph{ LVV-T1529 - Verify Production of All-Sky HiPS Map }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1529}{\textit{ LVV-T1529 } }
-test case in Jira.
-
-Verify that Data Release Production includes the production of an
-all-sky image map for the existing coadded image area in each filter
-band, and at least one pre-defined all-sky color image map, following
-the IVOA HiPS Recommendation.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
-\paragraph{ LVV-T1527 - Verify Support for HiPS Visualization }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1527}{\textit{ LVV-T1527 } }
-test case in Jira.
-
-Verify that the LSST Science Platform supports the visualization of
-LSST-generated HiPS image maps as well as other HiPS maps which satisfy
-the IVOA HiPS Recommendation. Also verify that integrated behavior is
-available, such as the overplotting of catalog entries, comparable to
-that provided for individual source images (e.g., PVIs and coadd tiles).
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
-
-}
-
-\paragraph{ LVV-T1528 - Verify Visualization of MOCs via Science Platform }\mbox{}\\
-
-Version \textbf{1}.
-Open  \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T1528}{\textit{ LVV-T1528 } }
-test case in Jira.
-
-Verify that the LSST Science Platform supports the visualization of the
-LSST-generated MOCs as well as other MOCs which satisfy the IVOA MOC
-Recommendation.
-
-\textbf{ Preconditions}:\\
-
-
-Execution status: {\bf Not Executed }
-
-Final comment:\\
-
-
-Detailed steps results:
-
-\begin{tabular}{p{2cm}p{14cm}}
-\toprule
-Step 1 & Step Execution Status: \textbf{ Not Executed } \\ \hline
-\end{tabular}
- Description \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Expected Result \\
-{\footnotesize
-
-}
-\hdashrule[0.5ex]{\textwidth}{1pt}{3mm}
-  Actual Result \\
-{\footnotesize
 
 }
 
