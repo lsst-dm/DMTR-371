@@ -31,7 +31,7 @@
 
 \title{LVV-P99: Data Management Acceptance Test Campaign 1 Test Plan and Report}
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{ 2022-12-12 }
+\date{ 2022-12-16 }
 \author{ Jeffrey Carlin }
 
 \input{history_and_info.tex}
@@ -123,8 +123,9 @@ The current status of test plan \href{https://jira.lsstcorp.org/secure/Tests.jsp
 \label{sect:hwconf}
   Most testing will be performed using the Rubin Science Platform (RSP),
 hosted at the IDF, with auxTel-related tests using the development
-cluster at the USDF. In particular, we will use version X\_XXXX\_XX of
-the Pipelines.
+cluster at the USDF. In particular, we will use version w\_2022\_32 of
+the Pipelines for most tests; some tests will use more recent weekly
+builds of the Pipelines.
 
 
 
@@ -765,7 +766,7 @@ Report repository.
 &   \\\hline
 \href{https://jira.lsstcorp.org/secure/Tests.jspa#/testCase/LVV-T129}{LVV-T129}
 &  1
-& Pass w/ Deviation &
+& Initial Pass &
 \begin{minipage}[]{9cm}
 \smallskip
 Executed at the IDF using Science Pipelines version w\_2022\_32. A
@@ -774,12 +775,12 @@ test\_LVV-T129.py, which is available in the test report github
 repository's ``scripts/'' directory. Qserv tables (i.e., Object tables)
 were checked via the notebook test\_LVV-T129.ipynb, which is available
 in the test report github repository's ``notebooks''
-directory.\\[2\baselineskip]This Test Case is determined to ``Pass with
-Deviation'' because the DIAObject table in Qserv does not clearly
-demonstrate that fluxes are provided in nJy. Though the fluxes are
-probably in nJy (and inspection of code could confirm this), we choose
-not to grant this test a full PASS until the DIAObject table is clearly
-reporting fluxes in nJy.
+directory.\\[2\baselineskip]This Test Case is granted status of
+``Initial Pass'' because the DIAObject table in Qserv does not clearly
+demonstrate that fluxes are provided in nJy. Though the fluxes are shown
+to be reasonable values if they are in nJy (and inspection of code could
+confirm this), we choose not to grant this test a full PASS until the
+DIAObject table is clearly reporting fluxes in nJy.
 \medskip
 \end{minipage}
 &   \\\hline
@@ -845,12 +846,35 @@ See attached artifact notebook ``test\_LVV-T74.ipynb'' for details.
 \subsection{Overall Assessment}
 \label{sect:overallassessment}
 
-Not yet available.
+In this test campaign, we have successfully verified 28 unique
+requirements from \citeds{LSE-61} via the execution of 35 Test Cases (of which 34
+passed, and one was deemed an initial pass). Of these requirements, 15
+are of priority 1a, 11 are priority 1b, and 2 are priority 2. The set of
+requirements tested in this campaign cover many aspects of the DM
+system, including software pipelines, databases, the Science Platform,
+and facilities, with the majority related to the Science Pipelines. Many
+of these tests were executed using the DP0.2 dataset at the Interim Data
+Facility (IDF), with a handful performed at the US Data Facility (USDF)
+using Auxtel data. The results of this campaign give a picture of many
+of the foundational capabilities required for DM to successfully gather,
+process, and distribute LSST data. The majority of remaining
+requirements to be verified concern more detailed or complicated
+capabilities.
 
 \subsection{Recommended Improvements}
 \label{sect:recommendations}
 
-Not yet available.
+Some difficulty arose because we executed this test campaign during the
+transition from the previous data facility to the current USDF.
+Thankfully, many requirements can be verified using the simulated DP0.2
+data set on the IDF. We recommend that future test campaigns should not
+be initiated until the required facilities, software, and hardware are
+confirmed to be available. Another important consideration for future
+verification is the variety of activities required to verify the DM
+system, which can make testing time consuming and difficult. As many
+capabilities as possible should be tested in an automated way during
+(re-)processing campaigns using, for example, the `faro` or
+`analysis\_drp` Science Pipelines packages.
 
 \newpage
 \section{Detailed Test Results}
@@ -6567,7 +6591,7 @@ DRP and AP products.
 \textbf{ Preconditions}:\\
 
 
-Execution status: {\bf Pass w/ Deviation }
+Execution status: {\bf Initial Pass }
 
 Final comment:\\Executed at the IDF using Science Pipelines version w\_2022\_32. A
 portion of this test case can be executed by running the script
@@ -6575,12 +6599,12 @@ test\_LVV-T129.py, which is available in the test report github
 repository's ``scripts/'' directory. Qserv tables (i.e., Object tables)
 were checked via the notebook test\_LVV-T129.ipynb, which is available
 in the test report github repository's ``notebooks''
-directory.\\[2\baselineskip]This Test Case is determined to ``Pass with
-Deviation'' because the DIAObject table in Qserv does not clearly
-demonstrate that fluxes are provided in nJy. Though the fluxes are
-probably in nJy (and inspection of code could confirm this), we choose
-not to grant this test a full PASS until the DIAObject table is clearly
-reporting fluxes in nJy.
+directory.\\[2\baselineskip]This Test Case is granted status of
+``Initial Pass'' because the DIAObject table in Qserv does not clearly
+demonstrate that fluxes are provided in nJy. Though the fluxes are shown
+to be reasonable values if they are in nJy (and inspection of code could
+confirm this), we choose not to grant this test a full PASS until the
+DIAObject table is clearly reporting fluxes in nJy.
 
 
 Detailed steps results:
@@ -6709,7 +6733,7 @@ tables.
 }
 \begin{tabular}{p{2cm}p{14cm}}
 \toprule
-Step 5 & Step Execution Status: \textbf{ Pass w/ Deviation } \\ \hline
+Step 5 & Step Execution Status: \textbf{ Initial Pass } \\ \hline
 \end{tabular}
  Description \\
 {\footnotesize
@@ -6736,9 +6760,11 @@ test\_LVV-T129.ipynb.\\[2\baselineskip]The notebook demonstrates that
 the Object table (i.e., measurements from DRP processed coadd images)
 meets the requirement -- all fluxes are in calibrated nanoJanskys.
 However, the DIAObject table does not report units with the flux values.
-Even though these fluxes may actually be in nJy, the lack of units in
-the database and schema leads us to characterize this step of the test
-as FAILED.
+Although we show in the attached notebook that these fluxes have
+reasonable values assuming they are in nJy, the lack of units in the
+database and schema leads us to characterize this step of the test as an
+INITIAL PASS. An issue has been created to fix this, and the test case
+will be executed again in the futue.
 
 }
 
